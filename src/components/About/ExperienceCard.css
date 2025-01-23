@@ -1,0 +1,95 @@
+/* Parent Container Styles*/
+.timeline-item {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-bottom: 40px;
+    position: relative;
+  }
+  
+  /* Timeline Dot and Line */
+  .timeline-dot {
+    width: 40px;
+    height: 40px;
+    background: #fff;
+    border: 2px solid #ffffff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 20px;
+  }
+  
+  .timeline-icon {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+  }
+  
+  .timeline-item::before {
+    content: '';
+    position: absolute;
+    left: 20px;
+    height: calc(100% + 40px);
+    width: 2px;
+    background: #ffffff;
+  }
+  
+  /* Card Container */
+  .experience-card {
+    background: rgba(28, 27, 51, 0.95);
+    border-radius: 15px;
+    padding: 20px;
+    color: #fff;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    width: 100%;
+  }
+  
+  /* Header Styles */
+  .experience-header {
+    margin-bottom: 20px;
+  }
+  
+  .experience-title {
+    font-size: 24px;
+    font-weight: 600;
+    margin: 0 0 10px 0;
+  }
+  
+  .experience-company {
+    font-size: 18px;
+    color: #a8a8b3;
+    margin: 10px 0;
+  }
+  
+  .experience-date {
+    font-size: 16px;
+    color: #808080;
+    margin: 10px 0;
+  }
+  
+  /* Experience Points */
+  .experience-points {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    text-align: left; /* Align all bullet points to the left */
+  }
+  
+  .experience-point {
+    font-size: 16px;
+    color: #d4d4d4;
+    margin-bottom: 10px;
+    padding-left: 20px; /* Add some space for bullets */
+    position: relative;
+  }
+  
+  .experience-point::before {
+    content: '•'; /* Bullet symbol */
+    position: absolute;
+    left: 0; /* Align to the start of the text */
+    color: #fff;
+    font-size: 20px;
+    line-height: 18px;
+  }
+  

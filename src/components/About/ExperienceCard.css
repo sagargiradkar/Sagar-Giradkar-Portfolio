@@ -37,11 +37,10 @@
 
 /* Card Container */
 .experience-card {
-  background: rgba(28, 27, 51, 0.95);
   border-radius: 15px;
   padding: 20px;
   color: #fff;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 5px 3px rgba(119, 53, 136, 0.459) !important;
   width: 100%;
 }
 
@@ -112,8 +111,8 @@
     padding: 15px;
     width: 90%; /* Smaller margin for screen fit */
     margin: 0 auto; /* Center align */
-    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.5); /* Subtle shadow */
-    background: rgba(28, 27, 51, 0.95); /* Retain dark theme */
+    box-shadow: 0 4px 5px 3px rgba(119, 53, 136, 0.459) !important; /* Subtle shadow */
+    
   }
 
   /* Header (Title, Company, Date) */

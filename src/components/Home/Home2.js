@@ -2,11 +2,7 @@ import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import myImg from "../../Assets/avatar.svg";
 import Tilt from "react-parallax-tilt";
-import {
-  AiFillGithub,
-  AiOutlineTwitter,
-  AiFillInstagram,
-} from "react-icons/ai";
+import { AiFillGithub, AiOutlineTwitter, AiFillInstagram } from "react-icons/ai";
 import { FaLinkedinIn } from "react-icons/fa";
 
 function Home2() {
@@ -19,36 +15,14 @@ function Home2() {
               LET ME <span className="purple"> INTRODUCE </span> MYSELF
             </h1>
             <p className="home-about-body">
-              I'm Sagar Giradkar, a passionate software developer with
-              experience in building full-stack applications using technologies
-              like
+              I'm Sagar Giradkar, a passionate software developer experienced in building full-stack applications with technologies like
               <i>
-                <b className="purple">
-                  {" "}
-                  React.js, Node.js, Spring Boot, and MongoDB.{" "}
-                </b>
+                <b className="purple"> React.js, React-Native, Android, Express.js, Node.js, Spring Boot, Microservices and databases like MySQL and MongoDB. </b>
               </i>
               <br />
-              <br />I enjoy creating solutions for real-world problems,
-              including
-              <b className="purple">
-                {" "}
-                innovative web and mobile applications.{" "}
-              </b>
-              My recent projects include a healthcare app, an e-learning
-              platform, and an e-waste sorting system leveraging collaborative
-              robots and AI.
-              <br />
-              <br />
-              My technical interests include developing{" "}
-              <b className="purple">RESTful APIs</b>, working with modern
-              frameworks like
-              <b className="purple"> React Native, Spring Framework,</b>
-              and exploring <b className="purple">AI and robotics. </b>
-              <br />
-              <br />
-              Whenever possible, I love to apply my skills to impactful projects
-              that bridge technology with real-world needs.
+              <br />I love solving real-world problems through
+              <b className="purple"> innovative web and mobile applications. </b>
+              I am always excited to work on projects that connect technology with real-world impact.
             </p>
           </Col>
           <Col md={4} className="myAvtar">
@@ -91,7 +65,7 @@ function Home2() {
                   rel="noreferrer"
                   className="icon-colour home-social-icons"
                 >
-                 <AiFillInstagram />
+                  <AiFillInstagram />
                 </a>
               </li>
             </ul>

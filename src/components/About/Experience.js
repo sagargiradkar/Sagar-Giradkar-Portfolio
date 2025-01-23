@@ -11,8 +11,8 @@ import argyleEnigma from "../../Assets/company/argyleEnigma.png";
 const experiences = [
   {
     title: "React-Native Full Stack Developer Intern",
-    companyName: "Real List.Ai Technologies,Benguluru",
-    icon: realListLogo, // You should import the logo image for the icon
+    companyName: "Real List.Ai Technologies, Bengaluru",
+    icon: realListLogo,
     iconBg: "#383E56",
     date: "July 2024 - October 2024",
     points: [
@@ -25,8 +25,8 @@ const experiences = [
   },
   {
     title: "React Native Developer Intern",
-    companyName: "Girl Script Summer of Code , Pune , India",
-    icon: GS_logo_Black, // You should import the logo image for the icon
+    companyName: "Girl Script Summer of Code, Pune, India",
+    icon: GS_logo_Black,
     iconBg: "#E6DEDD",
     date: "May 2024 - August 2024",
     points: [
@@ -38,8 +38,8 @@ const experiences = [
   },
   {
     title: "Software Engineering Intern",
-    companyName: "Argyle Enigma Tech Lab , Ahmedabad",
-    icon: argyleEnigma, // You should import the logo image for the icon
+    companyName: "Argyle Enigma Tech Lab, Ahmedabad",
+    icon: argyleEnigma,
     iconBg: "#383E56",
     date: "October 2023 - April 2024",
     points: [
@@ -56,7 +56,7 @@ function Experience() {
     <Container fluid className="experience-section">
       <Particle />
       <Container>
-        <Row style={{ justifyContent: "center", padding: "10px" }}>
+        <Row style={{ justifyContent: "center", padding: "1px" }}>
           <Col
             md={12}
             style={{
@@ -76,10 +76,24 @@ function Experience() {
             </h1>
 
             {/* Render Experience Cards from the experiences array */}
-            {experiences.map((experience, index) => (
-              <div key={index} className="experience-card">
-                <ExperienceCard {...experience} />
-              </div>
+            {experiences.map(({
+              title,
+              companyName,
+              icon,
+              iconBg,
+              date,
+              points
+            }, index) => (
+              <React.Fragment key={index}>
+                <ExperienceCard
+                  title={title}
+                  companyName={companyName}
+                  icon={icon}
+                  iconBg={iconBg}
+                  date={date}
+                  points={points}
+                />
+              </React.Fragment>
             ))}
           </Col>
         </Row>

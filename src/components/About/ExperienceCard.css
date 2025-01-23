@@ -93,78 +93,83 @@
   line-height: 18px;
 }
 
-/* Mobile Responsiveness */
+/* Mobile view - Responsive Design */
 @media (max-width: 768px) {
-  /* Hide Timeline Dot and Line */
-  .timeline-item::before,
+  /* Entire card container */
+  .timeline-item {
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  /* Timeline/visual dot hidden for mobile */
   .timeline-dot {
     display: none;
   }
 
-  /* Timeline Items */
-  .timeline-item {
-    flex-direction: column;
-    align-items: flex-start;
-    margin-bottom: 30px;
-  }
-
-  /* Experience Card */
+  /* Card Layout */
   .experience-card {
-    padding: 0 0 15px 0;  /* Remove horizontal padding */
-    width: 100%;
+    padding: 15px;
+    width: 90%; /* Smaller margin for screen fit */
+    margin: 0 auto; /* Center align */
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.5); /* Subtle shadow */
+    background: rgba(28, 27, 51, 0.95); /* Retain dark theme */
   }
 
-  /* Experience Title */
-  .experience-title {
-    font-size: 20px;
+  /* Header (Title, Company, Date) */
+  .experience-header {
+    text-align: center; /* Center align all content */
+    margin-bottom: 15px;
   }
 
-  /* Experience Company */
-  .experience-company {
-    font-size: 16px;
-  }
-
-  /* Experience Date */
-  .experience-date {
-    font-size: 14px;
-  }
-
-  /* Experience Points */
-  .experience-point {
-    font-size: 14px;
-  }
-}
-
-/* Extra Small Mobile Devices */
-@media (max-width: 480px) {
   .experience-title {
     font-size: 18px;
+    font-weight: 600;
+    color: #ffffff; /* White for better readability */
   }
 
   .experience-company {
     font-size: 14px;
+    color: #a8a8b3;
   }
 
   .experience-date {
     font-size: 12px;
+    color: #808080;
+  }
+
+  /* Content Points (aligned with bullets) */
+  .experience-points {
+    padding: 0;
+    margin: 0 10px 15px 10px; /* Adjust spacing */
   }
 
   .experience-point {
-    font-size: 12px;
+    font-size: 14px;
+    color: #d4d4d4;
+    line-height: 1.4em;
   }
 
-  .timeline-dot {
-    width: 25px;
-    height: 25px;
-    margin-right: 10px;
+  /* Action Buttons (GitHub and Demo) */
+  .action-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
   }
 
-  .timeline-icon {
-    width: 20px;
-    height: 20px;
+  .button {
+    padding: 10px 20px;
+    background: #6e57e0; /* Purple-violet */
+    color: #fff;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+    transition: all 0.3s ease;
   }
 
-  .experience-card {
-    padding: 0 0 10px 0;  /* Remove horizontal padding for extra small screens */
+  .button:hover {
+    background: #8f6ff0; /* Hover effect */
+    transform: scale(1.05);
   }
 }

@@ -4,10 +4,6 @@ import './ExperienceCard.css';
 
 function ExperienceCard({ title, companyName, icon, date, points }) {
   return (
-    <div className="timeline-item">
-      <div className="timeline-dot">
-        {/* <img src={icon} alt={title} className="timeline-icon" /> */}
-      </div>
       <div className="experience-card">
         <div className="experience-header">
           <h3 className="experience-title">{title}</h3>
@@ -20,7 +16,6 @@ function ExperienceCard({ title, companyName, icon, date, points }) {
           ))}
         </ul>
       </div>
-    </div>
   );
 }
 

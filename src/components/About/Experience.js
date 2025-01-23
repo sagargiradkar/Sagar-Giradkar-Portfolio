@@ -59,11 +59,6 @@ function Experience() {
         <Row style={{ justifyContent: "center", padding: "1px" }}>
           <Col
             md={12}
-            style={{
-              justifyContent: "center",
-              paddingTop: "30px",
-              paddingBottom: "50px",
-            }}
           >
             <h1
               style={{

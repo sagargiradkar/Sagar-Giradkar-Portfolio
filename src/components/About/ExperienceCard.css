@@ -1,47 +1,10 @@
-/* Parent Container Styles */
-.timeline-item {
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  margin-bottom: 40px;
-  position: relative;
-}
-
-/* Timeline Dot and Line */
-.timeline-dot {
-  width: 40px;
-  height: 40px;
-  background: #fff;
-  border: 2px solid #ffffff;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-right: 20px;
-}
-
-.timeline-icon {
-  width: 30px;
-  height: 30px;
-  border-radius: 50%;
-}
-
-.timeline-item::before {
-  content: '';
-  position: absolute;
-  left: 20px;
-  height: calc(100%);
-  width: 2px;
-  background: #ffffff;
-}
-
 /* Card Container */
 .experience-card {
-  border-radius: 15px;
-  padding: 20px;
+  border-radius: 10px;
   color: #fff;
   box-shadow: 0 4px 5px 3px rgba(119, 53, 136, 0.459) !important;
   width: 100%;
+  margin-bottom: 50px;
 }
 
 /* Header Styles */
@@ -52,7 +15,7 @@
 .experience-title {
   font-size: 24px;
   font-weight: 600;
-  margin: 0 0 10px 0;
+  margin: 0 0 15px 0;
 }
 
 .experience-company {
@@ -94,25 +57,14 @@
 
 /* Mobile view - Responsive Design */
 @media (max-width: 768px) {
-  /* Entire card container */
-  .timeline-item {
-    flex-direction: column;
-    align-items: center;
-    margin-bottom: 20px;
-  }
-  
-  /* Timeline/visual dot hidden for mobile */
-  .timeline-dot {
-    display: none;
-  }
 
   /* Card Layout */
   .experience-card {
     padding: 15px;
-    width: 90%; /* Smaller margin for screen fit */
+    width: 95%; /* Smaller margin for screen fit */
     margin: 0 auto; /* Center align */
     box-shadow: 0 4px 5px 3px rgba(119, 53, 136, 0.459) !important; /* Subtle shadow */
-    
+    margin-bottom: 50px;
   }
 
   /* Header (Title, Company, Date) */
@@ -140,7 +92,7 @@
   /* Content Points (aligned with bullets) */
   .experience-points {
     padding: 0;
-    margin: 0 10px 15px 10px; /* Adjust spacing */
+
   }
 
   .experience-point {

@@ -22,10 +22,32 @@ import simple_calculator from "../../Assets/Projects/Project14.png";
 import to_do_list from "../../Assets/Projects/Project15.png";
 import password_generator from "../../Assets/Projects/Project16.png";
 import amazon_website_clone from "../../Assets/Projects/Project17.png";
-
+import filiApp from "../../Assets/Projects/image.png"
+import realList from "../../Assets/Projects/realList.png"
+import acmwebsite from "../../Assets/Projects/acm.png"
 // JSON-like data with image imports
-const projects = [
+const projects = [ {
+  "imgPath": realList,
+  "title": "RealList.ai",
+  "description": "Real Estate projects made transparent and profitable. Join our real estate community to collaborate and network with developers, investors, and professionals. Build valuable connections and stay ahead in the real estate market with RealList.",
+  // "ghLink": "https://github.com/sagargiradkar/smile-computer-client",
+  "demoLink": "https://reallist.ai/about"
+},
   {
+    "imgPath": filiApp,
+    "title": "Fili: Financial Literacy",
+    "description": "Master personal finance with AI-powered micro-learning. In just 5-10 minutes daily, learn about budgeting, investing, taxes, retirement planning, insurance, and more. Gain the tools to make informeddecisions, build wealth, and achieve financial independence.",
+    // "ghLink": "https://github.com/sagargiradkar/smile-computer-client",
+    "demoLink": "https://play.google.com/store/apps/details?id=com.aetlpl.fili&hl=en_IN"
+  },
+  {
+    "imgPath": acmwebsite,
+    "title": "PVGCOET ACM Student Chapter",
+    "description": "ACM is the world's largest educational and scientific computing society, aimed at increasing the level and visibility of ACM activities across the globe. ACM is a society of dedicated professionals, academicians, and research scientists, who contribute towards the growth of technological innovations. The purpose of Society is to inculcate computational thinking aiding in career development and a lifelong learning experience.",
+    "ghLink": "https://pvgcoet.acm.org/",
+    "demoLink": "https://pvgcoet.acm.org/"
+  }, 
+   {
     "imgPath": smile_computer,
     "title": "Smile Computer Website",
     "description": "A website designed for Smile Computer, showcasing their services, products, and customer support. Built using React, it provides a user-friendly interface and interactive features for customers to explore the offerings of Smile Computer.",

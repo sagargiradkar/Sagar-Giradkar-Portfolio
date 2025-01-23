@@ -13,8 +13,7 @@ function AboutCard() {
           <br />
           I am currently pursuing a Bachelor's of Engineering in Information Technology at PVGCOET Pune.
           <br />
-          I am passionate about developing innovative solutions, with a keen interest in backend development and AI-based tools.
-          I have also honed my skills in tools like Spring Framework, DevOps, and deep learning, and I enjoy solving coding challenges on platforms like LeetCode.
+          I am passionate about developing innovative solutions, with a keen interest in fronend , backend development and AI-based tools.
           <br />
           <br />
           Apart from coding, some other activities that I love to do!

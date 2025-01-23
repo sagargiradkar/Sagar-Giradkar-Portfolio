@@ -9,6 +9,7 @@ import { CgGitFork } from "react-icons/cg";
 import { ImBlog } from "react-icons/im";
 import {
   AiFillStar,
+  AiOutlineDesktop ,
   AiOutlineHome,
   AiOutlineFundProjectionScreen,
   AiOutlineUser,
@@ -77,7 +78,7 @@ function NavBar() {
                 to="/experience"
                 onClick={() => updateExpanded(false)}
               >
-                <AiOutlineUser style={{ marginBottom: "2px" }} /> Experience
+                <AiOutlineDesktop  style={{ marginBottom: "2px" }} /> Experience
               </Nav.Link>
             </Nav.Item>
 

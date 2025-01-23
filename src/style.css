@@ -403,10 +403,13 @@ button:focus {
 /* --------- */
 .footer {
   background-color: rgb(10, 4, 22);
+  position: relative; /* Ensure the footer is positioned properly */
   bottom: 0 !important;
   padding-top: 10px !important;
-  padding-bottom: 8px !important ;
+  padding-bottom: 8px !important;
+  width: 100%; /* Ensure footer takes up full width */
 }
+
 .footer-copywright {
   text-align: center !important;
 }
@@ -432,6 +435,7 @@ button:focus {
   margin-top: 0.5em !important;
   margin-bottom: 0.5em !important;
 }
+
 .footer-icons {
   margin-top: 0.5em !important;
   margin-bottom: 0.5em !important;
@@ -441,6 +445,7 @@ button:focus {
 .blockquote-footer {
   color: #a588c0 !important;
 }
+
 /* --------- */
 /* Projects */
 /* --------- */

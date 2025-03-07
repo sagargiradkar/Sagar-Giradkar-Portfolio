@@ -6,9 +6,27 @@ import ExperienceCard from "./ExperienceCard"; // Assuming this is where individ
 import realListLogo from "../../Assets/company/realListLogo.png";
 import GS_logo_Black from "../../Assets/company/GS_logo_Black.png";
 import argyleEnigma from "../../Assets/company/argyleEnigma.png";
-
+import smileComputerLogo from "../../Assets/company/smileLogo.png"
 // Experience data moved to the same file
 const experiences = [
+  {
+    "title": "Full Stack Developer Intern",
+    "companyName": "Smile Computer Education, Bhandara",
+    "icon": smileComputerLogo,
+    "iconBg": "#E5A663",
+    "date": "December 2024 - Present",
+    "points": [
+      "Designed, developed, and maintained a dynamic website for the education institute, enhancing online presence and student engagement.",
+      "Built and deployed an Android application to provide seamless access to courses, schedules, and educational resources.",
+      "Developed a robust admin panel to manage student records, course details, and other administrative tasks efficiently.",
+      "Implemented responsive UI/UX designs, ensuring a smooth user experience across devices.",
+      "Integrated database management for secure and optimized data storage.",
+      "Utilized modern web technologies (e.g., HTML, CSS, JavaScript, React, Node.js, or others based on your stack).",
+      "Ensured scalability and security of applications with best practices in authentication and data handling."
+    ]
+  }
+
+  ,
   {
     title: "React-Native Full Stack Developer Intern",
     companyName: "Real List.Ai Technologies, Bengaluru",

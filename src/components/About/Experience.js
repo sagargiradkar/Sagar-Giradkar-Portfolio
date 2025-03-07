@@ -10,7 +10,7 @@ import smileComputerLogo from "../../Assets/company/smileLogo.png"
 // Experience data moved to the same file
 const experiences = [
   {
-    "title": "Full Stack Developer Intern",
+    "title": "Software Engineering Internship",
     "companyName": "Smile Computer Education, Bhandara",
     "icon": smileComputerLogo,
     "iconBg": "#E5A663",
@@ -26,7 +26,7 @@ const experiences = [
     ]
   },
   {
-    "title": "React-Native Full Stack Developer Intern",
+    "title": "React-Native | UX Full Stack Developer Internship",
     "companyName": "Real List.Ai Technologies, Bengaluru",
     "icon": realListLogo,
     "iconBg": "#383E56",
@@ -41,7 +41,7 @@ const experiences = [
     ]
   },
   {
-    "title": "React Native Developer Intern",
+    "title": "Software Developer Internship",
     "companyName": "Girl Script Summer of Code, Pune, India",
     "icon": GS_logo_Black,
     "iconBg": "#E6DEDD",
@@ -55,7 +55,7 @@ const experiences = [
     ]
   },
   {
-    "title": "Software Engineering Intern",
+    "title": "Software Engineering Internship",
     "companyName": "Argyle Enigma Tech Lab, Ahmedabad",
     "icon": argyleEnigma,
     "iconBg": "#383E56",

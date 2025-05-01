@@ -21,7 +21,6 @@ import discord_clone from "../../Assets/Projects/Project13.png";
 import simple_calculator from "../../Assets/Projects/Project14.png";
 import to_do_list from "../../Assets/Projects/Project15.png";
 import password_generator from "../../Assets/Projects/Project16.png";
-import amazon_website_clone from "../../Assets/Projects/Project17.png";
 import filiApp from "../../Assets/Projects/fili.jpg"
 import realList from "../../Assets/Projects/realList.png"
 import acmwebsite from "../../Assets/Projects/acm.png"

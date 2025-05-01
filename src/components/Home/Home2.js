@@ -15,14 +15,22 @@ function Home2() {
               LET ME <span className="purple"> INTRODUCE </span> MYSELF
             </h1>
             <p className="home-about-body">
-              I'm Sagar Giradkar, a passionate software developer experienced in building full-stack applications with technologies like
+              I'm <b className="purple">Sagar Giradkar</b>, a software developer from <b className="purple">Pune, India</b>, currently pursuing a Bachelor's in Information Technology at PVG's COET, Savitribai Phule Pune University.
+              <br />
+              <br />
+              With a passion for innovation, I've worked on diverse projects in AI, full-stack development, and robotics — from building REST APIs and mobile apps to publishing research on AI-driven smart material handling systems.
+              <br />
+              <br />
+              I have industry experience through internships at <b className="purple">Smile Computer Education, Real List AI Technologies, and Argyle Enigma Tech Labs</b>, where I developed Android apps, React Native projects, and enterprise RESTful services.
+              <br />
+              <br />
+              My go-to tech stack includes:
               <i>
-                <b className="purple"> React.js, React-Native, Android, Express.js, Node.js, Spring Boot, Microservices and databases like MySQL and MongoDB. </b>
+                <b className="purple"> React.js, React Native, Spring Boot, Node.js, Express.js, Java, JavaScript, MySQL, MongoDB, and Docker. </b>
               </i>
               <br />
-              <br />I love solving real-world problems through
-              <b className="purple"> innovative web and mobile applications. </b>
-              I am always excited to work on projects that connect technology with real-world impact.
+              <br />
+              Outside of tech, I enjoy playing games, traveling, and exploring new technologies that can solve meaningful problems.
             </p>
           </Col>
           <Col md={4} className="myAvtar">

@@ -14,7 +14,7 @@ const experiences = [
     "companyName": "Smile Computer Education, Bhandara",
     "icon": smileComputerLogo,
     "iconBg": "#E5A663",
-    "date": "December 2024 - Present",
+    "date": "December 2024 - May 2025",
     "points": [
       "Designed, developed, and maintained a dynamic website for the education institute, enhancing online presence and student engagement.",
       "Built and deployed an Android application to provide seamless access to courses, schedules, and educational resources.",

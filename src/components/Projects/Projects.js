@@ -4,7 +4,7 @@ import ProjectCard from "./ProjectCards";
 import Particle from "../Particle";
 
 // Import images directly
-import smile_computer from "../../Assets/Projects/project0.png";
+import smile_computer from "../../Assets/Projects/smile_computer.png";
 import razorpay from "../../Assets/Projects/project1.png";
 import poshinda from "../../Assets/Projects/project2.png";
 import hotstar from "../../Assets/Projects/project3.png";

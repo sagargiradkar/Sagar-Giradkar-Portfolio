@@ -1,0 +1,517 @@
+/* MongoPost.css */
+.blog-section {
+    padding-top: 150px !important;
+    padding-bottom: 50px !important;
+    background-color: var(--section-background-color) !important;
+    color: white !important;
+  }
+  
+  .blog-content {
+    max-width: 900px !important;
+    margin: 0 auto !important;
+  }
+  
+  .blog-featured-image {
+    width: 100%;
+    margin-bottom: 2rem;
+    border-radius: 10px;
+    overflow: hidden;
+  }
+  
+  .blog-featured-image img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+  
+  .blog-header {
+    margin-bottom: 2rem;
+  }
+  
+  .blog-header h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    color: var(--imp-text-color);
+  }
+  
+  .blog-subtitle {
+    border-left: 4px solid var(--imp-text-color);
+    padding-left: 1rem;
+    margin: 1.5rem 0;
+  }
+  
+  .italics {
+    font-style: italic;
+    color: #a8a8a8;
+    font-size: 1.2rem;
+    line-height: 1.6;
+  }
+  
+  .blog-meta {
+    display: flex;
+    justify-content: space-between;
+    color: #888;
+    font-size: 0.9rem;
+    margin-bottom: 2rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid #333;
+  }
+  
+  .blog-main-content {
+    line-height: 1.8;
+  }
+  
+  .blog-main-content section {
+    margin-bottom: 3rem;
+  }
+  
+  .blog-main-content h2 {
+    color: var(--imp-text-color);
+    margin-bottom: 1.5rem;
+    font-size: 1.8rem;
+  }
+  
+  .code-editor {
+    background: #1e1e1e;
+    border-radius: 8px;
+    margin: 2rem 0;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  }
+  
+  .code-header {
+    background: #2d2d2d;
+    padding: 12px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #3d3d3d;
+  }
+  
+  .code-header span {
+    color: #858585;
+    font-size: 0.9rem;
+    font-family: 'Fira Code', monospace;
+    text-transform: lowercase;
+  }
+  
+  .copy-button {
+    background: transparent;
+    border: none;
+    color: #858585;
+    cursor: pointer;
+    padding: 8px;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+  }
+  
+  .copy-button:hover {
+    color: #fff;
+    background: rgba(255, 255, 255, 0.1);
+  }
+  
+  .code-content {
+    margin: 0;
+    padding: 20px;
+    overflow-x: auto;
+    font-family: 'Fira Code', monospace;
+    font-size: 14px;
+    line-height: 1.6;
+    text-align: left;
+  }
+  
+  .code-content code {
+    color: #d4d4d4;
+    display: block;
+    white-space: pre;
+    word-spacing: normal;
+    word-break: normal;
+    tab-size: 2;
+  }
+  
+  .blog-tags {
+    margin-top: 3rem;
+    padding-top: 2rem;
+    border-top: 1px solid #333;
+  }
+  
+  .tag-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.8rem;
+    margin-top: 1rem;
+  }
+  
+  .tag {
+    background-color: var(--imp-text-color);
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+  }
+  
+  .tag:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+  }
+  
+  /* Scrollbar styling */
+  .code-content::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+  
+  .code-content::-webkit-scrollbar-track {
+    background: #1e1e1e;
+  }
+  
+  .code-content::-webkit-scrollbar-thumb {
+    background: #3d3d3d;
+    border-radius: 4px;
+  }
+  
+  .code-content::-webkit-scrollbar-thumb:hover {
+    background: #4d4d4d;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .blog-header h1 {
+      font-size: 2rem;
+    }
+    
+    .blog-meta {
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+    
+    .code-content {
+      font-size: 12px;
+    }
+    
+    .blog-subtitle {
+      font-size: 1rem;
+    }
+  }
+  /* Add to MongoPost.css */
+
+.section-content {
+    margin-bottom: 2rem;
+}
+
+.subsection {
+    margin: 1.5rem 0;
+    padding-left: 1rem;
+    border-left: 3px solid var(--imp-text-color);
+}
+
+.subsection h4 {
+    color: var(--imp-text-color);
+    margin-bottom: 1rem;
+}
+
+.subsection h5 {
+    color: #888;
+    margin: 1rem 0;
+}
+
+.subsection ul {
+    list-style-type: none;
+    padding-left: 1rem;
+}
+
+.subsection ul li {
+    margin: 0.5rem 0;
+    position: relative;
+}
+
+.subsection ul li:before {
+    content: "•";
+    color: var(--imp-text-color);
+    position: absolute;
+    left: -1rem;
+}
+
+.practice-card {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin: 1rem 0;
+    transition: transform 0.3s ease;
+}
+
+.practice-card:hover {
+    transform: translateY(-2px);
+}
+
+.practice-card h4 {
+    color: var(--imp-text-color);
+    margin-bottom: 0.5rem;
+}
+
+.conclusion {
+    margin-top: 3rem;
+    padding: 2rem;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 8px;
+}
+
+.conclusion h3 {
+    color: var(--imp-text-color);
+    margin-bottom: 1rem;
+}
+
+@media (max-width: 768px) {
+    .subsection {
+        padding-left: 0.5rem;
+    }
+
+    .practice-card {
+        padding: 1rem;
+    }
+}
+/* Add or update these styles in MongoPost.css */
+
+.blog-section {
+  padding: 150px 20px 50px !important;
+  background-color: var(--section-background-color) !important;
+  color: white !important;
+}
+
+.blog-content {
+  max-width: 900px !important;
+  margin: 0 auto !important;
+  text-align: justify;
+  hyphens: auto;
+}
+
+.blog-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.blog-header h1 {
+  font-size: 2.8rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  color: var(--imp-text-color);
+  line-height: 1.2;
+}
+
+.blog-subtitle {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 1.5rem;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 8px;
+  border-left: 4px solid var(--imp-text-color);
+}
+
+.italics {
+  font-style: italic;
+  color: #a8a8a8;
+  font-size: 1.2rem;
+  line-height: 1.8;
+  text-align: left;
+}
+
+.blog-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #888;
+  font-size: 0.9rem;
+  margin: 2rem 0;
+  padding: 1rem 0;
+  border-bottom: 1px solid #333;
+}
+
+.blog-main-content {
+  line-height: 1.8;
+  font-size: 1.1rem;
+}
+
+.blog-main-content section {
+  margin-bottom: 4rem;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.blog-main-content h2 {
+  color: var(--imp-text-color);
+  font-size: 2rem;
+  margin: 2.5rem 0 1.5rem;
+  text-align: left;
+}
+
+.blog-main-content h3 {
+  color: #fff;
+  font-size: 1.5rem;
+  margin: 2rem 0 1rem;
+  text-align: left;
+}
+
+.blog-main-content h4 {
+  color: var(--imp-text-color);
+  font-size: 1.2rem;
+  margin: 1.5rem 0 1rem;
+  text-align: left;
+}
+
+.blog-main-content p {
+  margin-bottom: 1.5rem;
+  text-align: justify;
+  line-height: 1.8;
+}
+
+.blog-main-content ul {
+  margin: 1.5rem 0;
+  padding-left: 2rem;
+}
+
+.blog-main-content ul li {
+  margin-bottom: 0.8rem;
+  text-align: left;
+}
+
+.practice-card {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 12px;
+  padding: 2rem;
+  margin: 1.5rem 0;
+  transition: all 0.3s ease;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.practice-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  border-color: var(--imp-text-color);
+}
+
+.practice-card h4 {
+  color: var(--imp-text-color);
+  margin-bottom: 1rem;
+  font-size: 1.3rem;
+}
+
+.practice-card p {
+  margin-bottom: 0;
+}
+
+code {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 0.2em 0.4em;
+  border-radius: 3px;
+  font-family: 'Fira Code', monospace;
+  font-size: 0.9em;
+}
+
+.conclusion {
+  margin-top: 4rem;
+  padding: 2.5rem;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 12px;
+  border: 1px solid var(--imp-text-color);
+}
+
+.conclusion h2 {
+  margin-top: 0;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .blog-content {
+      padding: 0 15px;
+  }
+
+  .blog-header h1 {
+      font-size: 2rem;
+  }
+
+  .blog-subtitle {
+      padding: 1rem;
+  }
+
+  .blog-main-content {
+      font-size: 1rem;
+  }
+
+  .practice-card {
+      padding: 1.5rem;
+  }
+
+  .conclusion {
+      padding: 1.5rem;
+  }
+}
+
+/* Typography improvements */
+.blog-main-content {
+  font-feature-settings: "liga" 1;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Links styling */
+.blog-main-content a {
+  color: var(--imp-text-color);
+  text-decoration: none;
+  border-bottom: 1px solid var(--imp-text-color);
+  transition: all 0.3s ease;
+}
+
+.blog-main-content a:hover {
+  color: #fff;
+  border-bottom-color: #fff;
+}
+.code-header {
+  background: #2d2d2d;
+  padding: 12px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #3d3d3d;
+}
+
+.copy-button {
+  background: transparent;
+  border: none;
+  color: #858585;
+  cursor: pointer;
+  padding: 8px;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.copy-button:hover {
+  color: #fff;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.copy-button:active {
+  transform: scale(0.95);
+}
+
+.code-content {
+  margin: 0;
+  padding: 20px;
+  overflow-x: auto;
+  font-family: 'Fira Code', monospace;
+  font-size: 14px;
+  line-height: 1.6;
+  background: #1e1e1e;
+}
+
+.code-content code {
+  display: block;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  color: #d4d4d4;
+}

@@ -1,5 +1,5 @@
-import React from "react";
-import { Container, Row, Col } from "react-bootstrap";
+import React,{useState} from "react";
+import { Container, Row, Col,Pagination } from "react-bootstrap";
 import ProjectCard from "./ProjectCards";
 import Particle from "../Particle";
 
@@ -212,6 +212,41 @@ const projects = [
 
 
 function Projects() {
+  const [currentPage, setCurrentPage] = useState(1);
+  const projectsPerPage = 9;
+
+  // Calculate the projects to show on current page
+  const indexOfLastProject = currentPage * projectsPerPage;
+  const indexOfFirstProject = indexOfLastProject - projectsPerPage;
+  const currentProjects = projects.slice(indexOfFirstProject, indexOfLastProject);
+
+  // Calculate total pages
+  const totalPages = Math.ceil(projects.length / projectsPerPage);
+
+  // Handle page change
+  const handlePageChange = (pageNumber) => {
+    setCurrentPage(pageNumber);
+    // Scroll to top when page changes
+    window.scrollTo(0, 0);
+  };
+
+  // Generate pagination items
+  const renderPaginationItems = () => {
+    let items = [];
+    for (let number = 1; number <= totalPages; number++) {
+      items.push(
+        <Pagination.Item
+          key={number}
+          active={number === currentPage}
+          onClick={() => handlePageChange(number)}
+        >
+          {number}
+        </Pagination.Item>
+      );
+    }
+    return items;
+  };
+
   return (
     <Container fluid className="project-section">
       <Particle />
@@ -223,7 +258,7 @@ function Projects() {
           Here are a few projects I've worked on recently.
         </p>
         <Row style={{ justifyContent: "center", paddingBottom: "10px" }}>
-          {projects.map((project, index) => (
+          {currentProjects.map((project, index) => (
             <Col md={4} className="project-card" key={index}>
               <ProjectCard
                 imgPath={project.imgPath}
@@ -236,6 +271,29 @@ function Projects() {
             </Col>
           ))}
         </Row>
+        
+        {/* Pagination */}
+        <div className="d-flex justify-content-center mt-4 mb-4">
+          <Pagination>
+            <Pagination.First 
+              onClick={() => handlePageChange(1)}
+              disabled={currentPage === 1}
+            />
+            <Pagination.Prev 
+              onClick={() => handlePageChange(currentPage - 1)}
+              disabled={currentPage === 1}
+            />
+            {renderPaginationItems()}
+            <Pagination.Next 
+              onClick={() => handlePageChange(currentPage + 1)}
+              disabled={currentPage === totalPages}
+            />
+            <Pagination.Last 
+              onClick={() => handlePageChange(totalPages)}
+              disabled={currentPage === totalPages}
+            />
+          </Pagination>
+        </div>
       </Container>
     </Container>
   );

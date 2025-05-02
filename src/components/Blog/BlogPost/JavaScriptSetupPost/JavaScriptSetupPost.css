@@ -1,0 +1,118 @@
+/* JavaScriptSetupPost.css */
+.installation-steps {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin: 1.5rem 0;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+  }
+  
+  .ide-card {
+    background: rgba(0, 122, 204, 0.1);
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin: 1rem 0;
+    border: 1px solid rgba(0, 122, 204, 0.2);
+  }
+  
+  .tool-card {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin: 1rem 0;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+  }
+  
+  .requirement-card {
+    background: rgba(76, 175, 80, 0.1);
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin: 1rem 0;
+    border: 1px solid rgba(76, 175, 80, 0.2);
+  }
+  
+  .important-note {
+    background: rgba(255, 87, 87, 0.1);
+    border-left: 4px solid #ff5757;
+    padding: 1rem;
+    margin: 1rem 0;
+  }
+  
+  .tip-card {
+    background: rgba(76, 175, 80, 0.1);
+    border-left: 4px solid #4CAF50;
+    padding: 1rem;
+    margin: 1rem 0;
+  }
+  
+  .code-editor {
+    background: #1e1e1e;
+    border-radius: 8px;
+    margin: 1rem 0;
+    overflow: hidden;
+  }
+  
+  .code-header {
+    background: #2d2d2d;
+    padding: 0.5rem 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .copy-button {
+    background: transparent;
+    border: none;
+    color: #ffffff;
+    cursor: pointer;
+    padding: 0.25rem 0.5rem;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+  }
+  
+  .copy-button:hover {
+    background: rgba(255, 255, 255, 0.1);
+  }
+  
+  .code-content {
+    padding: 1rem;
+    margin: 0;
+    overflow-x: auto;
+  }
+  
+  .next-steps-content ul {
+    list-style-type: none;
+    padding-left: 0;
+  }
+  
+  .next-steps-content ul li {
+    margin: 0.5rem 0;
+    padding-left: 1.5rem;
+    position: relative;
+  }
+  
+  .next-steps-content ul li:before {
+    content: "→";
+    color: var(--imp-text-color);
+    position: absolute;
+    left: 0;
+  }
+  
+  /* Responsive design */
+  @media (max-width: 768px) {
+    .installation-steps,
+    .ide-card,
+    .tool-card,
+    .requirement-card {
+      padding: 1rem;
+    }
+  
+    .code-editor {
+      margin: 0.5rem 0;
+    }
+  
+    .code-content {
+      font-size: 0.9rem;
+    }
+  }
+  

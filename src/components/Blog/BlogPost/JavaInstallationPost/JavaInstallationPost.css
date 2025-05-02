@@ -1,0 +1,112 @@
+/* JavaInstallationPost.css */
+/* Include all previous CSS styles from MongoPost.css */
+
+/* Additional styles specific to Java installation post */
+.requirement-card {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin: 1rem 0;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+  }
+  
+  .requirement-card ul {
+    list-style-type: none;
+    padding-left: 0;
+  }
+  
+  .requirement-card ul li {
+    margin: 0.5rem 0;
+    padding-left: 1.5rem;
+    position: relative;
+  }
+  
+  .requirement-card ul li:before {
+    content: "✓";
+    color: var(--imp-text-color);
+    position: absolute;
+    left: 0;
+  }
+  
+  .step-card {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 12px;
+    padding: 2rem;
+    margin: 2rem 0;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: all 0.3s ease;
+  }
+  
+  .step-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  }
+  
+  .step-card h3 {
+    color: var(--imp-text-color);
+    margin-bottom: 1rem;
+  }
+  
+  .step-card ol {
+    padding-left: 1.2rem;
+  }
+  
+  .step-card ol li {
+    margin: 0.8rem 0;
+  }
+  
+  .issue-card {
+    background: rgba(255, 0, 0, 0.05);
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin: 1rem 0;
+    border: 1px solid rgba(255, 0, 0, 0.2);
+  }
+  
+  .issue-card h4 {
+    color: #ff6b6b;
+    margin-bottom: 1rem;
+  }
+  
+  .next-steps-content {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 12px;
+    padding: 2rem;
+    margin: 1rem 0;
+  }
+  
+  .next-steps-content ul {
+    list-style-type: none;
+    padding-left: 0;
+  }
+  
+  .next-steps-content ul li {
+    margin: 1rem 0;
+    padding-left: 2rem;
+    position: relative;
+  }
+  
+  .next-steps-content ul li:before {
+    content: "→";
+    color: var(--imp-text-color);
+    position: absolute;
+    left: 0;
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .step-card {
+      padding: 1.5rem;
+    }
+  
+    .step-card ol {
+      padding-left: 1rem;
+    }
+  
+    .requirement-card,
+    .issue-card,
+    .next-steps-content {
+      padding: 1rem;
+    }
+  }
+  

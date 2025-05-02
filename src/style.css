@@ -542,6 +542,27 @@ button:focus {
   font-weight: 500 !important;
   padding-top: 10px !important;
 }
+.pagination {
+  .page-item {
+    .page-link {
+      background-color: #1b1b1b;
+      border-color: #2d2d2d;
+      color: white;
+      
+      &:hover {
+        background-color: #404040;
+        border-color: #404040;
+        color: white;
+      }
+    }
+    
+    &.active .page-link {
+      background-color: #623686;
+      border-color: #623686;
+      color: white;
+    }
+  }
+}
 
 /* --------- */
 /* About */
@@ -777,4 +798,123 @@ button:focus {
 }
 .fork-btn-inner::after {
   display: none !important;
+}
+
+/* --------- */
+/* Blog */
+/* --------- */
+
+.blog-section {
+  position: relative !important;
+  padding-top: 150px !important;
+  padding-bottom: 30px !important;
+  background-image: var(--section-background-color) !important;
+}
+
+/* Add to your existing CSS file or create a new Blog.css */
+
+.blog-card {
+  padding: 15px;
+}
+
+.blog-card-view {
+  background-color: transparent !important;
+  box-shadow: 0 4px 5px 3px rgba(119, 53, 136, 0.459) !important;
+  transition: all 0.3s ease 0s !important;
+  height: 100% !important;
+  max-width: 100% !important;
+}
+
+.blog-card-img {
+  height: 200px;
+  object-fit: cover;
+}
+
+.blog-card-title {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 0.75rem;
+}
+
+.blog-card-text {
+  font-size: 0.9rem;
+  color: #8a8a8a;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.blog-card-meta {
+  display: flex;
+  gap: 10px;
+  margin: 10px 0;
+  font-size: 0.8rem;
+}
+
+.blog-card-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+  margin: 10px 0;
+}
+
+.blog-tag {
+  background: rgba(119, 53, 136, 0.2);
+  color: var(--imp-text-color);
+  padding: 2px 8px;
+  border-radius: 12px;
+  font-size: 0.7rem;
+}
+
+.blog-card-view:hover {
+  transform: scale(1.02) !important;
+  overflow: hidden !important;
+  box-shadow: 0 4px 4px 5px rgba(129, 72, 144, 0.561) !important;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .blog-card {
+    padding: 10px;
+  }
+  
+  .blog-card-img {
+    height: 180px;
+  }
+}
+
+@media (max-width: 576px) {
+  .blog-card-img {
+    height: 160px;
+  }
+  
+  .blog-card-title {
+    font-size: 1.1rem;
+  }
+  
+  .blog-card-text {
+    font-size: 0.85rem;
+  }
+}
+.pagination {
+  .page-item {
+    .page-link {
+      background-color: #1b1b1b;
+      border-color: #2d2d2d;
+      color: white;
+      
+      &:hover {
+        background-color: #404040;
+        border-color: #404040;
+        color: white;
+      }
+    }
+    
+    &.active .page-link {
+      background-color: #623686;
+      border-color: #623686;
+      color: white;
+    }
+  }
 }

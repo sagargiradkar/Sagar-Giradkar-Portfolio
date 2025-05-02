@@ -9,6 +9,7 @@ import pythonSetupImg from "../../Assets/Blogs/pythonSetupImg.jpg"
 import jsSetupImg from "../../Assets/Blogs/jsSetupImg.jpg"
 import cSetupImg from "../../Assets/Blogs/cSetupImg.jpg"
 import cppSetupImg from "../../Assets/Blogs/cpp-setup.jpg"
+
 const blogPosts = [
   {
     id: "mongodb-nextjs",

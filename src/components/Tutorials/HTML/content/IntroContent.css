@@ -1,0 +1,132 @@
+/* src/components/Tutorials/HTML/content/Content.css */
+.content-wrapper {
+    max-width: 100%;  /* Changed from 900px to 100% */
+    padding: 20px 40px;  /* Adjusted padding */
+    color: var(--text-primary);
+    text-align: left;  /* Ensure left alignment */
+  }
+  
+  .content-breadcrumb {
+    margin-bottom: 20px;
+    color: var(--text-secondary);
+    padding-left: 0;  /* Remove any left padding */
+  }
+  
+  .content-title {
+    font-size: 2.5rem;
+    margin: 0 0 30px 0;  /* Adjust margin */
+    color: var(--text-primary);
+    text-align: left;
+  }
+  
+  .content-section {
+    margin: 30px 0;
+    max-width: 100%;  /* Ensure full width */
+  }
+  
+  .content-section p {
+    color: var(--text-secondary);
+    line-height: 1.7;
+    margin-bottom: 15px;
+    text-align: justify;  /* Justify the paragraph text */
+  }
+  
+  .learning-timeline {
+    background: var(--sidebar-bg);
+    padding: 20px;
+    border-radius: 8px;
+    margin: 20px 0;
+    width: 100%;  /* Ensure full width */
+  }
+  
+  .learning-timeline ul {
+    list-style: none;
+    padding: 0;  /* Remove default padding */
+    margin: 0;
+  }
+  
+  .learning-timeline li {
+    margin: 10px 0;
+    padding-left: 20px;
+    position: relative;
+    text-align: left;
+  }
+  
+  .key-points {
+    background: var(--sidebar-bg);
+    padding: 20px;
+    border-radius: 8px;
+    margin: 20px 0;
+    width: 100%;
+  }
+  
+  .key-points ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .key-points li {
+    margin: 10px 0;
+    padding-left: 25px;
+    position: relative;
+    text-align: left;
+  }
+  
+  .note-box {
+    background: rgba(59, 130, 246, 0.1);
+    border-left: 4px solid var(--active-color);
+    padding: 15px;
+    margin: 20px 0;
+    border-radius: 0 8px 8px 0;
+    width: 100%;
+  }
+  
+  /* Main content area adjustments */
+  .main-content {
+    padding: 0 30px 30px 30px;  /* Adjusted padding */
+    margin-left: 280px;  /* Keep this for sidebar space */
+    width: calc(100% - 280px);  /* Ensure proper width accounting for sidebar */
+  }
+  
+  @media (max-width: 768px) {
+    .content-wrapper {
+      padding: 15px;  /* Smaller padding on mobile */
+    }
+  
+    .main-content {
+      margin-left: 0;
+      width: 100%;
+      padding: 15px;
+    }
+  }
+  
+  /* Additional styles for better text alignment */
+  h1, h2, h3, h4, h5, h6 {
+    text-align: left;
+    margin-bottom: 20px;
+  }
+  
+  ul, ol {
+    padding-left: 20px;
+    text-align: left;
+  }
+  
+  /* Breadcrumb styling */
+  .breadcrumb-container {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 20px;
+    padding-left: 0;
+  }
+  
+  .breadcrumb-container a {
+    color: var(--text-secondary);
+    text-decoration: none;
+  }
+  
+  .breadcrumb-container a:hover {
+    color: var(--active-color);
+  }
+  

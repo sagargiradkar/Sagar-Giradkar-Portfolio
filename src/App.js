@@ -27,7 +27,7 @@ import CppSetupPost from "./components/Blog/BlogPost/CppSetupPost/CppSetupPost";
 import ReactCPanelPost from "./components/Blog/BlogPost/ReactCPanelPost/ReactCPanelPost";
 import ReactNativeCLIPost from "./components/Blog/BlogPost/ReactNativeCLIPost/ReactNativeCLIPost";
 import Tutorials from "./components/Tutorials/Tutorials";
-import TutorialPage from "./components/Tutorials/TutorialPage/TutorialPage";
+import HTMLDashboard from "./components/Tutorials/HTML/HTMLDashboard";
 
 function App() {
   const [load, upadateLoad] = useState(true);
@@ -58,7 +58,15 @@ function App() {
           <Route path="/blog/react-native-cli-setup" element={<ReactNativeCLIPost />} />
 
           <Route path="/tutorials" element={<Tutorials />} />
-          <Route path="/tutorial/:slug" element={<TutorialPage />} />
+
+          <Route path="/tutorial/htmltutorial" element={<HTMLDashboard />} />
+          {/* <Route path="/tutorial/csstutorial" element={<CSSTutorial />} />
+        <Route path="/tutorial/javascripttutorial" element={<JavaScriptTutorial />} />
+        <Route path="/tutorial/pythontutorial" element={<PythonTutorial />} />
+        <Route path="/tutorial/ctutorial" element={<CTutorial />} />
+        <Route path="/tutorial/reactjstutorial" element={<ReactJSTutorial />} />
+        <Route path="/tutorial/javatutorial" element={<JavaTutorial />} />
+        <Route path="/tutorial/cpptutorial" element={<CppTutorial />} /> */}
 
 
           <Route path="/blog/mongodb-nextjs" element={<MongoPost />} />

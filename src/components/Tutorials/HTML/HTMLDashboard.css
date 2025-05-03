@@ -1,0 +1,179 @@
+:root {
+  --primary-bg: #0f172a;        /* Dark blue background */
+  --sidebar-bg: #1e293b;        /* Slightly lighter blue for sidebar */
+  --hover-bg: #334155;          /* Hover state background */
+  --active-color: #3b82f6;      /* Active/Selected state color (blue) */
+  --text-primary: #f8fafc;      /* Primary text color (almost white) */
+  --text-secondary: #94a3b8;    /* Secondary text color (grayish) */
+  --border-color: #334155;      /* Border color */
+}
+
+.dashboard-container {
+  display: flex;
+  min-height: 100vh;
+  background-color: var(--primary-bg);
+  color: var(--text-primary);
+  position: relative;
+  margin-top: 80px;
+}
+
+.sidebar-toggle {
+  position: fixed;
+  top: 90px;
+  left: 10px;
+  z-index: 1000;
+  background: transparent;
+  border: none;
+  color: var(--text-primary);
+  cursor: pointer;
+  font-size: 24px;
+  padding: 10px;
+  display: none;
+}
+
+.sidebar {
+  width: 280px;
+  background-color: var(--sidebar-bg);
+  height: calc(100vh - 80px);
+  position: fixed;
+  overflow-y: auto;
+  transition: all 0.3s ease;
+  border-right: 1px solid var(--border-color);
+  color: var(--text-primary);
+}
+
+.tutorial-title {
+  padding: 20px;
+  margin: 0;
+  font-size: 1.5rem;
+  font-weight: 600;
+  border-bottom: 1px solid var(--border-color);
+  color: var(--text-primary);
+  background-color: var(--sidebar-bg);
+}
+
+.sidebar-menu {
+  padding: 10px 0;
+}
+
+.menu-section {
+  margin-bottom: 5px;
+}
+
+.menu-section-header {
+  padding: 12px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-weight: 500;
+  color: var(--text-primary);
+  background-color: var(--sidebar-bg);
+}
+
+.menu-section-header:hover {
+  background-color: var(--hover-bg);
+  color: var(--active-color);
+}
+
+.menu-section-header.expanded {
+  background-color: var(--hover-bg);
+  color: var(--active-color);
+}
+
+.menu-section-header svg {
+  font-size: 20px;
+  opacity: 0.7;
+}
+
+.menu-section-content {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.menu-item {
+  padding: 10px 20px 10px 35px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  color: var(--text-secondary);
+  font-size: 0.95em;
+}
+
+.menu-item:hover {
+  background-color: var(--hover-bg);
+  color: var(--active-color);
+}
+
+.menu-item.active {
+  background-color: var(--hover-bg);
+  color: var(--active-color);
+  border-left: 3px solid var(--active-color);
+}
+
+.menu-item svg {
+  font-size: 16px;
+  opacity: 0.7;
+  transition: transform 0.2s ease;
+}
+
+.menu-item:hover svg {
+  transform: translateX(3px);
+  opacity: 1;
+  color: var(--active-color);
+}
+
+.main-content {
+  flex: 1;
+  padding: 30px;
+  margin-left: 280px;
+  transition: all 0.3s ease;
+  background-color: var(--primary-bg);
+  color: var(--text-primary);
+}
+
+/* Scrollbar styling */
+.sidebar::-webkit-scrollbar {
+  width: 6px;
+}
+
+.sidebar::-webkit-scrollbar-track {
+  background: var(--sidebar-bg);
+}
+
+.sidebar::-webkit-scrollbar-thumb {
+  background: var(--hover-bg);
+  border-radius: 3px;
+}
+
+.sidebar::-webkit-scrollbar-thumb:hover {
+  background: var(--border-color);
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .sidebar-toggle {
+    display: block;
+  }
+
+  .sidebar {
+    transform: translateX(-100%);
+    z-index: 1000;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+  }
+
+  .sidebar.open {
+    transform: translateX(0);
+  }
+
+  .main-content {
+    margin-left: 0;
+    padding: 20px;
+  }
+
+  .main-content.expanded {
+    margin-left: 0;
+  }
+}

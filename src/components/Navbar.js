@@ -57,7 +57,8 @@ function NavBar() {
           <Nav className="ms-auto" defaultActiveKey="#home">
             <Nav.Item>
               <Nav.Link as={Link} to="/" onClick={() => updateExpanded(false)}>
-                <AiOutlineHome style={{ marginBottom: "2px" }} /> Home
+                {/* <AiOutlineHome style={{ marginBottom: "2px" }} />  */}
+                Home
               </Nav.Link>
             </Nav.Item>
 
@@ -67,7 +68,8 @@ function NavBar() {
                 to="/about"
                 onClick={() => updateExpanded(false)}
               >
-                <AiOutlineUser style={{ marginBottom: "2px" }} /> About
+                {/* <AiOutlineUser style={{ marginBottom: "2px" }} /> */}
+                 About
               </Nav.Link>
             </Nav.Item>
 
@@ -78,7 +80,8 @@ function NavBar() {
                 to="/experience"
                 onClick={() => updateExpanded(false)}
               >
-                <AiOutlineDesktop style={{ marginBottom: "2px" }} /> Experience
+                {/* <AiOutlineDesktop style={{ marginBottom: "2px" }} /> */}
+                 Experience
               </Nav.Link>
             </Nav.Item>
 
@@ -100,7 +103,8 @@ function NavBar() {
                 to="/tutorials"
                 onClick={() => updateExpanded(false)}
               >
-                <ImBlog style={{ marginBottom: "2px" }} /> Tutorials
+                {/* <ImBlog style={{ marginBottom: "2px" }} /> */}
+                 Tutorials
               </Nav.Link>
             </Nav.Item>
             <Nav.Item>
@@ -109,7 +113,8 @@ function NavBar() {
                 to="/blog"
                 onClick={() => updateExpanded(false)}
               >
-                <ImBlog style={{ marginBottom: "2px" }} /> Blogs
+                {/* <ImBlog style={{ marginBottom: "2px" }} />  */}
+                Blogs
               </Nav.Link>
             </Nav.Item>
             <Nav.Item>
@@ -118,7 +123,8 @@ function NavBar() {
                 to="/resume"
                 onClick={() => updateExpanded(false)}
               >
-                <CgFileDocument style={{ marginBottom: "2px" }} /> Resume
+                {/* <CgFileDocument style={{ marginBottom: "2px" }} />  */}
+                Resume
               </Nav.Link>
             </Nav.Item>
 

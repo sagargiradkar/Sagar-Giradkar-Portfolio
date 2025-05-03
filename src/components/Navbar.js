@@ -100,7 +100,7 @@ function NavBar() {
                 to="/blog"
                 onClick={() => updateExpanded(false)}
               >
-                <ImBlog style={{ marginBottom: "2px" }} /> Blog
+                <ImBlog style={{ marginBottom: "2px" }} /> Blogs
               </Nav.Link>
             </Nav.Item>
             <Nav.Item>

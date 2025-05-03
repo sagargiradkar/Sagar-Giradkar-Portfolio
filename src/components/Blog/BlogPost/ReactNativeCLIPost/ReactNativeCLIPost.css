@@ -1,0 +1,172 @@
+/* ReactNativeCLIPost.css */
+
+.installation-steps {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 8px;
+  padding: 1.5rem;
+  margin: 1.5rem 0;
+}
+
+.important-note {
+  background: rgba(255, 87, 87, 0.1);
+  border-left: 4px solid #ff5757;
+  padding: 1rem;
+  margin: 1rem 0;
+}
+
+.tip-card {
+  background: rgba(76, 175, 80, 0.1);
+  border-left: 4px solid #4caf50;
+  padding: 1rem;
+  margin: 1rem 0;
+}
+
+.issue-card {
+  background: rgba(255, 193, 7, 0.1);
+  border-left: 4px solid #ffc107;
+  padding: 1rem;
+  margin: 1rem 0;
+}
+
+.practice-card {
+  background: rgba(33, 150, 243, 0.1);
+  border-left: 4px solid #2196f3;
+  padding: 1rem;
+  margin: 1rem 0;
+}
+
+.blog-main-content ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.blog-main-content ul li {
+  margin: 0.5rem 0;
+  padding-left: 1.5rem;
+  position: relative;
+}
+
+.blog-main-content ul li:before {
+  content: "→";
+  color: var(--imp-text-color);
+  position: absolute;
+  left: 0;
+}
+
+.blog-main-content ol {
+  padding-left: 1.2rem;
+}
+
+.blog-main-content ol li {
+  margin: 0.5rem 0;
+}
+
+.code-editor {
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 6px;
+  margin: 1.5rem 0;
+  overflow: hidden;
+}
+
+.code-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.3);
+  padding: 0.5rem 1rem;
+  font-family: monospace;
+  font-size: 0.9rem;
+}
+
+.copy-button {
+  background: transparent;
+  border: none;
+  color: #ccc;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.copy-button:hover {
+  color: #fff;
+}
+
+.code-content {
+  padding: 1rem;
+  margin: 0;
+  overflow-x: auto;
+  font-family: "Consolas", "Monaco", monospace;
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+a {
+  color: var(--imp-text-color);
+  text-decoration: none;
+  border-bottom: 1px dashed var(--imp-text-color);
+  transition: all 0.3s ease;
+}
+
+a:hover {
+  color: #fff;
+  border-bottom-style: solid;
+}
+
+code {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 0.2rem 0.4rem;
+  border-radius: 4px;
+  font-family: monospace;
+  font-size: 0.9em;
+}
+
+.blog-featured-image {
+  border-radius: 8px;
+  overflow: hidden;
+  margin-bottom: 2rem;
+}
+
+.blog-featured-image img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.blog-header h1 {
+  margin-bottom: 1rem;
+}
+
+.blog-subtitle {
+  font-size: 1.1rem;
+  color: #ccc;
+  margin-bottom: 1.5rem;
+}
+
+.blog-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  color: #aaa;
+  margin-bottom: 2rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.italics {
+  font-style: italic;
+}
+
+@media (max-width: 768px) {
+  .installation-steps,
+  .important-note,
+  .tip-card,
+  .issue-card,
+  .practice-card {
+    padding: 1rem;
+    margin: 1rem 0;
+  }
+
+  .blog-meta {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+}

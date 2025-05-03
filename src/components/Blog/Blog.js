@@ -10,6 +10,7 @@ import jsSetupImg from "../../Assets/Blogs/jsSetupImg.jpg"
 import cSetupImg from "../../Assets/Blogs/cSetupImg.jpg"
 import cppSetupImg from "../../Assets/Blogs/cpp-setup.jpg"
 import reactCPanelImg from "../../Assets/Blogs/deploy-react-js-app-on-cpanel.png"
+import reactNativeImg from "../../Assets/Blogs/react-native.webp"
 const blogPosts = [
   {
     id: "react-cpanel-hosting",
@@ -21,6 +22,17 @@ const blogPosts = [
     author: "Sagar Giradkar",
     category: "Deployment",
     tags: ["React", "cPanel", "Hosting", "Frontend", "Deployment"],
+  },
+  {
+    id: "react-native-cli-setup",
+    title: "Setting Up React Native CLI and Building Your First App",
+    description: 
+      "Learn how to set up React Native CLI development environment and build your first cross-platform mobile application with step-by-step instructions for both iOS and Android...",
+    image: reactNativeImg,
+    date: "May 3, 2025",
+    author: "Sagar Giradkar",
+    category: "Mobile Development",
+    tags: ["React Native", "Mobile", "iOS", "Android", "JavaScript"],
   },
   {
     id: "mongodb-nextjs",

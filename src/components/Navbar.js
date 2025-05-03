@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import Navbar from "react-bootstrap/Navbar";
 import Nav from "react-bootstrap/Nav";
 import Container from "react-bootstrap/Container";
-import logo from "../Assets/logo.png";
 import Button from "react-bootstrap/Button";
 import { Link } from "react-router-dom";
 import { CgGitFork } from "react-icons/cg";
@@ -28,6 +27,19 @@ function NavBar() {
       updateNavbar(false);
     }
   }
+  
+  // Toggle body class for preventing scrolling when menu is open
+  React.useEffect(() => {
+    if (expand) {
+      document.body.classList.add('menu-open');
+    } else {
+      document.body.classList.remove('menu-open');
+    }
+    
+    return () => {
+      document.body.classList.remove('menu-open');
+    };
+  }, [expand]);
 
   window.addEventListener("scroll", scrollHandler);
 
@@ -48,16 +60,26 @@ function NavBar() {
           onClick={() => {
             updateExpanded(expand ? false : "expanded");
           }}
+          className="navbar-toggler"
         >
           <span></span>
           <span></span>
           <span></span>
         </Navbar.Toggle>
-        <Navbar.Collapse id="responsive-navbar-nav">
+        
+        <Navbar.Collapse 
+          id="responsive-navbar-nav" 
+          className="drawer-menu"
+          onClick={(e) => {
+            // Close menu when clicking on the backdrop (outside the menu)
+            if (e.target === e.currentTarget) {
+              updateExpanded(false);
+            }
+          }}
+        >
           <Nav className="ms-auto" defaultActiveKey="#home">
             <Nav.Item>
               <Nav.Link as={Link} to="/" onClick={() => updateExpanded(false)}>
-                {/* <AiOutlineHome style={{ marginBottom: "2px" }} />  */}
                 Home
               </Nav.Link>
             </Nav.Item>
@@ -68,20 +90,17 @@ function NavBar() {
                 to="/about"
                 onClick={() => updateExpanded(false)}
               >
-                {/* <AiOutlineUser style={{ marginBottom: "2px" }} /> */}
-                 About
+                About
               </Nav.Link>
             </Nav.Item>
 
-            {/* Experience Section Added Here */}
             <Nav.Item>
               <Nav.Link
                 as={Link}
                 to="/experience"
                 onClick={() => updateExpanded(false)}
               >
-                {/* <AiOutlineDesktop style={{ marginBottom: "2px" }} /> */}
-                 Experience
+                Experience
               </Nav.Link>
             </Nav.Item>
 
@@ -91,45 +110,39 @@ function NavBar() {
                 to="/project"
                 onClick={() => updateExpanded(false)}
               >
-                <AiOutlineFundProjectionScreen
-                  style={{ marginBottom: "2px" }}
-                />{" "}
                 Projects
               </Nav.Link>
             </Nav.Item>
+            
             <Nav.Item>
               <Nav.Link
                 as={Link}
                 to="/tutorials"
                 onClick={() => updateExpanded(false)}
               >
-                {/* <ImBlog style={{ marginBottom: "2px" }} /> */}
-                 Tutorials
+                Tutorials
               </Nav.Link>
             </Nav.Item>
+            
             <Nav.Item>
               <Nav.Link
                 as={Link}
                 to="/blog"
                 onClick={() => updateExpanded(false)}
               >
-                {/* <ImBlog style={{ marginBottom: "2px" }} />  */}
                 Blogs
               </Nav.Link>
             </Nav.Item>
+            
             <Nav.Item>
               <Nav.Link
                 as={Link}
                 to="/resume"
                 onClick={() => updateExpanded(false)}
               >
-                {/* <CgFileDocument style={{ marginBottom: "2px" }} />  */}
                 Resume
               </Nav.Link>
             </Nav.Item>
-
-
-
           </Nav>
         </Navbar.Collapse>
       </Container>

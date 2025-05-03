@@ -75,6 +75,9 @@ button:focus {
 /* --------- */
 /* Navbar Section  */
 /* --------- */
+/* --------- */
+/* Navbar Section  */
+/* --------- */
 .sticky {
   background-color: #1b1a2ea9 !important;
   transition: all 0.3s ease-out 0s !important;
@@ -93,6 +96,7 @@ button:focus {
   position: relative !important;
   background-color: transparent !important;
   border-color: transparent !important;
+  z-index: 1000 !important; /* Make sure hamburger stays above the drawer */
 }
 
 .navbar-toggler span {
@@ -105,6 +109,7 @@ button:focus {
   transform: rotate(0deg) !important;
   left: 0 !important;
   opacity: 1 !important;
+  transition: all 0.3s ease-in-out !important;
 }
 
 .navbar-toggler:focus,
@@ -114,7 +119,6 @@ button:focus {
 
 .navbar-toggler span:nth-child(1),
 .navbar-toggler span:nth-child(3) {
-  transition: transform 0.35s ease-in-out !important;
   transition: transform 0.35s ease-in-out !important;
 }
 
@@ -140,16 +144,6 @@ button:focus {
   opacity: 0.9 !important;
 }
 
-@media (max-width: 767px) {
-  .navbar {
-    padding: 1rem 2rem !important;
-    font-size: 1.4rem !important;
-    background-color: #181a27 !important;
-  }
-  .navbar-nav .nav-item a::after {
-    display: none !important;
-  }
-}
 .navbar-brand {
   color: rgb(250, 250, 250) !important;
 }
@@ -167,12 +161,6 @@ button:focus {
 
 .nav-link {
   padding: 0.8rem 1rem !important;
-}
-
-@media (max-width: 767px) {
-  .nav-link {
-    padding: 0.7rem 1rem !important;
-  }
 }
 
 .navbar-nav .nav-item {
@@ -205,6 +193,76 @@ button:focus {
   width: 100%;
 }
 
+/* Mobile responsive drawer menu */
+@media (max-width: 767px) {
+  .navbar {
+    padding: 1rem 2rem !important;
+    font-size: 1.4rem !important;
+    background-color: #181a27 !important;
+  }
+  
+  /* Drawer menu styling */
+  .drawer-menu {
+    position: fixed !important;
+    top: 0 !important;
+    right: -280px !important; /* Initially off-screen */
+    width: 280px !important;
+    height: 100vh !important;
+    background-color: #181a27 !important;
+    transition: right 0.3s ease-in-out !important;
+    overflow-y: auto !important;
+    z-index: 999 !important;
+    padding-top: 60px !important;
+    box-shadow: -5px 0px 15px rgba(0, 0, 0, 0.3) !important;
+  }
+  
+  /* When expanded, move drawer into view */
+  .navbar-collapse.show.drawer-menu,
+  .navbar-collapse.collapsing.drawer-menu {
+    right: 0 !important;
+  }
+  
+  /* Create an overlay effect when drawer is open */
+  .navbar-collapse.show.drawer-menu::before {
+    content: "" !important;
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
+    background-color: rgba(0, 0, 0, 0.5) !important;
+    z-index: -1 !important;
+  }
+  
+  /* Menu items in mobile view */
+  .navbar-nav {
+    padding: 0 15px !important;
+    width: 100% !important;
+  }
+  
+  .navbar-nav .nav-item {
+    margin-left: 0 !important;
+    border-bottom: 1px solid rgba(250, 250, 250, 0.1) !important;
+  }
+  
+  .navbar-nav .nav-item:last-child {
+    border-bottom: none !important;
+  }
+  
+  .navbar-nav .nav-item a {
+    padding: 1rem 0 !important;
+    display: block !important;
+  }
+  
+  .navbar-nav .nav-item a::after {
+    display: none !important;
+  }
+}
+
+/* Add backdrop to the entire page when menu is open */
+body.menu-open {
+  overflow: hidden !important;
+}
 /* --------- */
 /* Home section */
 /* --------- */

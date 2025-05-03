@@ -1,224 +1,417 @@
-// components/Blog/Blog.js
-import React, { useState } from "react";
-import { Container, Row, Col, Card, Button, Pagination } from "react-bootstrap";
-import { Link } from "react-router-dom";
-import Particle from "../Particle";
-import mongoDbImg from "../../Assets/Blogs/1744093144351-1.webp";
-import javaInstallImg from "../../Assets/Blogs/javaBlogs.png";
-import pythonSetupImg from "../../Assets/Blogs/pythonSetupImg.jpg"
-import jsSetupImg from "../../Assets/Blogs/jsSetupImg.jpg"
-import cSetupImg from "../../Assets/Blogs/cSetupImg.jpg"
-import cppSetupImg from "../../Assets/Blogs/cpp-setup.jpg"
-import reactCPanelImg from "../../Assets/Blogs/deploy-react-js-app-on-cpanel.png"
-import reactNativeImg from "../../Assets/Blogs/react-native.webp"
-const blogPosts = [
-  {
-    id: "react-cpanel-hosting",
-    title: "How to Build and Host a React Website on cPanel: A Complete Guide",
-    description: 
-      "Learn how to deploy your React applications on traditional cPanel hosting with this step-by-step guide covering build process, routing configuration...",
-    image: reactCPanelImg,
-    date: "May 3, 2025",
-    author: "Sagar Giradkar",
-    category: "Deployment",
-    tags: ["React", "cPanel", "Hosting", "Frontend", "Deployment"],
-  },
-  {
-    id: "react-native-cli-setup",
-    title: "Setting Up React Native CLI and Building Your First App",
-    description: 
-      "Learn how to set up React Native CLI development environment and build your first cross-platform mobile application with step-by-step instructions for both iOS and Android...",
-    image: reactNativeImg,
-    date: "May 3, 2025",
-    author: "Sagar Giradkar",
-    category: "Mobile Development",
-    tags: ["React Native", "Mobile", "iOS", "Android", "JavaScript"],
-  },
-  {
-    id: "mongodb-nextjs",
-    title: "How to integrate MongoDB into your Next.js apps",
-    description:
-      "Learn how to seamlessly integrate MongoDB into your Next.js applications with best practices for efficient connection handling, resource...",
-    image: mongoDbImg,
-    date: "May 1, 2025",
-    author: "Sagar Giradkar",
-    category: "Database",
-    tags: ["MongoDB", "Next.js", "Database", "Backend"],
-  },
-  {
-    id: "java-windows-installation",
-    title: "How to Install Java on Windows: A Complete Guide",
-    description:
-      "A comprehensive step-by-step guide to installing Java Development Kit (JDK) on Windows and setting up your development environment properly...",
-    image: javaInstallImg,
-    date: "May 3, 2025",
-    author: "Sagar Giradkar",
-    category: "Development Setup",
-    tags: ["Java", "Windows", "Installation", "JDK"],
-  },
-  {
-    id: "python-setup-virtual-env",
-    title: "How to Download Python and Set Up a Virtual Environment",
-    description:
-      "Learn how to properly install Python and create isolated development environments using virtual environments for better project management...",
-    image: pythonSetupImg,
-    date: "May 3, 2025",
-    author: "Sagar Giradkar",
-    category: "Development Setup",
-    tags: ["Python", "Virtual Environment", "Development", "Setup"],
-  },
-  {
-    id: "javascript-setup",
-    title: "How to Set Up JavaScript Development Environment",
-    description:
-      "Learn how to install Node.js, npm, and set up a professional JavaScript development environment with best practices and essential tools...",
-    image: jsSetupImg,
-    date: "May 3, 2025",
-    author: "Sagar Giradkar",
-    category: "Development Setup",
-    tags: ["JavaScript", "Node.js", "npm", "Development"],
-  },
-  {
-    id: "c-windows-setup",
-    title: "How to Install C Programming Environment on Windows",
-    description:
-      "Learn how to set up a complete C programming environment on Windows with MinGW-w64 compiler and Visual Studio Code...",
-    image: cSetupImg,
-    date: "May 3, 2025",
-    author: "Sagar Giradkar",
-    category: "Development Setup",
-    tags: ["C Programming", "Windows", "MinGW", "VS Code"],
-  },
-  {
-    id: "cpp-windows-setup",
-    title: "Complete Guide to Installing C++ Development Environment on Windows",
-    description:
-      "Learn how to set up a professional C++ development environment on Windows with MinGW-w64, Visual Studio Code, and essential development tools...",
-    image: cppSetupImg,
-    date: "May 3, 2025",
-    author: "Sagar Giradkar",
-    category: "Development Setup",
-    tags: ["C++", "Windows", "MinGW", "VS Code", "Programming"],
-  },
-  
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" href="%PUBLIC_URL%/favicon.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
 
+    <!-- Primary Meta Tags - Portfolio -->
+    <title>Sagar Giradkar | Full Stack Developer & AI Enthusiast</title>
+    <meta name="title" content="Sagar Giradkar | Full Stack Developer & AI Enthusiast" />
+    <meta name="description" content="Explore the portfolio of Sagar Giradkar—software engineer specializing in React, Java, and robotics-driven AI projects." />
+    <meta name="keywords" content="Sagar Giradkar, Full Stack Developer, React Developer, Java Developer, AI Projects, Robotics, Software Engineer, Web Development, Programming" />
+    <meta name="author" content="Sagar Giradkar" />
+    <meta name="robots" content="index, follow, max-image-preview:large" />
+    <link rel="canonical" href="https://sagargiradkar.vercel.app/" />
 
+    <!-- Google / Search Engine Tags - Portfolio -->
+    <meta itemprop="name" content="Sagar Giradkar | Full Stack Developer & AI Enthusiast" />
+    <meta itemprop="description" content="Explore the portfolio of Sagar Giradkar—software engineer specializing in React, Java, and robotics-driven AI projects." />
+    <meta itemprop="image" content="https://sagargiradkar.vercel.app/portfolio-preview.jpg" />
 
+    <!-- Open Graph / Facebook - Portfolio -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://sagargiradkar.vercel.app/" />
+    <meta property="og:title" content="Sagar Giradkar | Full Stack Developer & AI Enthusiast" />
+    <meta property="og:description" content="Explore the portfolio of Sagar Giradkar—software engineer specializing in React, Java, and robotics-driven AI projects." />
+    <meta property="og:image" content="https://sagargiradkar.vercel.app/portfolio-preview.jpg" />
+    <meta property="og:site_name" content="Sagar Giradkar Portfolio" />
+    <meta property="og:locale" content="en_US" />
 
-];
-function Blog() {
-  const [currentPage, setCurrentPage] = useState(1);
-  const postsPerPage = 9;
+    <!-- Twitter - Portfolio -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://sagargiradkar.vercel.app/" />
+    <meta property="twitter:title" content="Sagar Giradkar | Full Stack Developer & AI Enthusiast" />
+    <meta property="twitter:description" content="Explore the portfolio of Sagar Giradkar—software engineer specializing in React, Java, and robotics-driven AI projects." />
+    <meta property="twitter:image" content="https://sagargiradkar.vercel.app/portfolio-preview.jpg" />
+    <meta property="twitter:creator" content="@SagarGiradkar" />
 
-  // Calculate the posts to show on current page
-  const indexOfLastPost = currentPage * postsPerPage;
-  const indexOfFirstPost = indexOfLastPost - postsPerPage;
-  const currentPosts = blogPosts.slice(indexOfFirstPost, indexOfLastPost);
+    <!-- Person Schema.org Markup -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "@id": "https://sagargiradkar.vercel.app/#person",
+        "name": "Sagar Giradkar",
+        "givenName": "Sagar",
+        "familyName": "Giradkar",
+        "url": "https://sagargiradkar.vercel.app/",
+        "image": "https://sagargiradkar.vercel.app/profile.jpg",
+        "sameAs": [
+          "https://github.com/sagargiradkar",
+          "https://linkedin.com/in/sagargiradkar",
+          "https://twitter.com/SagarGiradkar"
+        ],
+        "jobTitle": "Full Stack Developer",
+        "worksFor": {
+          "@type": "Organization",
+          "name": "Freelance Developer"
+        },
+        "alumniOf": {
+          "@type": "EducationalOrganization",
+          "name": "Your University"
+        },
+        "knowsAbout": [
+          "React",
+          "Java",
+          "JavaScript",
+          "Artificial Intelligence",
+          "Robotics",
+          "Web Development",
+          "Full Stack Development"
+        ]
+      }
+    </script>
 
-  // Calculate total pages
-  const totalPages = Math.ceil(blogPosts.length / postsPerPage);
+    <!-- WebSite Schema.org Markup -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "@id": "https://sagargiradkar.vercel.app/#website",
+        "url": "https://sagargiradkar.vercel.app/",
+        "name": "Sagar Giradkar | Full Stack Developer & AI Enthusiast",
+        "description": "Explore the portfolio of Sagar Giradkar—software engineer specializing in React, Java, and robotics-driven AI projects.",
+        "publisher": {
+          "@id": "https://sagargiradkar.vercel.app/#person"
+        },
+        "inLanguage": "en-US"
+      }
+    </script>
 
-  // Handle page change
-  const handlePageChange = (pageNumber) => {
-    setCurrentPage(pageNumber);
-    // Scroll to top when page changes
-    window.scrollTo(0, 0);
-  };
+    <!-- Professional Service Schema.org Markup -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "ProfessionalService",
+        "@id": "https://sagargiradkar.vercel.app/#professionalservice",
+        "name": "Sagar Giradkar - Development Services",
+        "description": "Full stack development and AI integration services for web applications and software projects.",
+        "url": "https://sagargiradkar.vercel.app/",
+        "logo": "https://sagargiradkar.vercel.app/logo.png",
+        "image": "https://sagargiradkar.vercel.app/portfolio-preview.jpg",
+        "priceRange": "$$",
+        "telephone": "+91XXXXXXXXXX",
+        "email": "contact@sagargiradkar.com",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Your City",
+          "addressRegion": "Your State",
+          "addressCountry": "India"
+        },
+        "founder": {
+          "@id": "https://sagargiradkar.vercel.app/#person"
+        },
+        "hasOfferCatalog": {
+          "@type": "OfferCatalog",
+          "name": "Development Services",
+          "itemListElement": [
+            {
+              "@type": "Offer",
+              "name": "Full Stack Development",
+              "description": "End-to-end web application development using React, Node.js, and Java"
+            },
+            {
+              "@type": "Offer",
+              "name": "AI Integration",
+              "description": "Implementation of AI and machine learning solutions for software projects"
+            },
+            {
+              "@type": "Offer",
+              "name": "Robotics Software Development",
+              "description": "Custom software solutions for robotics applications"
+            }
+          ]
+        }
+      }
+    </script>
 
-  // Generate pagination items
-  const renderPaginationItems = () => {
-    let items = [];
-    for (let number = 1; number <= totalPages; number++) {
-      items.push(
-        <Pagination.Item
-          key={number}
-          active={number === currentPage}
-          onClick={() => handlePageChange(number)}
-        >
-          {number}
-        </Pagination.Item>
-      );
-    }
-    return items;
-  };
+    <!-- Blog Schema.org Markup -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Blog",
+        "@id": "https://sagargiradkar.vercel.app/blog#blog",
+        "headline": "Tech Blog | Programming Tutorials & Development Guides",
+        "description": "Comprehensive programming tutorials and development setup guides for various programming languages and technologies.",
+        "url": "https://sagargiradkar.vercel.app/blog",
+        "image": {
+          "@type": "ImageObject",
+          "url": "https://sagargiradkar.vercel.app/blog-preview.jpg",
+          "width": "1200",
+          "height": "630"
+        },
+        "author": {
+          "@type": "Person",
+          "@id": "https://sagargiradkar.vercel.app/#person"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "Sagar Giradkar",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://sagargiradkar.vercel.app/logo.png",
+            "width": "112",
+            "height": "112"
+          }
+        },
+        "mainEntityOfPage": {
+          "@type": "WebPage",
+          "@id": "https://sagargiradkar.vercel.app/blog"
+        },
+        "datePublished": "2025-05-01",
+        "dateModified": "2025-05-03",
+        "keywords": ["React", "MongoDB", "Java", "Python", "JavaScript", "C++", "Next.js", "Development Setup", "Programming Tutorials"]
+      }
+    </script>
 
-  return (
-    <Container fluid className="project-section">
-      <Particle />
-      <Container>
-        <h1 className="project-heading">
-          My Recent <strong className="purple">Blog Posts </strong>
-        </h1>
-        <p style={{ color: "white" }}>
-          Here are a few blog posts I've written recently
-        </p>
-        <Row style={{ justifyContent: "center", paddingBottom: "10px" }}>
-          {currentPosts.map((post) => (
-            <Col md={4} sm={6} xs={12} className="blog-card" key={post.id}>
-              <Card className="blog-card-view h-100">
-                <Card.Img
-                  variant="top"
-                  src={post.image}
-                  alt={post.title}
-                  className="blog-card-img"
-                />
-                <Card.Body className="d-flex flex-column">
-                  <Card.Title className="blog-card-title">{post.title}</Card.Title>
-                  <Card.Text className="blog-card-text">
-                    {post.description}
-                  </Card.Text>
-                  <div className="blog-card-meta">
-                    <small className="text-muted">{post.date}</small>
-                    <small className="text-muted">• {post.author}</small>
-                  </div>
-                  <div className="blog-card-tags">
-                    {post.tags.map((tag, index) => (
-                      <span key={index} className="blog-tag">
-                        {tag}
-                      </span>
-                    ))}
-                  </div>
-                  <Button
-                    as={Link}
-                    to={`/blog/${post.id}`}
-                    variant="primary"
-                    className="mt-auto"
-                  >
-                    Read More
-                  </Button>
-                </Card.Body>
-              </Card>
-            </Col>
-          ))}
-        </Row>
+    <!-- BlogPosting Schema.org Markup for React cPanel Article -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "BlogPosting",
+        "@id": "https://sagargiradkar.vercel.app/blog/react-cpanel-hosting#article",
+        "headline": "How to Build and Host a React Website on cPanel: A Complete Guide",
+        "description": "Learn how to deploy your React applications on traditional cPanel hosting with this step-by-step guide covering build process, routing configuration...",
+        "image": "https://sagargiradkar.vercel.app/images/blog/react-cpanel.jpg",
+        "author": {
+          "@type": "Person",
+          "@id": "https://sagargiradkar.vercel.app/#person"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "Sagar Giradkar",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://sagargiradkar.vercel.app/logo.png"
+          }
+        },
+        "datePublished": "2025-05-03",
+        "dateModified": "2025-05-03",
+        "mainEntityOfPage": {
+          "@type": "WebPage",
+          "@id": "https://sagargiradkar.vercel.app/blog/react-cpanel-hosting"
+        },
+        "keywords": ["React", "cPanel", "Hosting", "Frontend", "Deployment"],
+        "articleSection": "Deployment"
+      }
+    </script>
 
-        {/* Pagination */}
-        {totalPages > 1 && (
-          <div className="d-flex justify-content-center mt-4 mb-4">
-            <Pagination>
-              <Pagination.First
-                onClick={() => handlePageChange(1)}
-                disabled={currentPage === 1}
-              />
-              <Pagination.Prev
-                onClick={() => handlePageChange(currentPage - 1)}
-                disabled={currentPage === 1}
-              />
-              {renderPaginationItems()}
-              <Pagination.Next
-                onClick={() => handlePageChange(currentPage + 1)}
-                disabled={currentPage === totalPages}
-              />
-              <Pagination.Last
-                onClick={() => handlePageChange(totalPages)}
-                disabled={currentPage === totalPages}
-              />
-            </Pagination>
-          </div>
-        )}
-      </Container>
-    </Container>
-  );
-}
+    <!-- BlogPosting Schema.org Markup for React Native Article -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "BlogPosting",
+        "@id": "https://sagargiradkar.vercel.app/blog/react-native-cli-setup#article",
+        "headline": "Setting Up React Native CLI and Building Your First App",
+        "description": "Learn how to set up React Native CLI development environment and build your first cross-platform mobile application with step-by-step instructions for both iOS and Android...",
+        "image": "https://sagargiradkar.vercel.app/images/blog/react-native.jpg",
+        "author": {
+          "@type": "Person",
+          "@id": "https://sagargiradkar.vercel.app/#person"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "Sagar Giradkar",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://sagargiradkar.vercel.app/logo.png"
+          }
+        },
+        "datePublished": "2025-05-03",
+        "dateModified": "2025-05-03",
+        "mainEntityOfPage": {
+          "@type": "WebPage",
+          "@id": "https://sagargiradkar.vercel.app/blog/react-native-cli-setup"
+        },
+        "keywords": ["React Native", "Mobile", "iOS", "Android", "JavaScript"],
+        "articleSection": "Mobile Development"
+      }
+    </script>
 
-export default Blog;
+    <!-- BlogPosting Schema.org Markup for MongoDB Article -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "BlogPosting",
+        "@id": "https://sagargiradkar.vercel.app/blog/mongodb-nextjs#article",
+        "headline": "How to integrate MongoDB into your Next.js apps",
+        "description": "Learn how to seamlessly integrate MongoDB into your Next.js applications with best practices for efficient connection handling, resource...",
+        "image": "https://sagargiradkar.vercel.app/images/blog/mongodb.jpg",
+        "author": {
+          "@type": "Person",
+          "@id": "https://sagargiradkar.vercel.app/#person"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "Sagar Giradkar",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://sagargiradkar.vercel.app/logo.png"
+          }
+        },
+        "datePublished": "2025-05-01",
+        "dateModified": "2025-05-01",
+        "mainEntityOfPage": {
+          "@type": "WebPage",
+          "@id": "https://sagargiradkar.vercel.app/blog/mongodb-nextjs"
+        },
+        "keywords": ["MongoDB", "Next.js", "Database", "Backend"],
+        "articleSection": "Database"
+      }
+    </script>
+
+    <!-- BlogPosting Schema.org Markup for Java Windows Installation -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "BlogPosting",
+        "@id": "https://sagargiradkar.vercel.app/blog/java-windows-installation#article",
+        "headline": "How to Install Java on Windows: A Complete Guide",
+        "description": "A comprehensive step-by-step guide to installing Java Development Kit (JDK) on Windows and setting up your development environment properly...",
+        "image": "https://sagargiradkar.vercel.app/images/blog/java-install.jpg",
+        "author": {
+          "@type": "Person",
+          "@id": "https://sagargiradkar.vercel.app/#person"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "Sagar Giradkar",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://sagargiradkar.vercel.app/logo.png"
+          }
+        },
+        "datePublished": "2025-05-03",
+        "dateModified": "2025-05-03",
+        "mainEntityOfPage": {
+          "@type": "WebPage",
+          "@id": "https://sagargiradkar.vercel.app/blog/java-windows-installation"
+        },
+        "keywords": ["Java", "Windows", "Installation", "JDK"],
+        "articleSection": "Development Setup"
+      }
+    </script>
+
+    <!-- BlogPosting Schema.org Markup for Python Setup -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "BlogPosting",
+        "@id": "https://sagargiradkar.vercel.app/blog/python-setup-virtual-env#article",
+        "headline": "How to Download Python and Set Up a Virtual Environment",
+        "description": "Learn how to properly install Python and create isolated development environments using virtual environments for better project management...",
+        "image": "https://sagargiradkar.vercel.app/images/blog/python-setup.jpg",
+        "author": {
+          "@type": "Person",
+          "@id": "https://sagargiradkar.vercel.app/#person"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "Sagar Giradkar",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://sagargiradkar.vercel.app/logo.png"
+          }
+        },
+        "datePublished": "2025-05-03",
+        "dateModified": "2025-05-03",
+        "mainEntityOfPage": {
+          "@type": "WebPage",
+          "@id": "https://sagargiradkar.vercel.app/blog/python-setup-virtual-env"
+        },
+        "keywords": ["Python", "Virtual Environment", "Development", "Setup"],
+        "articleSection": "Development Setup"
+      }
+    </script>
+
+    <!-- ItemList Schema for All Blog Posts -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "ItemList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "url": "https://sagargiradkar.vercel.app/blog/react-cpanel-hosting"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "url": "https://sagargiradkar.vercel.app/blog/react-native-cli-setup"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "url": "https://sagargiradkar.vercel.app/blog/mongodb-nextjs"
+          },
+          {
+            "@type": "ListItem",
+            "position": 4,
+            "url": "https://sagargiradkar.vercel.app/blog/java-windows-installation"
+          },
+          {
+            "@type": "ListItem",
+            "position": 5,
+            "url": "https://sagargiradkar.vercel.app/blog/python-setup-virtual-env"
+          },
+          {
+            "@type": "ListItem",
+            "position": 6,
+            "url": "https://sagargiradkar.vercel.app/blog/javascript-setup"
+          },
+          {
+            "@type": "ListItem",
+            "position": 7,
+            "url": "https://sagargiradkar.vercel.app/blog/c-windows-setup"
+          },
+          {
+            "@type": "ListItem",
+            "position": 8,
+            "url": "https://sagargiradkar.vercel.app/blog/cpp-windows-setup"
+          }
+        ]
+      }
+    </script>
+
+    <!-- Additional Meta Tags -->
+    <meta name="language" content="English" />
+    <meta name="revisit-after" content="7 days" />
+    <meta name="distribution" content="global" />
+    <meta http-equiv="content-language" content="en-us" />
+    <meta name="rating" content="general" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta name="format-detection" content="telephone=no" />
+
+    <!-- Favicon and Apple Touch Icons -->
+    <link rel="apple-touch-icon" sizes="180x180" href="%PUBLIC_URL%/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="%PUBLIC_URL%/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="%PUBLIC_URL%/favicon-16x16.png" />
+    <link rel="manifest" href="%PUBLIC_URL%/site.webmanifest" />
+    <link rel="mask-icon" href="%PUBLIC_URL%/safari-pinned-tab.svg" color="#5bbad5" />
+    <meta name="msapplication-TileColor" content="#da532c" />
+
+    <!-- Preconnect to important domains -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  </head>
+
+  <body>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="root"></div>
+  </body>
+</html>

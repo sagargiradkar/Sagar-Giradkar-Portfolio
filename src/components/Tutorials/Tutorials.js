@@ -1,0 +1,97 @@
+// src/components/Tutorials/Tutorials.js
+import React from "react";
+import { Container, Row, Col } from "react-bootstrap";
+import "./Tutorials.css";
+import html5Icon from "../../Assets/Tutorials/html.webp"
+import css3iIon from "../../Assets/Tutorials/css.webp"
+import javascriptIcon from "../../Assets/Tutorials/js.webp"
+import pythonIcon from "../../Assets/Tutorials/python.webp"
+import cIcon from "../../Assets/Tutorials/c.webp"
+import reactIcon from "../../Assets/Tutorials/reactjs.webp"
+import javaIcon from "../../Assets/Tutorials/java.webp"
+import cppIcon from "../../Assets/Tutorials/cpp.webp"
+ function Tutorials() {
+  const tutorialData = [
+    {
+      id: 1,
+      title: "HTML Tutorial",
+      icon: html5Icon, // Replace with actual icon path
+      description: "The word hypertext markup language is composed of the words 'hypertext' and 'mar...",
+      color: "#E44D26"
+    },
+    {
+      id: 2,
+      title: "CSS Tutorial",
+      icon: css3iIon,
+      description: "CSS stands for Cascading Style Sheets. It describes how HTML elements are to be ...",
+      color: "#264DE4"
+    },
+    {
+      id: 3,
+      title: "JavaScript Tutorial",
+      icon: javascriptIcon,
+      description: "JavaScript is a lightweight, cross-platform, OOP language.",
+      color: "#F7DF1E"
+    },
+    {
+      id: 4,
+      title: "Python Tutorial",
+      icon: pythonIcon,
+      description: "Python is a high-level, interpreted, general-purpose programming language.",
+      color: "#306998"
+    },
+    {
+      id: 5,
+      title: "C Tutorial",
+      icon: cIcon,
+      description: "C language is considered as the mother language of all programming languages. It...",
+      color: "#5C6BC0"
+    },
+    {
+      id: 6,
+      title: "React JS Tutorial",
+      icon: reactIcon,
+      description: "React is an open-source front-end JavaScript library. This series will cover Rea...",
+      color: "#61DAFB"
+    },
+    {
+      id: 7,
+      title: "Java Tutorial",
+      icon: javaIcon,
+      description: "Java is a programming language, created in 1995. More than 3 billion devices run...",
+      color: "#007396"
+    },
+    {
+      id: 8,
+      title: "C++ Tutorial",
+      icon: cppIcon,
+      description: "C++ is a cross-platform language that can be used to create high-performance app...",
+      color: "#00599C"
+    }
+  ];
+
+return (
+  <Container fluid className="tutorial-section">
+    <h1 className="text-center text-white">Tutorials</h1>
+    <Container>
+      <Row>
+        {tutorialData.map((tutorial) => (
+          <Col xl={3} lg={3} md={6} xs={12} className="tutorial-card" key={tutorial.id}>
+            <div className="tutorial-card-view">
+              <div className="tutorial-icon-container">
+                <img src={tutorial.icon} alt={tutorial.title} className="tutorial-icon" />
+              </div>
+              <h3 className="tutorial-name">{tutorial.title}</h3>
+              <p className="tutorial-description">{tutorial.description}</p>
+              <button className="tutorial-btn">Start Learning!</button>
+            </div>
+          </Col>
+        ))}
+      </Row>
+    </Container>
+  </Container>
+);
+
+}
+
+export default Tutorials;

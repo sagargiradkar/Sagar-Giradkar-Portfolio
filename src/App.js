@@ -26,6 +26,8 @@ import CSetupPost from "./components/Blog/BlogPost/CSetupPost/CSetupPost";
 import CppSetupPost from "./components/Blog/BlogPost/CppSetupPost/CppSetupPost";
 import ReactCPanelPost from "./components/Blog/BlogPost/ReactCPanelPost/ReactCPanelPost";
 import ReactNativeCLIPost from "./components/Blog/BlogPost/ReactNativeCLIPost/ReactNativeCLIPost";
+import Tutorials from "./components/Tutorials/Tutorials";
+import TutorialPage from "./components/Tutorials/TutorialPage/TutorialPage";
 
 function App() {
   const [load, upadateLoad] = useState(true);
@@ -54,7 +56,11 @@ function App() {
           <Route path="/blog" element={<Blog />} />
           <Route path="/blog/react-cpanel-hosting" element={<ReactCPanelPost />} />
           <Route path="/blog/react-native-cli-setup" element={<ReactNativeCLIPost />} />
-         
+
+          <Route path="/tutorials" element={<Tutorials />} />
+          <Route path="/tutorial/:slug" element={<TutorialPage />} />
+
+
           <Route path="/blog/mongodb-nextjs" element={<MongoPost />} />
           <Route path="/blog/java-windows-installation" element={<JavaInstallationPost />} />
           <Route path="/blog/python-setup-virtual-env" element={<PythonSetupPost />} />
@@ -62,8 +68,8 @@ function App() {
           <Route path="/blog/c-windows-setup" element={<CSetupPost />} />
           <Route path="/blog/cpp-windows-setup" element={<CppSetupPost />} />
 
-        
-        
+
+
         </Routes>
         <Footer />
       </div>

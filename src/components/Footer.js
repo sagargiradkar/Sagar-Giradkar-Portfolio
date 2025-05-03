@@ -1,70 +1,72 @@
 import React from "react";
-import { Container, Row, Col } from "react-bootstrap";
-import {
-  AiFillGithub,
-  AiOutlineTwitter,
-  AiFillInstagram,
-} from "react-icons/ai";
-import { FaLinkedinIn } from "react-icons/fa";
+import { Link } from "react-router-dom";
+import { FaGithub, FaTwitter, FaYoutube, FaFacebook } from "react-icons/fa";
+import "./Footer.css";
 
 function Footer() {
-  let date = new Date();
-  let year = date.getFullYear();
   return (
-    <Container fluid className="footer">
-      <Row>
-        <Col md="4" className="footer-copywright">
-          <h3>Designed and Developed by Sagar Giradkar</h3>
-        </Col>
-        <Col md="4" className="footer-copywright">
-          <h3>Copyright © {year} Sagar Giradkar</h3>
-        </Col>
-        <Col md="4" className="footer-body">
-          <ul className="footer-icons">
-            <li className="social-icons">
-              <a
-                href="https://github.com/sagargiradkar"
-                style={{ color: "white" }}
-                target="_blank" 
-                rel="noopener noreferrer"
-              >
-                <AiFillGithub />
+    <footer className="footer">
+      <div className="footer-container">
+        <div className="footer-column">
+          <h3>Main</h3>
+          <ul className="footer-links">
+            <li><Link to="/">Home</Link></li>
+            <li><Link to="/about">About</Link></li>
+            <li><Link to="/experience">Experience</Link></li>
+            {/* <li><Link to="/project">Projects</Link></li>
+            <li><Link to="/blog">Blogs</Link></li>
+            <li><Link to="/resume">Resume</Link></li> */}
+          </ul>
+        </div>
+
+        <div className="footer-column">
+          <h3>Learn</h3>
+          <ul className="footer-links">
+          <li><Link to="/project">Projects</Link></li>
+          <li><Link to="/blog">Blogs</Link></li>
+          </ul>
+        </div>
+
+        <div className="footer-column">
+          <h3>Legal</h3>
+          <ul className="footer-links">
+            <li><Link to="/terms">Terms</Link></li>
+            <li><Link to="/privacy">Privacy</Link></li>
+            {/* <li><Link to="/refund">Refund</Link></li> */}
+          </ul>
+        </div>
+
+        <div className="footer-column">
+          <h3>Social</h3>
+          <ul className="footer-social-links">
+            <li>
+              <a href="https://github.com/sagargiradkar" target="_blank" rel="noopener noreferrer">
+                <FaGithub /> GitHub
               </a>
             </li>
-            <li className="social-icons">
-              <a
-                href="https://twitter.com/sagargiradkar"
-                style={{ color: "white" }}
-                target="_blank" 
-                rel="noopener noreferrer"
-              >
-                <AiOutlineTwitter />
+            <li>
+              <a href="https://twitter.com/sagargiradkar" target="_blank" rel="noopener noreferrer">
+                <FaTwitter /> Twitter (X)
               </a>
             </li>
-            <li className="social-icons">
-              <a
-                href="https://www.linkedin.com/in/sagar-giradkar-b21581234/"
-                style={{ color: "white" }}
-                target="_blank" 
-                rel="noopener noreferrer"
-              >
-                <FaLinkedinIn />
+            <li>
+              <a href="https://youtube.com" target="_blank" rel="noopener noreferrer">
+                <FaYoutube /> YouTube
               </a>
             </li>
-            <li className="social-icons">
-              <a
-                href="https://www.instagram.com/sagar_giradkar"
-                style={{ color: "white" }}
-                target="_blank" 
-                rel="noopener noreferrer"
-              >
-                <AiFillInstagram />
+            <li>
+              <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">
+                <FaFacebook /> Facebook
               </a>
             </li>
           </ul>
-        </Col>
-      </Row>
-    </Container>
+        </div>
+      </div>
+
+      <div className="footer-bottom">
+        <p>Made with <span className="heart">❤️</span> and <span className="coffee">☕</span> in India</p>
+      </div>
+    </footer>
   );
 }
 

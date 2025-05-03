@@ -73,8 +73,6 @@ function Footer() {
               <li><Link to="/">Home</Link></li>
               <li><Link to="/about">About</Link></li>
               <li><Link to="/experience">Experience</Link></li>
-              <li><Link to="/project">Projects</Link></li>
-              <li><Link to="/blog">Blogs</Link></li>
             </ul>
           </div>
 
@@ -96,7 +94,7 @@ function Footer() {
 
           <div className="footer-column">
             <h3>Social</h3>
-            <ul className="footer-social-links">
+            <ul className="footer-links">
               <li>
                 <a href="https://github.com/sagargiradkar" target="_blank" rel="noopener noreferrer">
                   <FaGithub /> GitHub

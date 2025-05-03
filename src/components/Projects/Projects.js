@@ -2,7 +2,7 @@ import React,{useState} from "react";
 import { Container, Row, Col,Pagination } from "react-bootstrap";
 import ProjectCard from "./ProjectCards";
 import Particle from "../Particle";
-
+import Footer from "../Footer";
 // Import images directly
 import smile_computer from "../../Assets/Projects/smile_computer.png";
 import razorpay from "../../Assets/Projects/project1.png";
@@ -295,6 +295,7 @@ function Projects() {
           </Pagination>
         </div>
       </Container>
+      <Footer />
     </Container>
   );
 }

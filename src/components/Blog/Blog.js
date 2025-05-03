@@ -11,6 +11,7 @@ import cSetupImg from "../../Assets/Blogs/cSetupImg.jpg"
 import cppSetupImg from "../../Assets/Blogs/cpp-setup.jpg"
 import reactCPanelImg from "../../Assets/Blogs/deploy-react-js-app-on-cpanel.png"
 import reactNativeImg from "../../Assets/Blogs/react-native.webp"
+import Footer from "../Footer";
 const blogPosts = [
   {
     id: "react-cpanel-hosting",
@@ -99,12 +100,7 @@ const blogPosts = [
     author: "Sagar Giradkar",
     category: "Development Setup",
     tags: ["C++", "Windows", "MinGW", "VS Code", "Programming"],
-  },
-  
-
-
-
-
+  }
 ];
 function Blog() {
   const [currentPage, setCurrentPage] = useState(1);
@@ -217,6 +213,7 @@ function Blog() {
           </div>
         )}
       </Container>
+      <Footer />
     </Container>
   );
 }

@@ -7,6 +7,7 @@ import realListLogo from "../../Assets/company/realListLogo.png";
 import GS_logo_Black from "../../Assets/company/GS_logo_Black.png";
 import argyleEnigma from "../../Assets/company/argyleEnigma.png";
 import smileComputerLogo from "../../Assets/company/smileLogo.png"
+import Footer from "../Footer";
 // Experience data moved to the same file
 const experiences = [
   {
@@ -115,6 +116,7 @@ function Experience() {
           </Col>
         </Row>
       </Container>
+      <Footer />
     </Container>
   );
 }

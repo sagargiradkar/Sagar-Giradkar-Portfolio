@@ -6,7 +6,7 @@ import Techstack from "./Techstack";
 import Aboutcard from "./AboutCard";
 import laptopImg from "../../Assets/about.png";
 import Toolstack from "./Toolstack";
-
+import Footer from "../Footer";
 function About() {
   return (
     <Container fluid className="about-section">
@@ -47,6 +47,7 @@ function About() {
 
         <Github />
       </Container>
+      <Footer />
     </Container>
   );
 }

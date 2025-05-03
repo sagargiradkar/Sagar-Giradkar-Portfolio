@@ -5,6 +5,7 @@ import Particle from "../Particle";
 import pdf from "../../Assets/../Assets/Sagar-Giradkar-Resume-Full-Stack.pdf";
 import { AiOutlineDownload } from "react-icons/ai";
 import { Document, Page, pdfjs } from "react-pdf";
+import Footer from "../Footer";
 import "react-pdf/dist/esm/Page/AnnotationLayer.css";
 pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.min.js`;
 
@@ -16,7 +17,6 @@ function ResumeNew() {
   }, []);
 
   return (
-    <div>
       <Container fluid className="resume-section">
         <Particle />
         <Row style={{ justifyContent: "center", position: "relative" }}>
@@ -48,8 +48,8 @@ function ResumeNew() {
             &nbsp;Download CV
           </Button>
         </Row>
+       <Footer/>
       </Container>
-    </div>
   );
 }
 

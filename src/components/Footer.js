@@ -1,17 +1,17 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { FaGithub, FaTwitter, FaYoutube, FaFacebook } from "react-icons/fa";
-import { 
-  AiFillGithub, 
-  AiOutlineTwitter, 
-  AiFillInstagram 
+import {
+  AiFillGithub,
+  AiOutlineTwitter,
+  AiFillInstagram
 } from "react-icons/ai";
 import { FaLinkedinIn } from "react-icons/fa";
 import "./Footer.css";
 
 function Footer() {
   const year = new Date().getFullYear();
-  
+
   return (
     <footer className="footer">
       {/* Mobile Footer - Only shown on small screens */}
@@ -19,7 +19,7 @@ function Footer() {
         <div className="mobile-footer-content">
           <h3>Designed and Developed by Sagar Giradkar</h3>
           <h3>Copyright © {year} Sagar Giradkar</h3>
-          
+
           <ul className="mobile-social-icons">
             <li className="social-icon-item">
               <a
@@ -30,7 +30,7 @@ function Footer() {
                 <AiFillGithub />
               </a>
             </li>
-            
+
             <li className="social-icon-item">
               <a
                 href="https://twitter.com/sagargiradkar"
@@ -40,7 +40,7 @@ function Footer() {
                 <AiOutlineTwitter />
               </a>
             </li>
-            
+
             <li className="social-icon-item">
               <a
                 href="https://www.linkedin.com/in/sagar-giradkar-b21581234/"
@@ -50,7 +50,7 @@ function Footer() {
                 <FaLinkedinIn />
               </a>
             </li>
-            
+
             <li className="social-icon-item">
               <a
                 href="https://www.instagram.com/sagar_giradkar"
@@ -72,7 +72,7 @@ function Footer() {
             <ul className="footer-links">
               <li><Link to="/">Home</Link></li>
               <li><Link to="/about">About</Link></li>
-              <li><Link to="/experience">Experience</Link></li>
+              {/* <li><Link to="/experience">Experience</Link></li> */}
             </ul>
           </div>
 
@@ -101,20 +101,24 @@ function Footer() {
                 </a>
               </li>
               <li>
-                <a href="https://twitter.com/sagargiradkar" target="_blank" rel="noopener noreferrer">
-                  <FaTwitter /> Twitter (X)
+                <a
+                  href="https://www.linkedin.com/in/sagar-giradkar-b21581234/"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <FaLinkedinIn /> Linkedin
                 </a>
               </li>
-              <li>
-                <a href="https://youtube.com" target="_blank" rel="noopener noreferrer">
-                  <FaYoutube /> YouTube
+              {/* <li>
+                <a href="https://www.instagram.com/sagar_giradkar" target="_blank" rel="noopener noreferrer">
+                  <AiFillInstagram /> Instagram
                 </a>
-              </li>
-              <li>
+              </li> */}
+              {/* <li>
                 <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">
                   <FaFacebook /> Facebook
                 </a>
-              </li>
+              </li> */}
             </ul>
           </div>
         </div>

@@ -66,7 +66,8 @@ setx PATH "%PATH%;%JAVA_HOME%\bin"`;
 
         <div className="blog-meta">
           <span>By Sagar Giradkar</span>
-          <span>Updated: {new Date().toLocaleDateString()}</span>
+          <span>Updated: 1 May 2025</span>
+          <span>Reading Time: 15 minutes</span>
         </div>
 
         <div className="blog-main-content">

@@ -87,8 +87,9 @@ npm run dev`;
         </div>
 
         <div className="blog-meta">
-          <span>By Your Name</span>
-          <span>Updated: {new Date().toLocaleDateString()}</span>
+          <span>By Sagar Giradkar</span>
+          <span>Updated: 1 May 2025</span>
+          <span>Reading Time: 15 minutes</span>
         </div>
 
         <div className="blog-main-content">

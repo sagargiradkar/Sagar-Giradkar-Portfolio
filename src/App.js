@@ -24,6 +24,7 @@ import PythonSetupPost from "./components/Blog/BlogPost/PythonSetupPost/PythonSe
 import JavaScriptSetupPost from "./components/Blog/BlogPost/JavaScriptSetupPost/JavaScriptSetupPost";
 import CSetupPost from "./components/Blog/BlogPost/CSetupPost/CSetupPost";
 import CppSetupPost from "./components/Blog/BlogPost/CppSetupPost/CppSetupPost";
+import ReactCPanelPost from "./components/Blog/BlogPost/ReactCPanelPost/ReactCPanelPost";
 
 function App() {
   const [load, upadateLoad] = useState(true);
@@ -50,12 +51,15 @@ function App() {
           <Route path="/resume" element={<Resume />} />
           <Route path="*" element={<Navigate to="/" />} />
           <Route path="/blog" element={<Blog />} />
+          <Route path="/blog/react-cpanel-hosting" element={<ReactCPanelPost />} />
+          
           <Route path="/blog/mongodb-nextjs" element={<MongoPost />} />
           <Route path="/blog/java-windows-installation" element={<JavaInstallationPost />} />
           <Route path="/blog/python-setup-virtual-env" element={<PythonSetupPost />} />
           <Route path="/blog/javascript-setup" element={<JavaScriptSetupPost />} />
           <Route path="/blog/c-windows-setup" element={<CSetupPost />} />
           <Route path="/blog/cpp-windows-setup" element={<CppSetupPost />} />
+
         
         
         </Routes>

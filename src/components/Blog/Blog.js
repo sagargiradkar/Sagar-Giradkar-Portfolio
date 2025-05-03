@@ -9,8 +9,19 @@ import pythonSetupImg from "../../Assets/Blogs/pythonSetupImg.jpg"
 import jsSetupImg from "../../Assets/Blogs/jsSetupImg.jpg"
 import cSetupImg from "../../Assets/Blogs/cSetupImg.jpg"
 import cppSetupImg from "../../Assets/Blogs/cpp-setup.jpg"
-
+import reactCPanelImg from "../../Assets/Blogs/deploy-react-js-app-on-cpanel.png"
 const blogPosts = [
+  {
+    id: "react-cpanel-hosting",
+    title: "How to Build and Host a React Website on cPanel: A Complete Guide",
+    description: 
+      "Learn how to deploy your React applications on traditional cPanel hosting with this step-by-step guide covering build process, routing configuration...",
+    image: reactCPanelImg,
+    date: "May 3, 2025",
+    author: "Sagar Giradkar",
+    category: "Deployment",
+    tags: ["React", "cPanel", "Hosting", "Frontend", "Deployment"],
+  },
   {
     id: "mongodb-nextjs",
     title: "How to integrate MongoDB into your Next.js apps",

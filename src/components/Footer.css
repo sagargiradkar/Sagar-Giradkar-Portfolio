@@ -1,9 +1,63 @@
-/* Footer.css */
-
+/* Responsive Footer CSS */
 .footer {
   background-color: #111827;
   color: #cfd7e3;
   width: 100%;
+}
+
+/* ===== MOBILE FOOTER STYLES ===== */
+.mobile-footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 1.5rem 1rem;
+}
+
+.mobile-footer-content {
+  width: 100%;
+}
+
+.mobile-footer h3 {
+  color: white;
+  font-size: 0.9rem;
+  margin: 0.5rem 0;
+  font-weight: 500;
+}
+
+.mobile-social-icons {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 1.5rem 0 0.5rem;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+.social-icon-item a {
+  color: white;
+  background-color: rgba(255, 255, 255, 0.1);
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+.social-icon-item a:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  transform: translateY(-3px);
+}
+
+.social-icon-item svg {
+  font-size: 1.2rem;
+}
+
+/* ===== DESKTOP FOOTER STYLES ===== */
+.desktop-footer {
+  display: none;
   padding: 3rem 0 1rem;
 }
 
@@ -17,7 +71,7 @@
 }
 
 .footer-column {
-  width: 100%;
+  width: 22%;
   margin-bottom: 2rem;
 }
 
@@ -33,14 +87,11 @@
   list-style: none;
   padding: 0;
   margin: 0;
-  align-items: center;
-  
 }
 
 .footer-links li,
 .footer-social-links li {
   margin-bottom: 0.75rem;
-  align-items: center;
 }
 
 .footer-links a,
@@ -48,7 +99,6 @@
   color: #8d99ae;
   text-decoration: none;
   transition: color 0.3s ease;
-  display: inline-block;
 }
 
 .footer-social-links a {
@@ -69,21 +119,23 @@
   border-top: 1px solid #2d3748;
 }
 
+.copyright-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+
+.copyright-col {
+  flex: 1;
+}
+
+.copyright-col h3 {
+  font-size: 1rem;
+  font-weight: 500;
+}
+
 .heart, .coffee {
   display: inline-block;
-}
-
-/* Responsive design */
-@media (min-width: 576px) {
-  .footer-column {
-    width: 45%;
-  }
-}
-
-@media (min-width: 992px) {
-  .footer-column {
-    width: 22%;
-  }
 }
 
 /* Animation for heart */
@@ -95,4 +147,40 @@
 
 .heart {
   animation: heartbeat 1.5s infinite;
+}
+
+/* ===== RESPONSIVE MEDIA QUERIES ===== */
+
+/* Mobile view */
+@media (max-width: 767px) {
+  .mobile-footer {
+    display: flex;
+  }
+  
+  .desktop-footer {
+    display: none;
+  }
+}
+
+/* Tablet and desktop view */
+@media (min-width: 768px) {
+  .mobile-footer {
+    display: none;
+  }
+  
+  .desktop-footer {
+    display: block;
+  }
+  
+  /* Footer columns responsive adjustments */
+  .footer-column {
+    width: 45%;
+  }
+}
+
+/* Large desktop view */
+@media (min-width: 992px) {
+  .footer-column {
+    width: 22%;
+  }
 }

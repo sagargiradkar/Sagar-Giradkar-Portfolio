@@ -3,9 +3,13 @@ import React, { useState, useRef } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
 import "./HTMLDashboard.css";
 import Sidebar from "./Sidebar";
-import HTMLIntroductionContent from "./content/HTMLIntroduction";
-import SkeletalTagsContent from "./content/SkeletalTags";
 
+// Import all content components
+import HTMLIntroductionContent from "./content/HTMLIntroduction";
+import HTMLInstallation from "./content/HTMLInstallation";
+import HTMLWorking from "./content/HTMLWorking";
+import HTMLExecution from "./content/HTMLExecution";
+import SkeletalTags from "./content/SkeletalTags"
 function HTMLDashboard() {
   const [isSidebarOpen, setIsSidebarOpen] = useState(true);
   const [selectedContent, setSelectedContent] = useState("htmlIntroduction");
@@ -17,10 +21,47 @@ function HTMLDashboard() {
 
   const renderContent = () => {
     switch (selectedContent) {
+      // Introduction section
       case "htmlIntroduction":
         return <HTMLIntroductionContent />;
+      case "htmlWorking":
+        return <HTMLWorking />;
+      case "htmlInstallation":
+        return <HTMLInstallation />;
+      case "htmlExecution":
+        return <HTMLExecution />;
+      // case "htmlPageStructure":
+      //   return <HTMLPageStructureContent />;
+      // case "htmlTags":
+      //   return <HTMLTagsContent />;
+      // case "htmlElements":
+      //   return <HTMLElementsContent />;
+      // case "htmlAttributes":
+      //   return <HTMLAttributesContent />;
+      // case "htmlComments":
+      //   return <HTMLCommentsContent />;
+      // case "htmlIdClasses":
+      //   return <HTMLIdClassesContent />;
+
+      // Basic Tags section
       case "skeletalTags":
-        return <SkeletalTagsContent />;
+        return <SkeletalTags />;
+      // case "headingTags":
+      //   return <HeadingTagsContent />;
+      // case "paragraphTag":
+      //   return <ParagraphTagContent />;
+      // case "horizontalLineTag":
+      //   return <HorizontalLineTagContent />;
+      // case "lineBreakTag":
+      //   return <LineBreakTagContent />;
+      // case "anchorTag":
+      //   return <AnchorTagContent />;
+      // case "imageTag":
+      //   return <ImageTagContent />;
+      // case "preTag":
+      //   return <PreTagContent />;
+        
+      // Default case
       default:
         return <HTMLIntroductionContent />;
     }
@@ -28,7 +69,11 @@ function HTMLDashboard() {
 
   return (
     <div className="dashboard-container">
-      <button className="sidebar-toggle" onClick={toggleSidebar}>
+      <button 
+        className="sidebar-toggle" 
+        onClick={toggleSidebar}
+        aria-label={isSidebarOpen ? "Close sidebar" : "Open sidebar"}
+      >
         {isSidebarOpen ? <FaTimes /> : <FaBars />}
       </button>
 
@@ -39,13 +84,12 @@ function HTMLDashboard() {
         mainContentRef={mainContentRef}
       />
 
-      <div 
+      <main 
         className={`main-content ${!isSidebarOpen ? 'expanded' : ''}`}
         ref={mainContentRef}
       >
         {renderContent()}
-      </div>
-    
+      </main>
     </div>
   );
 }

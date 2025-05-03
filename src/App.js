@@ -28,6 +28,7 @@ import ReactCPanelPost from "./components/Blog/BlogPost/ReactCPanelPost/ReactCPa
 import ReactNativeCLIPost from "./components/Blog/BlogPost/ReactNativeCLIPost/ReactNativeCLIPost";
 import Tutorials from "./components/Tutorials/Tutorials";
 import HTMLDashboard from "./components/Tutorials/HTML/HTMLDashboard";
+import JavaDashboard from "./components/Tutorials/JAVA/JavaDashboard";
 
 function App() {
   const [load, upadateLoad] = useState(true);
@@ -58,14 +59,14 @@ function App() {
           <Route path="/blog/react-native-cli-setup" element={<ReactNativeCLIPost />} />
 
           <Route path="/tutorials" element={<Tutorials />} />
-
+          <Route path="/tutorial/javatutorial" element={<JavaDashboard />} />
           <Route path="/tutorial/htmltutorial" element={<HTMLDashboard />} />
           {/* <Route path="/tutorial/csstutorial" element={<CSSTutorial />} />
         <Route path="/tutorial/javascripttutorial" element={<JavaScriptTutorial />} />
         <Route path="/tutorial/pythontutorial" element={<PythonTutorial />} />
         <Route path="/tutorial/ctutorial" element={<CTutorial />} />
         <Route path="/tutorial/reactjstutorial" element={<ReactJSTutorial />} />
-        <Route path="/tutorial/javatutorial" element={<JavaTutorial />} />
+      
         <Route path="/tutorial/cpptutorial" element={<CppTutorial />} /> */}
 
 

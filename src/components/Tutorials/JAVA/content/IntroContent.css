@@ -1,0 +1,185 @@
+/* src/components/Tutorials/Java/content/IntroContent.css */
+.content-wrapper {
+    max-width: 800px;
+    margin: 0 auto;
+    color: var(--text-primary);
+  }
+  
+  .content-breadcrumb {
+    font-size: 0.9rem;
+    margin-bottom: 20px;
+    color: var(--text-secondary);
+  }
+  
+  .content-breadcrumb a {
+    color: var(--active-color);
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  
+  .content-breadcrumb a:hover {
+    text-decoration: underline;
+  }
+  
+  .content-title {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    font-weight: 700;
+    color: var(--text-primary);
+    border-bottom: 2px solid var(--active-color);
+    padding-bottom: 15px;
+  }
+  
+  .learning-timeline {
+    background-color: rgba(45, 55, 72, 0.5);
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 30px;
+    border-left: 4px solid var(--active-color);
+  }
+  
+  .learning-timeline h2 {
+    margin-top: 0;
+    color: var(--active-color);
+    font-size: 1.5rem;
+  }
+  
+  .learning-timeline ul {
+    list-style-type: none;
+    padding-left: 10px;
+  }
+  
+  .learning-timeline li {
+    margin-bottom: 10px;
+    position: relative;
+    padding-left: 25px;
+  }
+  
+  .learning-timeline li:before {
+    content: "→";
+    position: absolute;
+    left: 0;
+    color: var(--active-color);
+  }
+  
+  .author-intro {
+    margin-bottom: 30px;
+    font-style: italic;
+    color: var(--text-secondary);
+    line-height: 1.6;
+  }
+  
+  .content-section {
+    margin-bottom: 40px;
+  }
+  
+  .content-section h2 {
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+    color: var(--text-primary);
+  }
+  
+  .content-section p {
+    line-height: 1.7;
+    margin-bottom: 15px;
+  }
+  
+  .key-points {
+    background-color: rgba(45, 55, 72, 0.5);
+    border-radius: 10px;
+    padding: 20px;
+    margin: 20px 0;
+  }
+  
+  .key-points h3 {
+    margin-top: 0;
+    color: var(--active-color);
+  }
+  
+  .key-points ul {
+    padding-left: 20px;
+  }
+  
+  .key-points li {
+    margin-bottom: 10px;
+    line-height: 1.6;
+  }
+  
+  .note-box {
+    background-color: rgba(79, 70, 229, 0.1);
+    border-left: 4px solid var(--active-color);
+    padding: 15px;
+    margin: 20px 0;
+    border-radius: 0 5px 5px 0;
+  }
+  
+  .navigation-links {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid var(--border-color);
+  }
+  
+  .next-link, .prev-link {
+    color: var(--active-color);
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    transition: all 0.3s ease;
+  }
+  
+  .next-link:hover, .prev-link:hover {
+    transform: translateX(5px);
+  }
+  
+  /* Code block styling */
+  pre {
+    background-color: #1a2233;
+    border-radius: 5px;
+    padding: 15px;
+    overflow-x: auto;
+    border: 1px solid var(--border-color);
+    margin: 20px 0;
+  }
+  
+  code {
+    font-family: "Consolas", "Monaco", "Andale Mono", monospace;
+    color: #e2e8f0;
+  }
+  
+  /* Table styling */
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    background-color: rgba(30, 41, 59, 0.5);
+  }
+  
+  th, td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid var(--border-color);
+  }
+  
+  th {
+    background-color: var(--sidebar-bg);
+    color: var(--active-color);
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .content-title {
+      font-size: 2rem;
+    }
+    
+    .content-section h2 {
+      font-size: 1.5rem;
+    }
+    
+    .learning-timeline, 
+    .key-points, 
+    .note-box {
+      padding: 15px;
+    }
+  }

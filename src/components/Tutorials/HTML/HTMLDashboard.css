@@ -316,3 +316,78 @@
 .menu-item {
   animation: fadeIn var(--transition-speed) ease;
 }
+/* src/components/Tutorials/HTML/HTMLDashboard.css */
+.dashboard-container {
+  display: flex;
+  min-height: 100vh;
+  position: relative;
+  background-color: var(--bg-primary);
+}
+
+.sidebar-toggle {
+  position: fixed;
+  top: 1rem;
+  left: 1rem;
+  z-index: 1000;
+  background: var(--active-color);
+  border: none;
+  color: white;
+  padding: 0.5rem;
+  border-radius: 4px;
+  cursor: pointer;
+  display: none;
+  transition: background-color 0.3s ease;
+}
+
+.sidebar-toggle:hover {
+  background: var(--active-color-hover);
+}
+
+.main-content {
+  flex-grow: 1;
+  margin-left: var(--sidebar-width);
+  transition: margin-left 0.3s ease;
+  padding: 2rem;
+  background-color: var(--bg-primary);
+  min-height: 100vh;
+}
+
+.main-content.expanded {
+  margin-left: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .sidebar-toggle {
+    display: block;
+  }
+
+  .main-content {
+    margin-left: 0;
+    padding: 1rem;
+  }
+
+  .main-content.expanded {
+    margin-left: 0;
+  }
+}
+
+/* Accessibility */
+@media (prefers-reduced-motion: reduce) {
+  .main-content,
+  .sidebar-toggle {
+    transition: none;
+  }
+}
+
+/* Print styles */
+@media print {
+  .sidebar-toggle {
+    display: none;
+  }
+
+  .main-content {
+    margin-left: 0;
+    padding: 0;
+  }
+}

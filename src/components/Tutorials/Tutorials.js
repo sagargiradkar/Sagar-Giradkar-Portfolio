@@ -28,6 +28,13 @@ function Tutorials() {
 
   const tutorialData = [
     {
+      id: "java-tutorial",
+      title: "Java Tutorial",
+      icon: javaIcon,
+      description: "Java is a programming language, created in 1995. More than 3 billion devices run...",
+      color: "#007396"
+    },
+    {
       id: "html-tutorial",
       title: "HTML Tutorial",
       icon: html5Icon,
@@ -69,13 +76,7 @@ function Tutorials() {
       description: "React is an open-source front-end JavaScript library. This series will cover Rea...",
       color: "#61DAFB"
     },
-    {
-      id: "java-tutorial",
-      title: "Java Tutorial",
-      icon: javaIcon,
-      description: "Java is a programming language, created in 1995. More than 3 billion devices run...",
-      color: "#007396"
-    },
+    
     {
       id: "cpp-tutorial",
       title: "C++ Tutorial",

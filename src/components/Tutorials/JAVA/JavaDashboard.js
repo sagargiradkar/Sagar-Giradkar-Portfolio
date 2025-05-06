@@ -9,6 +9,7 @@ import JavaIntroductionContent from "./content/JavaIntroduction/JavaIntroduction
 import JavaBasicSyntax from "./content/JavaBasicSyntax/JavaBasicSyntax";
 import JavaWorking from "./content/JavaWorking/JavaWorking";
 import JavaInstallation from "./content/JavaInstallation/JavaInstallation";
+import JavaExecution from "./content/JavaExecution/JavaExecution";
 
 function JavaDashboard() {
   const [isSidebarOpen, setIsSidebarOpen] = useState(true);
@@ -28,8 +29,8 @@ function JavaDashboard() {
         return <JavaWorking />;
       case "javaInstallation":
         return <JavaInstallation />;
-    //   case "javaExecution":
-    //     return <JavaExecution />;
+      case "javaExecution":
+        return <JavaExecution />;
       case "javaBasicSyntax":
         return <JavaBasicSyntax />;
       // case "javaHistory":

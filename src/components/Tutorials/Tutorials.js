@@ -1,7 +1,6 @@
 // src/components/Tutorials/Tutorials.js
 import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
-import "./Tutorials.css";
 import html5Icon from "../../Assets/Tutorials/html.webp"
 import css3iIon from "../../Assets/Tutorials/css.webp"
 import javascriptIcon from "../../Assets/Tutorials/js.webp"
@@ -88,6 +87,7 @@ function Tutorials() {
   ];
 
   return (
+    <>
     <Container fluid className="tutorial-section">
       <h1 className="text-center text-white">Tutorials</h1>
       <Container>
@@ -111,8 +111,10 @@ function Tutorials() {
           ))}
         </Row>
       </Container>
-      <Footer/>
+    
     </Container>
+    <Footer/></>
+    
   );
 }
 

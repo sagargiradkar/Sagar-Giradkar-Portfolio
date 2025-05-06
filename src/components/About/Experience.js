@@ -76,7 +76,7 @@ const experiences = [
 
 function Experience() {
   return (
-    <Container fluid className="experience-section">
+    <><Container fluid className="experience-section">
       <Particle />
       <Container>
         <Row style={{ justifyContent: "center", padding: "1px" }}>
@@ -116,8 +116,8 @@ function Experience() {
           </Col>
         </Row>
       </Container>
-      <Footer />
-    </Container>
+
+    </Container> <Footer /></>
   );
 }
 

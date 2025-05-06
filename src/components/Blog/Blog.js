@@ -16,7 +16,7 @@ const blogPosts = [
   {
     id: "react-cpanel-hosting",
     title: "How to Build and Host a React Website on cPanel: A Complete Guide",
-    description: 
+    description:
       "Learn how to deploy your React applications on traditional cPanel hosting with this step-by-step guide covering build process, routing configuration...",
     image: reactCPanelImg,
     date: "May 3, 2025",
@@ -27,7 +27,7 @@ const blogPosts = [
   {
     id: "react-native-cli-setup",
     title: "Setting Up React Native CLI and Building Your First App",
-    description: 
+    description:
       "Learn how to set up React Native CLI development environment and build your first cross-platform mobile application with step-by-step instructions for both iOS and Android...",
     image: reactNativeImg,
     date: "May 3, 2025",
@@ -139,7 +139,7 @@ function Blog() {
   };
 
   return (
-    <Container fluid className="project-section">
+    <> <Container fluid className="blog-section">
       <Particle />
       <Container>
         <h1 className="project-heading">
@@ -213,8 +213,9 @@ function Blog() {
           </div>
         )}
       </Container>
-      <Footer />
+
     </Container>
+      <Footer /></>
   );
 }
 

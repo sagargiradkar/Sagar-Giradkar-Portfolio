@@ -9,7 +9,7 @@ import Toolstack from "./Toolstack";
 import Footer from "../Footer";
 function About() {
   return (
-    <Container fluid className="about-section">
+    <>   <Container fluid className="about-section">
       <Particle />
       <Container>
         <Row style={{ justifyContent: "center", padding: "10px" }}>
@@ -47,8 +47,8 @@ function About() {
 
         <Github />
       </Container>
-      <Footer />
-    </Container>
+
+    </Container> <Footer /></>
   );
 }
 

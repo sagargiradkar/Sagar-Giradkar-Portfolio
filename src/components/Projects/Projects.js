@@ -1,5 +1,5 @@
-import React,{useState} from "react";
-import { Container, Row, Col,Pagination } from "react-bootstrap";
+import React, { useState } from "react";
+import { Container, Row, Col, Pagination } from "react-bootstrap";
 import ProjectCard from "./ProjectCards";
 import Particle from "../Particle";
 import Footer from "../Footer";
@@ -248,7 +248,7 @@ function Projects() {
   };
 
   return (
-    <Container fluid className="project-section">
+    <>  <Container fluid className="project-section">
       <Particle />
       <Container>
         <h1 className="project-heading">
@@ -271,32 +271,32 @@ function Projects() {
             </Col>
           ))}
         </Row>
-        
+
         {/* Pagination */}
         <div className="d-flex justify-content-center mt-4 mb-4">
           <Pagination>
-            <Pagination.First 
+            <Pagination.First
               onClick={() => handlePageChange(1)}
               disabled={currentPage === 1}
             />
-            <Pagination.Prev 
+            <Pagination.Prev
               onClick={() => handlePageChange(currentPage - 1)}
               disabled={currentPage === 1}
             />
             {renderPaginationItems()}
-            <Pagination.Next 
+            <Pagination.Next
               onClick={() => handlePageChange(currentPage + 1)}
               disabled={currentPage === totalPages}
             />
-            <Pagination.Last 
+            <Pagination.Last
               onClick={() => handlePageChange(totalPages)}
               disabled={currentPage === totalPages}
             />
           </Pagination>
         </div>
       </Container>
-      <Footer />
-    </Container>
+
+    </Container>  <Footer /></>
   );
 }
 

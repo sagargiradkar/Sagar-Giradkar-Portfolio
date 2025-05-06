@@ -5,14 +5,16 @@ import "./JavaDashboard.css";
 import Sidebar from "./Sidebar";
 
 // Import all content components
-import JavaIntroductionContent from "./content/JavaIntroduction/JavaIntroduction";
-import JavaBasicSyntax from "./content/JavaBasicSyntax/JavaBasicSyntax";
-import JavaWorking from "./content/JavaWorking/JavaWorking";
-import JavaInstallation from "./content/JavaInstallation/JavaInstallation";
-import JavaExecution from "./content/JavaExecution/JavaExecution";
-import JavaHistory from "./content/JavaHistory/JavaHistory";
-import JavaFeatures from "./content/JavaFeatures/JavaFeatures";
-import JavaJDK from "./content/JavaJDK/JavaJDK";
+import JavaIntroductionContent from "./content/INTRODUCTION/JavaIntroduction/JavaIntroduction";
+import JavaBasicSyntax from "./content/INTRODUCTION/JavaBasicSyntax/JavaBasicSyntax";
+import JavaWorking from "./content/INTRODUCTION/JavaWorking/JavaWorking";
+import JavaInstallation from "./content/INTRODUCTION/JavaInstallation/JavaInstallation";
+import JavaExecution from "./content/INTRODUCTION/JavaExecution/JavaExecution";
+import JavaHistory from "./content/INTRODUCTION/JavaHistory/JavaHistory";
+import JavaFeatures from "./content/INTRODUCTION/JavaFeatures/JavaFeatures";
+import JavaJDK from "./content/INTRODUCTION/JavaJDK/JavaJDK";
+import JavaJRE from "./content/INTRODUCTION/JavaJRE/JavaJRE";
+import JavaIDEs from "./content/INTRODUCTION/JavaIDEs/JavaIDEs";
 
 function JavaDashboard() {
   const [isSidebarOpen, setIsSidebarOpen] = useState(true);
@@ -42,10 +44,10 @@ function JavaDashboard() {
         return <JavaFeatures />;
       case "javaJDK":
         return <JavaJDK />;
-      // case "javaJRE":
-      //   return <JavaJRE />;
-      // case "javaIDEs":
-      //   return <JavaIDEs />;
+      case "javaJRE":
+        return <JavaJRE />;
+      case "javaIDEs":
+        return <JavaIDEs />;
 
       // Basic Concepts section
       // case "javaVariables":

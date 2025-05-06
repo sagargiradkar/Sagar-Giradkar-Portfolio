@@ -127,7 +127,7 @@ function Sidebar({ isOpen, onSelectContent, selectedContent, mainContentRef }) {
         
         <nav className="sidebar-menu" ref={sidebarMenuRef}>
           <MenuSection
-            title="Introduction"
+            title="INTRODUCTION"
             items={INTRODUCTION_ITEMS}
             isExpanded={expandedSections.introduction}
             onToggle={() => toggleSection('introduction')}

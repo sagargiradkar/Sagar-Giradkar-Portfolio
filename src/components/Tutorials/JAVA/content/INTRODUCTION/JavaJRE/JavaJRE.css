@@ -1,0 +1,264 @@
+/* src/components/Tutorials/Java/content/JavaJRE/JavaJRE.css */
+
+.jre-overview {
+    margin: 20px 0;
+}
+
+.info-box {
+    background: var(--secondary-bg);
+    padding: 20px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.info-icon {
+    font-size: 48px;
+    color: var(--active-color);
+}
+
+.architecture-diagram {
+    margin: 30px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+.layer {
+    background: var(--secondary-bg);
+    padding: 15px 30px;
+    border-radius: 8px;
+    text-align: center;
+    width: 100%;
+    max-width: 400px;
+    position: relative;
+}
+
+.layer[data-layer]::before {
+    content: attr(data-layer);
+    position: absolute;
+    left: -10px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: var(--active-color);
+    color: white;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 0.8em;
+}
+
+.sub-layers {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    margin-top: 10px;
+    padding-top: 10px;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.sub-layer {
+    background: rgba(0, 0, 0, 0.1);
+    padding: 8px;
+    border-radius: 4px;
+    font-size: 0.9em;
+}
+
+.layer-arrow {
+    color: var(--active-color);
+    font-size: 24px;
+}
+
+.components-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    margin: 20px 0;
+}
+
+.component-card {
+    background: var(--secondary-bg);
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.component-card h3 {
+    color: var(--active-color);
+    margin-top: 0;
+}
+
+.component-card ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.component-card li {
+    margin: 8px 0;
+    padding-left: 24px;
+    position: relative;
+}
+
+.component-card li::before {
+    content: "→";
+    position: absolute;
+    left: 0;
+    color: var(--active-color);
+}
+
+.comparison-table {
+    overflow-x: auto;
+    margin: 20px 0;
+}
+
+.comparison-table table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.comparison-table th,
+.comparison-table td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.comparison-table th {
+    background: var(--active-color);
+    color: white;
+}
+
+.setup-steps {
+    display: grid;
+    gap: 20px;
+    margin: 20px 0;
+}
+
+.step-card {
+    background: var(--secondary-bg);
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.download-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background: var(--active-color);
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+    margin-top: 10px;
+    transition: background 0.2s;
+}
+
+.download-button:hover {
+    background: var(--active-color-dark);
+}
+
+.execution-example {
+    background: var(--secondary-bg);
+    padding: 20px;
+    border-radius: 8px;
+    margin: 20px 0;
+}
+
+.execution-steps {
+    margin-top: 20px;
+}
+
+.step {
+    margin: 10px 0;
+    padding-left: 24px;
+    position: relative;
+}
+
+.step h4 {
+    margin: 0;
+    color: var(--active-color);
+}
+
+.memory-management {
+    margin: 20px 0;
+}
+
+.memory-areas {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.memory-area {
+    background: var(--secondary-bg);
+    padding: 15px;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.memory-area h3 {
+    color: var(--active-color);
+    margin-top: 0;
+}
+
+.memory-settings {
+    background: var(--secondary-bg);
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.troubleshooting-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    margin: 20px 0;
+}
+
+.trouble-card {
+    background: var(--secondary-bg);
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.trouble-card h3 {
+    color: var(--active-color);
+    margin-top: 0;
+}
+
+@media (max-width: 768px) {
+    .sub-layers {
+        grid-template-columns: 1fr;
+    }
+
+    .layer[data-layer]::before {
+        position: static;
+        display: block;
+        transform: none;
+        margin-bottom: 10px;
+    }
+
+    .components-grid,
+    .memory-areas,
+    .troubleshooting-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Dark mode support */
+@media (prefers-color-scheme: dark) {
+    .component-card,
+    .step-card,
+    .execution-example,
+    .memory-area,
+    .memory-settings,
+    .trouble-card {
+        background: rgba(255, 255, 255, 0.05);
+    }
+
+    .sub-layer {
+        background: rgba(255, 255, 255, 0.1);
+    }
+
+    .comparison-table th {
+        background: var(--active-color-dark);
+    }
+}

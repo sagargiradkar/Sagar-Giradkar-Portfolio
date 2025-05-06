@@ -1,0 +1,232 @@
+/* src/components/Tutorials/Java/content/JavaIDEs/JavaIDEs.css */
+
+.ide-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin: 20px 0;
+}
+
+.ide-card {
+    background: var(--secondary-bg);
+    border-radius: 12px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    transition: transform 0.2s;
+}
+
+.ide-card:hover {
+    transform: translateY(-5px);
+}
+
+.ide-header {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.ide-logo {
+    width: 50px;
+    height: 50px;
+    object-fit: contain;
+}
+
+.ide-description {
+    color: var(--text-secondary);
+    line-height: 1.5;
+}
+
+.ide-features ul,
+.ide-pros-cons ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.ide-features li,
+.ide-pros-cons li {
+    margin: 8px 0;
+    padding-left: 24px;
+    position: relative;
+}
+
+.ide-features li::before {
+    content: "→";
+    position: absolute;
+    left: 0;
+    color: var(--active-color);
+}
+
+.ide-pros-cons {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.pros li::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: #48bb78;
+}
+
+.cons li::before {
+    content: "×";
+    position: absolute;
+    left: 0;
+    color: #e53e3e;
+}
+
+.download-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background: var(--active-color);
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+    text-align: center;
+    transition: background 0.2s;
+}
+
+.download-button:hover {
+    background: var(--active-color-dark);
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    margin: 20px 0;
+}
+
+.feature-category {
+    background: var(--secondary-bg);
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.feature-category h3 {
+    color: var(--active-color);
+    margin-top: 0;
+}
+
+.feature-category ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.feature-category li {
+    margin: 8px 0;
+    padding-left: 24px;
+    position: relative;
+}
+
+.feature-category li::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: var(--active-color);
+    font-weight: bold;
+}
+
+.selection-guide {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    margin: 20px 0;
+}
+
+.guide-card {
+    background: var(--secondary-bg);
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.guide-card h3 {
+    color: var(--active-color);
+    margin-top: 0;
+}
+
+.guide-card ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.guide-card li {
+    margin: 8px 0;
+    padding-left: 24px;
+    position: relative;
+}
+
+.guide-card li::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: var(--active-color);
+}
+
+.setup-tips {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    margin: 20px 0;
+}
+
+.tip {
+    background: var(--secondary-bg);
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.tip h3 {
+    color: var(--active-color);
+    margin-top: 0;
+}
+
+.tip ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.tip li {
+    margin: 8px 0;
+    padding-left: 24px;
+    position: relative;
+}
+
+.tip li::before {
+    content: "→";
+    position: absolute;
+    left: 0;
+    color: var(--active-color);
+}
+
+@media (max-width: 768px) {
+    .ide-pros-cons {
+        grid-template-columns: 1fr;
+    }
+
+    .selection-guide,
+    .setup-tips {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Dark mode support */
+@media (prefers-color-scheme: dark) {
+    .ide-card,
+    .feature-category,
+    .guide-card,
+    .tip {
+        background: rgba(255, 255, 255, 0.05);
+    }
+
+    .download-button {
+        background: var(--active-color-dark);
+    }
+
+    .download-button:hover {
+        background: var(--active-color);
+    }
+}

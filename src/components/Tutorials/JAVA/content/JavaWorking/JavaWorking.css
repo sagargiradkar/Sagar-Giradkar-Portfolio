@@ -1,0 +1,124 @@
+/* src/components/Tutorials/Java/content/JavaWorking.css */
+
+.learning-objectives {
+    background-color: var(--primary-bg);
+    border-radius: 8px;
+    padding: 20px;
+    margin: 20px 0;
+    border-left: 4px solid var(--active-color);
+  }
+  
+  .learning-objectives h2 {
+    color: var(--active-color);
+    margin-top: 0;
+  }
+  
+  .learning-objectives ul {
+    list-style-type: none;
+    padding-left: 0;
+  }
+  
+  .learning-objectives li {
+    margin: 10px 0;
+    padding-left: 20px;
+    position: relative;
+  }
+  
+  .learning-objectives li::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: var(--active-color);
+  }
+  
+  .architecture-diagram {
+    background: var(--secondary-bg);
+    border-radius: 8px;
+    padding: 20px;
+    margin: 20px 0;
+  }
+  
+  .architecture-diagram ul {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+    padding-left: 0;
+    list-style-type: none;
+  }
+  
+  .architecture-diagram li {
+    background: var(--primary-bg);
+    padding: 10px;
+    border-radius: 4px;
+    text-align: center;
+  }
+  
+  .warning-box {
+    background-color: rgba(255, 86, 48, 0.1);
+    border-left: 4px solid #ff5630;
+    padding: 15px;
+    margin: 20px 0;
+    border-radius: 0 5px 5px 0;
+  }
+  
+  .best-practices-list ul {
+    background: var(--secondary-bg);
+    border-radius: 8px;
+    padding: 20px 40px;
+  }
+  
+  .best-practices-list li {
+    margin: 10px 0;
+  }
+  
+  .issues-table {
+    overflow-x: auto;
+  }
+  
+  .issues-table table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+  }
+  
+  .issues-table th,
+  .issues-table td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid var(--border-color);
+  }
+  
+  .issues-table th {
+    background-color: var(--primary-bg);
+    color: var(--active-color);
+  }
+  
+  .issues-table tr:hover {
+    background-color: var(--secondary-bg);
+  }
+  
+  @media (max-width: 768px) {
+    .architecture-diagram ul {
+      grid-template-columns: 1fr;
+    }
+  
+    .issues-table {
+      margin: 20px -15px;
+    }
+  }
+  
+  /* Additional styles for dark mode support */
+  @media (prefers-color-scheme: dark) {
+    .learning-objectives {
+      background-color: rgba(255, 255, 255, 0.05);
+    }
+  
+    .architecture-diagram {
+      background-color: rgba(255, 255, 255, 0.03);
+    }
+  
+    .warning-box {
+      background-color: rgba(255, 86, 48, 0.15);
+    }
+  }
+  

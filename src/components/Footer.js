@@ -9,6 +9,7 @@ import {
 import { FaLinkedinIn } from "react-icons/fa";
 import "./Footer.css";
 
+
 function Footer() {
   const year = new Date().getFullYear();
 
@@ -17,8 +18,8 @@ function Footer() {
       {/* Mobile Footer - Only shown on small screens */}
       <div className="mobile-footer">
         <div className="mobile-footer-content">
-          <h3>Designed and Developed by Sagar Giradkar</h3>
-          <h3>Copyright © {year} Sagar Giradkar</h3>
+          {/* <h3>Designed and Developed by Sagar Giradkar</h3>
+          <h3>Copyright © {year} Sagar Giradkar</h3> */}
 
           <ul className="mobile-social-icons">
             <li className="social-icon-item">
@@ -61,6 +62,7 @@ function Footer() {
               </a>
             </li>
           </ul>
+          <p>Made with <span className="heart">❤️</span> and <span className="coffee">☕</span> in India</p>
         </div>
       </div>
 
@@ -125,12 +127,12 @@ function Footer() {
 
         <div className="footer-bottom desktop-only">
           <div className="copyright-row">
-            <div className="copyright-col">
+            {/* <div className="copyright-col">
               <h3>Designed and Developed by Sagar Giradkar</h3>
             </div>
             <div className="copyright-col">
               <h3>Copyright © {year} Sagar Giradkar</h3>
-            </div>
+            </div> */}
           </div>
           <p>Made with <span className="heart">❤️</span> and <span className="coffee">☕</span> in India</p>
         </div>

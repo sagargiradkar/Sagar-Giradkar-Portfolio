@@ -10,6 +10,7 @@ import cIcon from "../../Assets/Tutorials/c.webp"
 import reactIcon from "../../Assets/Tutorials/reactjs.webp"
 import javaIcon from "../../Assets/Tutorials/java.webp"
 import cppIcon from "../../Assets/Tutorials/cpp.webp"
+import Footer from "../../components/Footer"
 import { useNavigate } from "react-router-dom";
 
 function Tutorials() {
@@ -110,6 +111,7 @@ function Tutorials() {
           ))}
         </Row>
       </Container>
+      <Footer/>
     </Container>
   );
 }

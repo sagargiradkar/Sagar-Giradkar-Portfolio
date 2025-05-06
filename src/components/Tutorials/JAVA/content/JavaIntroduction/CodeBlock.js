@@ -18,7 +18,7 @@ const CodeBlock = ({ initialCode }) => {
     const handleCopy = async () => {
         try {
             await navigator.clipboard.writeText(code);
-            alert('Code copied to clipboard!');
+           // alert('Code copied to clipboard!');
         } catch (err) {
             console.error('Failed to copy code:', err);
         }

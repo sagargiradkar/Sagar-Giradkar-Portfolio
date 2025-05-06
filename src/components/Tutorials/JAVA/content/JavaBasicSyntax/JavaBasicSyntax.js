@@ -1,230 +1,236 @@
-// src/components/Tutorials/Java/content/JavaBasicSyntax.js
-import React from "react";
-import { Link } from "react-router-dom";
-import "./JavaBasicSyntax";
+// src/components/Tutorials/Java/content/JavaBasicSyntax/JavaBasicSyntax.js
+
+import React from 'react';
+import { Link } from 'react-router-dom';
+import CodeBlock from './CodeBlock';
+import './JavaBasicSyntax.css';
 
 function JavaBasicSyntax() {
+    const basicStructureCode = `public class HelloWorld {
+    public static void main(String[] args) {
+        // Your code goes here
+        System.out.println("Hello, World!");
+    }
+}`;
+
+    const identifiersCode = `// Valid identifiers
+int age;
+String firstName;
+double _value;
+boolean isActive;
+
+// Invalid identifiers
+int 123number;     // Cannot start with number
+String my name;    // Cannot contain space
+double $price;     // $ not recommended
+boolean class;     // Cannot use reserved keyword`;
+
+    const dataTypesCode = `// Primitive Data Types
+byte byteNum = 127;
+short shortNum = 32767;
+int intNum = 2147483647;
+long longNum = 9223372036854775807L;
+float floatNum = 3.14f;
+double doubleNum = 3.14159;
+char letter = 'A';
+boolean isTrue = true;
+
+// Reference Data Types
+String text = "Hello, World!";
+int[] numbers = {1, 2, 3, 4, 5};
+ArrayList<String> list = new ArrayList<>();`;
+
+    const variablesCode = `// Variable declaration and initialization
+int number = 42;
+String name = "John";
+
+// Constants
+final double PI = 3.14159;
+final String COMPANY_NAME = "TechCorp";
+
+// Type inference (Java 10+)
+var count = 10;  // Type is inferred as int
+var message = "Hello";  // Type is inferred as String`;
+
+    const commentsCode = `// Single line comment
+
+/* Multi-line comment
+   This comment can span
+   multiple lines */
+
+/** Documentation comment (Javadoc)
+ * @author Your Name
+ * @version 1.0
+ * @since 2025-05-05
+ */`;
+
+    const classStructureCode = `public class Person {
+    // Instance variables (fields)
+    private String name;
+    private int age;
+
+    // Constructor
+    public Person(String name, int age) {
+        this.name = name;
+        this.age = age;
+    }
+
+    // Methods
+    public void sayHello() {
+        System.out.println("Hello, my name is " + name);
+    }
+
+    // Getters and Setters
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+}`;
+
     return (
         <div className="content-wrapper">
             <div className="content-breadcrumb">
-                <Link to="/tutorials">Tutorials</Link> › <Link to="/tutorials/java">Java</Link> › Basic Syntax
+                <Link to="/tutorial/javatutorial">Tutorials</Link> <span>›</span>{" "}
+                <Link to="/tutorial/javatutorial">Java</Link> <span>›</span> Basic Syntax
             </div>
 
             <h1 className="content-title">Java Basic Syntax</h1>
+            <p className="last-updated">Last Updated: 05 May, 2025</p>
 
             <section className="content-section">
-                <h2>Understanding Java Syntax</h2>
-                <p>
-                    Java syntax is the set of rules that define how a Java program is written and interpreted.
-                    Understanding these rules is essential for writing Java code that compiles and runs correctly.
-                </p>
-                <p>
-                    Let's explore the fundamental elements of Java syntax that form the building blocks of any Java program.
-                </p>
-            </section>
-
-            <section className="content-section">
-                <h2>Your First Java Program</h2>
-                <p>
-                    Let's start with the traditional "Hello, World!" program to understand basic Java structure:
-                </p>
-                <pre>
-                    <code>
-                        {`public class HelloWorld {
-    public static void main(String[] args) {
-        System.out.println("Hello, World!");
-    }
-}`}
-                    </code>
-                </pre>
-                <p>Let's break down this program:</p>
-                <ul>
-                    <li><strong>public class HelloWorld</strong> - Declares a class named HelloWorld. In Java, everything is defined within classes.</li>
-                    <li><strong>public static void main(String[] args)</strong> - The main method that serves as the entry point for the program.</li>
-                    <li><strong>System.out.println("Hello, World!")</strong> - Prints the text "Hello, World!" to the console.</li>
-                </ul>
-            </section>
-
-            <section className="content-section">
-                <h2>Java Case Sensitivity</h2>
-                <p>
-                    Java is case-sensitive, which means <code>HelloWorld</code> and <code>helloworld</code> are considered
-                    different identifiers. This applies to all identifiers in Java, including class names, method names, and variables.
-                </p>
-                <div className="note-box">
-                    <strong>Important:</strong> Class names in Java should start with an uppercase letter by convention, while
-                    method and variable names should start with a lowercase letter.
+                <h2>Basic Program Structure</h2>
+                <div className="syntax-explanation">
+                    <p>Every Java program starts with a class definition. Here's the basic structure:</p>
+                    <CodeBlock initialCode={basicStructureCode} />
+                    
+                    <div className="key-components">
+                        <h3>Key Components:</h3>
+                        <ul>
+                            <li><code>public class</code> - Class declaration</li>
+                            <li><code>main method</code> - Program entry point</li>
+                            <li><code>System.out.println()</code> - Output statement</li>
+                        </ul>
+                    </div>
                 </div>
             </section>
 
             <section className="content-section">
-                <h2>Java Identifiers</h2>
-                <p>
-                    Identifiers are names given to classes, methods, variables, etc. Here are the rules for valid Java identifiers:
-                </p>
-                <ul>
-                    <li>Must begin with a letter (A-Z or a-z), currency character ($), or underscore (_).</li>
-                    <li>After the first character, can include digits (0-9).</li>
-                    <li>Cannot use reserved keywords as identifiers.</li>
-                    <li>Cannot include spaces or special characters like !, @, #, etc.</li>
-                </ul>
-                <p>Examples of valid identifiers:</p>
-                <pre>
-                    <code>
-                        {`count
-$value
-_name
-firstName
-student2
-MAX_SIZE`}
-                    </code>
-                </pre>
+                <h2>Identifiers</h2>
+                <div className="identifier-rules">
+                    <h3>Rules for Identifiers:</h3>
+                    <ul>
+                        <li>Must start with a letter, underscore, or dollar sign</li>
+                        <li>Can contain letters, digits, underscores</li>
+                        <li>Case-sensitive</li>
+                        <li>No reserved keywords allowed</li>
+                    </ul>
+                    <CodeBlock initialCode={identifiersCode} />
+                </div>
             </section>
 
             <section className="content-section">
-                <h2>Java Keywords</h2>
-                <p>
-                    Keywords are reserved words that have special meaning in Java. You cannot use these words as identifiers.
-                </p>
-                <table>
-                    <thead>
-                        <tr>
-                            <th colSpan="5">Java Keywords</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>abstract</td>
-                            <td>assert</td>
-                            <td>boolean</td>
-                            <td>break</td>
-                            <td>byte</td>
-                        </tr>
-                        <tr>
-                            <td>case</td>
-                            <td>catch</td>
-                            <td>char</td>
-                            <td>class</td>
-                            <td>const</td>
-                        </tr>
-                        <tr>
-                            <td>continue</td>
-                            <td>default</td>
-                            <td>do</td>
-                            <td>double</td>
-                            <td>else</td>
-                        </tr>
-                        <tr>
-                            <td>enum</td>
-                            <td>extends</td>
-                            <td>final</td>
-                            <td>finally</td>
-                            <td>float</td>
-                        </tr>
-                        <tr>
-                            <td>for</td>
-                            <td>if</td>
-                            <td>implements</td>
-                            <td>import</td>
-                            <td>instanceof</td>
-                        </tr>
-                        <tr>
-                            <td>int</td>
-                            <td>interface</td>
-                            <td>long</td>
-                            <td>native</td>
-                            <td>new</td>
-                        </tr>
-                        <tr>
-                            <td>package</td>
-                            <td>private</td>
-                            <td>protected</td>
-                            <td>public</td>
-                            <td>return</td>
-                        </tr>
-                        <tr>
-                            <td>short</td>
-                            <td>static</td>
-                            <td>strictfp</td>
-                            <td>super</td>
-                            <td>switch</td>
-                        </tr>
-                        <tr>
-                            <td>synchronized</td>
-                            <td>this</td>
-                            <td>throw</td>
-                            <td>throws</td>
-                            <td>transient</td>
-                        </tr>
-                        <tr>
-                            <td>try</td>
-                            <td>void</td>
-                            <td>volatile</td>
-                            <td>while</td>
-                            <td>var</td>
-                        </tr>
-                    </tbody>
-                </table>
+                <h2>Data Types</h2>
+                <div className="data-types">
+                    <div className="data-types-grid">
+                        <div className="type-category primitive">
+                            <h3>Primitive Types</h3>
+                            <ul>
+                                <li>byte (8 bits)</li>
+                                <li>short (16 bits)</li>
+                                <li>int (32 bits)</li>
+                                <li>long (64 bits)</li>
+                                <li>float (32 bits)</li>
+                                <li>double (64 bits)</li>
+                                <li>char (16 bits)</li>
+                                <li>boolean</li>
+                            </ul>
+                        </div>
+                        <div className="type-category reference">
+                            <h3>Reference Types</h3>
+                            <ul>
+                                <li>Classes</li>
+                                <li>Interfaces</li>
+                                <li>Arrays</li>
+                                <li>Enums</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <CodeBlock initialCode={dataTypesCode} />
+                </div>
             </section>
 
             <section className="content-section">
-                <h2>Java Statements</h2>
-                <p>
-                    A statement is a complete unit of execution in Java that performs an action.
-                    Each statement in Java should end with a semicolon (;).
-                </p>
-                <pre>
-                    <code>
-                        {`int age = 25;            // Variable declaration statement
-System.out.println(age);  // Method invocation statement
-age++;                    // Increment statement`}
-                    </code>
-                </pre>
+                <h2>Variables</h2>
+                <div className="variables">
+                    <div className="variable-types">
+                        <h3>Types of Variables:</h3>
+                        <ul>
+                            <li>Local Variables</li>
+                            <li>Instance Variables (Fields)</li>
+                            <li>Class Variables (Static Fields)</li>
+                            <li>Constants (Final Variables)</li>
+                        </ul>
+                    </div>
+                    <CodeBlock initialCode={variablesCode} />
+                </div>
             </section>
 
             <section className="content-section">
-                <h2>Java Blocks</h2>
-                <p>
-                    A block in Java is a group of statements enclosed within curly braces { }. Blocks define the scope of variables
-                    and are used in classes, methods, and control flow statements.
-                </p>
-                <pre>
-                    <code>
-                        {`{
-    int x = 10;  // Variable x is only accessible within this block
-    System.out.println(x);
-}
-// x is not accessible here`}
-                    </code>
-                </pre>
+                <h2>Comments</h2>
+                <div className="comments">
+                    <p>Java supports three types of comments:</p>
+                    <CodeBlock initialCode={commentsCode} />
+                </div>
             </section>
 
             <section className="content-section">
-                <h2>Java Comments</h2>
-                <p>
-                    Comments are non-executable statements that make your code more readable. Java supports three types of comments:
-                </p>
-                <pre>
-                    <code>
-                        {`// This is a single-line comment
+                <h2>Class Structure</h2>
+                <div className="class-structure">
+                    <p>A typical Java class contains:</p>
+                    <ul>
+                        <li>Fields (attributes)</li>
+                        <li>Constructors</li>
+                        <li>Methods</li>
+                        <li>Nested classes and interfaces (optional)</li>
+                    </ul>
+                    <CodeBlock initialCode={classStructureCode} />
+                </div>
+            </section>
 
-/* This is a 
-   multi-line comment */
-
-/**
- * This is a documentation comment (Javadoc)
- * @author Harry
- * @version 1.0
- */`}
-                    </code>
-                </pre>
+            <section className="content-section">
+                <h2>Naming Conventions</h2>
+                <div className="naming-conventions">
+                    <div className="convention-card">
+                        <h3>Classes</h3>
+                        <p>Start with uppercase, use CamelCase</p>
+                        <code>public class StudentRecord { }</code>
+                    </div>
+                    <div className="convention-card">
+                        <h3>Methods</h3>
+                        <p>Start with lowercase, use camelCase</p>
+                        <code>public void calculateTotal() { }</code>
+                    </div>
+                    <div className="convention-card">
+                        <h3>Variables</h3>
+                        <p>Start with lowercase, use camelCase</p>
+                        <code>int studentAge;</code>
+                    </div>
+                    <div className="convention-card">
+                        <h3>Constants</h3>
+                        <p>All uppercase, words separated by underscore</p>
+                        <code>final int MAX_VALUE = 100;</code>
+                    </div>
+                </div>
             </section>
 
             <div className="navigation-links">
-                <Link to="/tutorials/java/java-execution" className="prev-link">
+                <Link to="/tutorials/java/execution" className="prev-link">
                     ← Previous: Java Execution
                 </Link>
-                <Link to="/tutorials/java/java-variables" className="next-link">
+                <Link to="/tutorials/java/variables" className="next-link">
                     Next: Java Variables →
                 </Link>
             </div>

@@ -22,6 +22,7 @@ import JavaControlFlow from "./content/BASIC CONCEPTS/JavaControlFlow/JavaContro
 import JavaLoops from "./content/BASIC CONCEPTS/JavaLoops/JavaLoops";
 import JavaArrays from "./content/BASIC CONCEPTS/JavaArrays/JavaArrays";
 import JavaStrings from "./content/BASIC CONCEPTS/JavaStrings/JavaStrings";
+import JavaMethods from "./content/BASIC CONCEPTS/JavaMethods/JavaMethods";
 
 function JavaDashboard() {
   const [isSidebarOpen, setIsSidebarOpen] = useState(true);
@@ -71,8 +72,8 @@ function JavaDashboard() {
         return <JavaArrays />;
       case "javaStrings":
         return <JavaStrings />;
-      // case "javaMethods":
-      //   return <JavaMethodsContent />;
+      case "javaMethods":
+        return <JavaMethods />;
         
       // Default case
       default:

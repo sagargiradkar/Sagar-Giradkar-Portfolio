@@ -6,8 +6,9 @@
   }
   
   .content-breadcrumb {
-    font-size: 0.9rem;
+    font-size: 1rem;
     margin-bottom: 20px;
+    margin-left: 30px;
     color: var(--text-secondary);
   }
   
@@ -26,7 +27,7 @@
     margin-bottom: 30px;
     font-weight: 700;
     color: var(--text-primary);
-    border-bottom: 2px solid var(--active-color);
+    background: var(--primary-bg);
     padding-bottom: 15px;
   }
   

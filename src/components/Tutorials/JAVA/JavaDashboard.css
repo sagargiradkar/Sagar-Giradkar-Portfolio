@@ -28,17 +28,15 @@
   /* Sidebar Toggle Button */
   .sidebar-toggle {
     position: fixed;
-    top: calc(var(--header-height) + 10px);
+    top: calc(var(--header-height) + 20px);
     left: 10px;
     z-index: 1000;
-    background: var(--sidebar-bg);
-    border: none;
+    background: var(--primary-bg);
     color: var(--text-primary);
     cursor: pointer;
     font-size: 24px;
     padding: 12px;
     display: none;
-    border-radius: 8px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
     transition: all var(--transition-speed) ease;
   }
@@ -66,14 +64,11 @@
     flex-direction: column;
     height: 100%;
   }
-  
   .tutorial-title {
+    margin-left: 60px; /* Add left margin */
     padding: 20px;
-    margin: 0;
     font-size: 1.5rem;
     font-weight: 600;
-    border-bottom: 1px solid var(--border-color);
-    background-color: var(--sidebar-bg);
     position: sticky;
     top: 0;
     z-index: 2;
@@ -90,6 +85,7 @@
   /* Menu Sections */
   .menu-section {
     margin-bottom: 5px;
+    
   }
   
   .menu-section-header {

@@ -1,7 +1,7 @@
 // src/components/Tutorials/Java/content/JavaBasicSyntax.js
 import React from "react";
 import { Link } from "react-router-dom";
-import "./IntroContent.css";
+import "./JavaBasicSyntax";
 
 function JavaBasicSyntax() {
     return (

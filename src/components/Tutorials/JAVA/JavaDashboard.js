@@ -5,8 +5,8 @@ import "./JavaDashboard.css";
 import Sidebar from "./Sidebar";
 
 // Import all content components
-import JavaIntroductionContent from "./content/JavaIntroduction";
-import JavaBasicSyntax from "./content/JavaBasicSyntax";
+import JavaIntroductionContent from "./content/JavaIntroduction/JavaIntroduction";
+import JavaBasicSyntax from "./content/JavaBasicSyntax/JavaBasicSyntax";
 
 function JavaDashboard() {
   const [isSidebarOpen, setIsSidebarOpen] = useState(true);

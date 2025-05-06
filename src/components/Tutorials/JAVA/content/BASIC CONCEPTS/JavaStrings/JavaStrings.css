@@ -1,0 +1,324 @@
+/* src/components/Tutorials/Java/content/JavaStrings/JavaStrings.css */
+
+.strings-overview {
+    background: var(--secondary-bg);
+    padding: 20px;
+    border-radius: 8px;
+    margin: 20px 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.strings-overview p {
+    margin: 0;
+    line-height: 1.6;
+    color: var(--text-primary);
+}
+
+.creation-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.creation-card {
+    background: var(--secondary-bg);
+    padding: 20px;
+    border-radius: 8px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: relative;
+    overflow: hidden;
+}
+
+.creation-card::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: linear-gradient(to right, var(--active-color), transparent);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.creation-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.creation-card:hover::after {
+    opacity: 1;
+}
+
+.methods-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.method-card {
+    background: var(--secondary-bg);
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.method-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--active-color);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: 1;
+}
+
+.method-card:hover::before {
+    opacity: 0.1;
+}
+
+.method-card h3,
+.method-card p {
+    position: relative;
+    z-index: 2;
+}
+
+.comparison-section {
+    margin: 20px 0;
+}
+
+.comparison-info {
+    margin-bottom: 20px;
+}
+
+.info-card {
+    background: var(--secondary-bg);
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.builder-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.builder-card {
+    background: var(--secondary-bg);
+    padding: 20px;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.builder-card:hover {
+    transform: translateY(-5px);
+}
+
+.best-practices {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    margin: 20px 0;
+}
+
+.practice-card {
+    background: var(--secondary-bg);
+    padding: 20px;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.practice-card:hover {
+    transform: translateY(-5px);
+    background: linear-gradient(145deg, var(--secondary-bg), var(--secondary-bg-dark));
+}
+
+/* Code block styles */
+.code-block {
+    background: #1e1e1e;
+    border-radius: 8px;
+    padding: 20px;
+    margin: 15px 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.code-block::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: linear-gradient(to right, var(--active-color), transparent);
+}
+
+.code-block pre {
+    margin: 0;
+    white-space: pre-wrap;
+}
+
+.code-block code {
+    color: #d4d4d4;
+    font-family: 'Consolas', 'Monaco', monospace;
+    font-size: 0.95em;
+    line-height: 1.5;
+}
+
+/* Typography */
+h2 {
+    color: var(--text-primary);
+    margin: 30px 0 20px;
+    font-size: 1.8em;
+}
+
+h3 {
+    color: var(--active-color);
+    margin: 0 0 10px 0;
+    font-size: 1.2em;
+}
+
+p {
+    margin: 0;
+    line-height: 1.5;
+    color: var(--text-secondary);
+}
+
+/* Dark mode support */
+@media (prefers-color-scheme: dark) {
+    .creation-card,
+    .method-card,
+    .info-card,
+    .builder-card,
+    .practice-card {
+        background: rgba(255, 255, 255, 0.05);
+    }
+
+    .code-block {
+        background: #2d2d2d;
+    }
+
+    .practice-card:hover {
+        background: linear-gradient(145deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.05));
+    }
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.creation-card,
+.method-card,
+.builder-card,
+.practice-card {
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .creation-grid,
+    .methods-grid,
+    .builder-grid,
+    .best-practices {
+        grid-template-columns: 1fr;
+    }
+
+    .creation-card:hover,
+    .method-card:hover,
+    .builder-card:hover,
+    .practice-card:hover {
+        transform: none;
+    }
+
+    .code-block {
+        padding: 15px;
+        font-size: 0.9em;
+    }
+}
+
+/* Navigation links */
+.navigation-links {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid var(--border-color);
+}
+
+.prev-link,
+.next-link {
+    text-decoration: none;
+    color: var(--active-color);
+    display: flex;
+    align-items: center;
+    transition: color 0.2s;
+}
+
+.prev-link:hover,
+.next-link:hover {
+    color: var(--active-color-dark);
+}
+
+.prev-link::before {
+    content: "←";
+    margin-right: 8px;
+}
+
+.next-link::after {
+    content: "→";
+    margin-left: 8px;
+}
+
+/* Print styles */
+@media print {
+    .creation-card,
+    .method-card,
+    .builder-card,
+    .practice-card {
+        break-inside: avoid;
+        page-break-inside: avoid;
+    }
+
+    .code-block {
+        break-inside: avoid;
+        page-break-inside: avoid;
+        border: 1px solid #ccc;
+    }
+
+    .navigation-links {
+        display: none;
+    }
+}
+
+/* Accessibility */
+@media (prefers-reduced-motion: reduce) {
+    .creation-card,
+    .method-card,
+    .builder-card,
+    .practice-card {
+        transition: none;
+        animation: none;
+    }
+}

@@ -1,0 +1,224 @@
+/* src/components/Tutorials/Java/content/BASIC CONCEPTS/JavaVariables/JavaVariables.css */
+
+.variable-intro {
+    background: var(--secondary-bg);
+    padding: 20px;
+    border-radius: 8px;
+    margin: 20px 0;
+}
+
+.variable-intro p {
+    margin: 0;
+    line-height: 1.6;
+}
+
+.declaration-examples {
+    margin: 20px 0;
+}
+
+.variable-types-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    margin: 20px 0;
+}
+
+.type-card {
+    background: var(--secondary-bg);
+    padding: 20px;
+    border-radius: 8px;
+    transition: transform 0.2s;
+}
+
+.type-card:hover {
+    transform: translateY(-5px);
+}
+
+.type-card h3 {
+    color: var(--active-color);
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+
+.type-card ul {
+    list-style-type: none;
+    padding-left: 0;
+    margin: 0;
+}
+
+.type-card li {
+    margin: 8px 0;
+    padding-left: 24px;
+    position: relative;
+}
+
+.type-card li::before {
+    content: "→";
+    position: absolute;
+    left: 0;
+    color: var(--active-color);
+}
+
+.constants-example,
+.scope-example {
+    margin: 20px 0;
+}
+
+.naming-conventions {
+    margin: 20px 0;
+}
+
+.conventions-rules {
+    background: var(--secondary-bg);
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.conventions-rules h3 {
+    color: var(--active-color);
+    margin-top: 0;
+}
+
+.conventions-rules ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.conventions-rules li {
+    margin: 8px 0;
+    padding-left: 24px;
+    position: relative;
+}
+
+.conventions-rules li::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: var(--active-color);
+    font-weight: bold;
+}
+
+.best-practices {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    margin: 20px 0;
+}
+
+.practice-card {
+    background: var(--secondary-bg);
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.practice-card h3 {
+    color: var(--active-color);
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+.practice-card p {
+    margin: 0;
+    line-height: 1.5;
+}
+
+/* Code block styling */
+.code-block {
+    background: #1e1e1e;
+    border-radius: 8px;
+    padding: 15px;
+    margin: 15px 0;
+}
+
+.code-block pre {
+    margin: 0;
+    white-space: pre-wrap;
+}
+
+.code-block code {
+    color: #d4d4d4;
+    font-family: 'Consolas', 'Monaco', monospace;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .variable-types-grid,
+    .best-practices {
+        grid-template-columns: 1fr;
+    }
+
+    .type-card,
+    .practice-card {
+        transform: none;
+    }
+
+    .type-card:hover {
+        transform: none;
+    }
+}
+
+/* Dark mode support */
+@media (prefers-color-scheme: dark) {
+    .variable-intro,
+    .type-card,
+    .conventions-rules,
+    .practice-card {
+        background: rgba(255, 255, 255, 0.05);
+    }
+
+    .code-block {
+        background: #2d2d2d;
+    }
+}
+
+/* Animation for cards */
+.type-card,
+.practice-card {
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Navigation links */
+.navigation-links {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid var(--border-color);
+}
+
+.prev-link,
+.next-link {
+    text-decoration: none;
+    color: var(--active-color);
+    display: flex;
+    align-items: center;
+    transition: color 0.2s;
+}
+
+.prev-link:hover,
+.next-link:hover {
+    color: var(--active-color-dark);
+}
+
+.prev-link::before {
+    content: "←";
+    margin-right: 8px;
+}
+
+.next-link::after {
+    content: "→";
+    margin-left: 8px;
+}

@@ -10,6 +10,7 @@ import JavaBasicSyntax from "./content/JavaBasicSyntax/JavaBasicSyntax";
 import JavaWorking from "./content/JavaWorking/JavaWorking";
 import JavaInstallation from "./content/JavaInstallation/JavaInstallation";
 import JavaExecution from "./content/JavaExecution/JavaExecution";
+import JavaHistory from "./content/JavaHistory/JavaHistory";
 
 function JavaDashboard() {
   const [isSidebarOpen, setIsSidebarOpen] = useState(true);
@@ -33,16 +34,16 @@ function JavaDashboard() {
         return <JavaExecution />;
       case "javaBasicSyntax":
         return <JavaBasicSyntax />;
-      // case "javaHistory":
-      //   return <JavaHistoryContent />;
+      case "javaHistory":
+        return <JavaHistory />;
       // case "javaFeatures":
-      //   return <JavaFeaturesContent />;
+      //   return <JavaFeatures />;
       // case "javaJDK":
-      //   return <JavaJDKContent />;
+      //   return <JavaJDK />;
       // case "javaJRE":
-      //   return <JavaJREContent />;
+      //   return <JavaJRE />;
       // case "javaIDEs":
-      //   return <JavaIDEsContent />;
+      //   return <JavaIDEs />;
 
       // Basic Concepts section
       // case "javaVariables":

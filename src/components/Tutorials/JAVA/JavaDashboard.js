@@ -12,6 +12,7 @@ import JavaInstallation from "./content/JavaInstallation/JavaInstallation";
 import JavaExecution from "./content/JavaExecution/JavaExecution";
 import JavaHistory from "./content/JavaHistory/JavaHistory";
 import JavaFeatures from "./content/JavaFeatures/JavaFeatures";
+import JavaJDK from "./content/JavaJDK/JavaJDK";
 
 function JavaDashboard() {
   const [isSidebarOpen, setIsSidebarOpen] = useState(true);
@@ -39,8 +40,8 @@ function JavaDashboard() {
         return <JavaHistory />;
       case "javaFeatures":
         return <JavaFeatures />;
-      // case "javaJDK":
-      //   return <JavaJDK />;
+      case "javaJDK":
+        return <JavaJDK />;
       // case "javaJRE":
       //   return <JavaJRE />;
       // case "javaIDEs":

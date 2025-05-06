@@ -1,0 +1,338 @@
+/* src/components/Tutorials/Java/content/JavaArrays/JavaArrays.css */
+
+.arrays-overview {
+    background: var(--secondary-bg);
+    padding: 20px;
+    border-radius: 8px;
+    margin: 20px 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.arrays-overview p {
+    margin: 0;
+    line-height: 1.6;
+    color: var(--text-primary);
+}
+
+.type-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.type-card {
+    background: var(--secondary-bg);
+    padding: 20px;
+    border-radius: 8px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: relative;
+    overflow: hidden;
+}
+
+.type-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 4px;
+    height: 100%;
+    background: var(--active-color);
+    opacity: 0.7;
+}
+
+.type-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.type-card h3 {
+    color: var(--active-color);
+    margin: 0 0 10px 0;
+    font-size: 1.2em;
+}
+
+.type-card p {
+    margin: 0;
+    color: var(--text-secondary);
+    line-height: 1.5;
+}
+
+.operations-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.operation-card {
+    background: var(--secondary-bg);
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.operation-card:hover {
+    background: var(--active-color);
+    color: white;
+    transform: translateY(-5px);
+}
+
+.operation-card:hover h3 {
+    color: white;
+}
+
+.operation-card h3 {
+    color: var(--active-color);
+    margin: 0 0 10px 0;
+}
+
+.operation-card p {
+    margin: 0;
+    line-height: 1.5;
+}
+
+.multidim-section,
+.jagged-section {
+    margin: 20px 0;
+}
+
+.dim-info,
+.jagged-info {
+    margin-bottom: 20px;
+}
+
+.info-card {
+    background: var(--secondary-bg);
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.info-card h3 {
+    color: var(--active-color);
+    margin: 0 0 10px 0;
+}
+
+.info-card p {
+    margin: 0;
+    line-height: 1.5;
+}
+
+.best-practices {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    margin: 20px 0;
+}
+
+.practice-card {
+    background: var(--secondary-bg);
+    padding: 20px;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.practice-card:hover {
+    transform: translateY(-5px);
+}
+
+.practice-card h3 {
+    color: var(--active-color);
+    margin: 0 0 10px 0;
+}
+
+.practice-card p {
+    margin: 0;
+    line-height: 1.5;
+}
+
+.pitfalls-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    margin: 20px 0;
+}
+
+.pitfall-card {
+    background: #fff3f3;
+    padding: 20px;
+    border-radius: 8px;
+    border-left: 4px solid #ff4444;
+    transition: transform 0.3s ease;
+}
+
+.pitfall-card:hover {
+    transform: translateY(-5px);
+}
+
+.pitfall-card h3 {
+    color: #ff4444;
+    margin: 0 0 10px 0;
+}
+
+.pitfall-card p {
+    margin: 0;
+    line-height: 1.5;
+    color: #666;
+}
+
+/* Code block styles */
+.code-block {
+    background: #1e1e1e;
+    border-radius: 8px;
+    padding: 20px;
+    margin: 15px 0;
+    position: relative;
+}
+
+.code-block::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: var(--active-color);
+    opacity: 0.7;
+}
+
+.code-block pre {
+    margin: 0;
+    white-space: pre-wrap;
+}
+
+.code-block code {
+    color: #d4d4d4;
+    font-family: 'Consolas', 'Monaco', monospace;
+    font-size: 0.95em;
+    line-height: 1.5;
+}
+
+/* Dark mode support */
+@media (prefers-color-scheme: dark) {
+    .type-card,
+    .operation-card,
+    .info-card,
+    .practice-card {
+        background: rgba(255, 255, 255, 0.05);
+    }
+
+    .pitfall-card {
+        background: rgba(255, 68, 68, 0.1);
+    }
+
+    .operation-card:hover {
+        background: var(--active-color-dark);
+    }
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.type-card,
+.operation-card,
+.practice-card,
+.pitfall-card {
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .type-grid,
+    .operations-grid,
+    .best-practices,
+    .pitfalls-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .type-card:hover,
+    .operation-card:hover,
+    .practice-card:hover,
+    .pitfall-card:hover {
+        transform: none;
+    }
+
+    .code-block {
+        padding: 15px;
+        font-size: 0.9em;
+    }
+}
+
+/* Navigation links */
+.navigation-links {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid var(--border-color);
+}
+
+.prev-link,
+.next-link {
+    text-decoration: none;
+    color: var(--active-color);
+    display: flex;
+    align-items: center;
+    transition: color 0.2s;
+}
+
+.prev-link:hover,
+.next-link:hover {
+    color: var(--active-color-dark);
+}
+
+.prev-link::before {
+    content: "←";
+    margin-right: 8px;
+}
+
+.next-link::after {
+    content: "→";
+    margin-left: 8px;
+}
+
+/* Print styles */
+@media print {
+    .type-card,
+    .operation-card,
+    .practice-card,
+    .pitfall-card {
+        break-inside: avoid;
+        page-break-inside: avoid;
+    }
+
+    .code-block {
+        break-inside: avoid;
+        page-break-inside: avoid;
+        border: 1px solid #ccc;
+    }
+
+    .navigation-links {
+        display: none;
+    }
+}
+
+/* Accessibility */
+@media (prefers-reduced-motion: reduce) {
+    .type-card,
+    .operation-card,
+    .practice-card,
+    .pitfall-card {
+        transition: none;
+        animation: none;
+    }
+}

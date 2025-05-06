@@ -8,6 +8,7 @@ import Sidebar from "./Sidebar";
 import JavaIntroductionContent from "./content/JavaIntroduction/JavaIntroduction";
 import JavaBasicSyntax from "./content/JavaBasicSyntax/JavaBasicSyntax";
 import JavaWorking from "./content/JavaWorking/JavaWorking";
+import JavaInstallation from "./content/JavaInstallation/JavaInstallation";
 
 function JavaDashboard() {
   const [isSidebarOpen, setIsSidebarOpen] = useState(true);
@@ -25,8 +26,8 @@ function JavaDashboard() {
         return <JavaIntroductionContent />;
       case "javaWorking":
         return <JavaWorking />;
-    //   case "javaInstallation":
-    //     return <JavaInstallation />;
+      case "javaInstallation":
+        return <JavaInstallation />;
     //   case "javaExecution":
     //     return <JavaExecution />;
       case "javaBasicSyntax":

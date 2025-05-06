@@ -16,6 +16,7 @@ import JavaJDK from "./content/INTRODUCTION/JavaJDK/JavaJDK";
 import JavaJRE from "./content/INTRODUCTION/JavaJRE/JavaJRE";
 import JavaIDEs from "./content/INTRODUCTION/JavaIDEs/JavaIDEs";
 import JavaVariables from "./content/BASIC CONCEPTS/JavaVariables/JavaVariables";
+import JavaDataTypes from "./content/BASIC CONCEPTS/JavaDataTypes/JavaDataTypes";
 
 function JavaDashboard() {
   const [isSidebarOpen, setIsSidebarOpen] = useState(true);
@@ -53,8 +54,8 @@ function JavaDashboard() {
       // Basic Concepts section
       case "javaVariables":
         return <JavaVariables />;
-      // case "javaDataTypes":
-      //   return <JavaDataTypesContent />;
+      case "javaDataTypes":
+        return <JavaDataTypes />;
       // case "javaOperators":
       //   return <JavaOperatorsContent />;
       // case "javaControlFlow":

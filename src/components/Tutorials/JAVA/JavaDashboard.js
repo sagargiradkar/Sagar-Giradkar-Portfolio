@@ -30,6 +30,7 @@ import JavaComments from "./content/BASIC CONCEPTS/JavaComments/JavaComments";
 import TypeCasting from "./content/BASIC CONCEPTS/TypeCasting/TypeCasting";
 import JavaIO from "./content/BASIC CONCEPTS/JavaIO/JavaIO";
 import TopicNotFound from "./content/INTRODUCTION/TopicNotFound/TopicNotFound";
+import ClassesAndObjects from "./content/OOP BASIC/ClassesAndObjects/ClassesAndObjects";
 
 function JavaDashboard() {
   const [isSidebarOpen, setIsSidebarOpen] = useState(true);
@@ -95,8 +96,9 @@ function JavaDashboard() {
         return <JavaMethods />;
 
       //OOP BASIC
+      case "classesAndObjects":
+        return <ClassesAndObjects />;
 
-      
 
       // Default case
       default:

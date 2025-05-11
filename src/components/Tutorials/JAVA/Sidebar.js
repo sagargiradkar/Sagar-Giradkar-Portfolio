@@ -35,7 +35,7 @@ const JAVA_TUTORIAL_SECTIONS = {
   ],
 
   OOP_BASICS: [
-    { id: "classesObjects", title: "Classes and Objects" },
+    { id: "classesAndObjects", title: "Classes and Objects" },
     { id: "constructors", title: "Constructors" },
     { id: "methods", title: "Methods and Overloading" },
     { id: "thisKeyword", title: "This Keyword" },

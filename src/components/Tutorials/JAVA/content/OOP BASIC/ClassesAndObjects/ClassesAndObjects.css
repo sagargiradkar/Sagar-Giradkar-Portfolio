@@ -1,0 +1,163 @@
+/* ClassesAndObjects.css */
+.feature-list {
+  background-color: var(--secondary-bg);
+  padding: 20px;
+  border-radius: 8px;
+  margin: 20px 0;
+}
+
+.feature-list h3 {
+  color: var(--active-color);
+  margin-top: 0;
+}
+
+.feature-list ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.feature-list li {
+  margin-bottom: 10px;
+  padding-left: 20px;
+  position: relative;
+}
+
+.feature-list li:before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: var(--active-color);
+}
+
+.constructor-types {
+  margin: 20px 0;
+}
+
+.type-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.type-card {
+  background-color: var(--secondary-bg);
+  padding: 1.5rem;
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+}
+
+.type-card:hover {
+  transform: translateY(-5px);
+}
+
+.type-card h4 {
+  color: var(--active-color);
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+}
+
+.type-card p {
+  margin: 0;
+  color: var(--text-secondary);
+}
+
+.attributes-methods {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin: 20px 0;
+}
+
+.subsection {
+  background-color: var(--secondary-bg);
+  padding: 1.5rem;
+  border-radius: 8px;
+}
+
+.subsection h3 {
+  color: var(--active-color);
+  margin-top: 0;
+}
+
+.subsection ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.subsection li {
+  margin-bottom: 0.5rem;
+  padding-left: 20px;
+  position: relative;
+}
+
+.subsection li:before {
+  content: "→";
+  position: absolute;
+  left: 0;
+  color: var(--active-color);
+}
+
+.warning-box {
+  background-color: rgba(245, 158, 11, 0.1);
+  border-left: 4px solid #f59e0b;
+  padding: 15px;
+  margin: 20px 0;
+  border-radius: 0 5px 5px 0;
+}
+
+.note-box {
+  background-color: rgba(79, 70, 229, 0.1);
+  border-left: 4px solid var(--active-color);
+  padding: 15px;
+  margin: 20px 0;
+  border-radius: 0 5px 5px 0;
+}
+
+.best-practices {
+  background-color: rgba(45, 55, 72, 0.3);
+  padding: 20px;
+  border-radius: 8px;
+  margin: 20px 0;
+}
+
+.best-practices ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.best-practices li {
+  margin-bottom: 15px;
+  padding-left: 20px;
+  position: relative;
+}
+
+.best-practices li:before {
+  content: "→";
+  position: absolute;
+  left: 0;
+  color: var(--active-color);
+}
+
+.best-practices strong {
+  color: var(--active-color);
+  display: block;
+  margin-bottom: 5px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .type-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .attributes-methods {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .type-card,
+  .subsection {
+    padding: 1rem;
+  }
+}

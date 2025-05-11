@@ -29,6 +29,7 @@ import ReactNativeCLIPost from "./components/Blog/BlogPost/ReactNativeCLIPost/Re
 import Tutorials from "./components/Tutorials/Tutorials";
 import HTMLDashboard from "./components/Tutorials/HTML/HTMLDashboard";
 import JavaDashboard from "./components/Tutorials/JAVA/JavaDashboard";
+import TopicNotFound from "./components/Tutorials/JAVA/content/INTRODUCTION/TopicNotFound/TopicNotFound";
 
 function App() {
   const [load, upadateLoad] = useState(true);
@@ -53,7 +54,7 @@ function App() {
           <Route path="/about" element={<About />} />
           <Route path="/experience" element={<Experience />} />
           <Route path="/resume" element={<Resume />} />
-          <Route path="*" element={<Navigate to="/" />} />
+           <Route path="*" element={<TopicNotFound />} />
           <Route path="/blog" element={<Blog />} />
           <Route path="/blog/react-cpanel-hosting" element={<ReactCPanelPost />} />
           <Route path="/blog/react-native-cli-setup" element={<ReactNativeCLIPost />} />

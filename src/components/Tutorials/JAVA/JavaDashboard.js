@@ -28,6 +28,7 @@ import JavaEdition from "./content/INTRODUCTION/JavaEdition/JavaEdition";
 import JavaArchitecture from "./content/INTRODUCTION/JavaArchitecture/JavaArchitecture";
 import JavaComments from "./content/BASIC CONCEPTS/JavaComments/JavaComments";
 import TypeCasting from "./content/BASIC CONCEPTS/TypeCasting/TypeCasting";
+import JavaIO from "./content/BASIC CONCEPTS/JavaIO/JavaIO";
 
 function JavaDashboard() {
   const [isSidebarOpen, setIsSidebarOpen] = useState(true);
@@ -79,6 +80,8 @@ function JavaDashboard() {
         return <JavaComments />;
       case "typeCasting":
         return <TypeCasting />;
+      case "inputOutput":
+        return <JavaIO />;
       case "javaControlFlow":
         return <JavaControlFlow />;
       case "javaLoops":

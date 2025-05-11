@@ -41,6 +41,7 @@ import JavaPolymorphism from "./content/OOP TOPICS/Polymorphism/JavaPolymorphism
 import JavaAbstraction from "./content/OOP TOPICS/JavaAbstraction/JavaAbstraction";
 import JavaEncapsulation from "./content/OOP TOPICS/JavaEncapsulation/JavaEncapsulation";
 import JavaInterfaces from "./content/OOP TOPICS/JavaInterfaces/JavaInterfaces";
+import SuperKeyword from "./content/OOP TOPICS/SuperKeyword/SuperKeyword";
 function JavaDashboard() {
   const [isSidebarOpen, setIsSidebarOpen] = useState(true);
   const [selectedContent, setSelectedContent] = useState("javaIntroduction");
@@ -129,8 +130,8 @@ function JavaDashboard() {
         return <JavaEncapsulation />;
       case "javaInterfaces":
         return <JavaInterfaces />;
-      // case "superKeyword":
-      //   return <SuperKeyword />;
+      case "superKeyword":
+        return <SuperKeyword />;
 
       // Default case
       default:

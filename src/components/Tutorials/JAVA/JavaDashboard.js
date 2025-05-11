@@ -27,6 +27,7 @@ import WhatIsJava from "./content/INTRODUCTION/WhatIsJava/WhatIsJava";
 import JavaEdition from "./content/INTRODUCTION/JavaEdition/JavaEdition";
 import JavaArchitecture from "./content/INTRODUCTION/JavaArchitecture/JavaArchitecture";
 import JavaComments from "./content/BASIC CONCEPTS/JavaComments/JavaComments";
+import TypeCasting from "./content/BASIC CONCEPTS/TypeCasting/TypeCasting";
 
 function JavaDashboard() {
   const [isSidebarOpen, setIsSidebarOpen] = useState(true);
@@ -76,6 +77,8 @@ function JavaDashboard() {
         return <JavaOperators />;
       case "comments":
         return <JavaComments />;
+      case "typeCasting":
+        return <TypeCasting />;
       case "javaControlFlow":
         return <JavaControlFlow />;
       case "javaLoops":

@@ -104,7 +104,7 @@ function Tutorials() {
                   className="tutorial-btn"
                   onClick={() => handleStartLearning(tutorial.title)}
                 >
-                  Start Learning!
+                  Start Learning !
                 </button>
               </div>
             </Col>

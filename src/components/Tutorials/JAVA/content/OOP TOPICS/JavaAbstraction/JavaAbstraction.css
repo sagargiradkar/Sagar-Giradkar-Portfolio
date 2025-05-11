@@ -1,0 +1,189 @@
+/* JavaAbstraction.css */
+.feature-box,
+.warning-box,
+.info-box {
+  background-color: var(--secondary-bg);
+  padding: 20px;
+  border-radius: 8px;
+  margin: 20px 0;
+}
+
+.info-box {
+  background-color: rgba(79, 70, 229, 0.1);
+  border-left: 4px solid var(--active-color);
+}
+
+.feature-box ul,
+.warning-box ul,
+.info-box ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.feature-box li,
+.warning-box li,
+.info-box li {
+  margin-bottom: 10px;
+  padding-left: 20px;
+  position: relative;
+}
+
+.feature-box li:before,
+.warning-box li:before,
+.info-box li:before {
+  content: "→";
+  position: absolute;
+  left: 0;
+  color: var(--active-color);
+}
+
+.comparison-table {
+  margin: 20px 0;
+  overflow-x: auto;
+}
+
+.comparison-table table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: var(--secondary-bg);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.comparison-table th,
+.comparison-table td {
+  padding: 12px 15px;
+  text-align: left;
+  border: 1px solid var(--border-color);
+}
+
+.comparison-table th {
+  background-color: var(--active-color);
+  color: white;
+}
+
+.best-practices {
+  background-color: rgba(45, 55, 72, 0.3);
+  padding: 20px;
+  border-radius: 8px;
+  margin: 20px 0;
+}
+
+.best-practices ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.best-practices li {
+  margin-bottom: 15px;
+  padding-left: 20px;
+  position: relative;
+}
+
+.best-practices li:before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: var(--active-color);
+}
+
+.best-practices strong {
+  color: var(--active-color);
+  display: block;
+  margin-bottom: 5px;
+}
+
+.pitfalls-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  margin: 20px 0;
+}
+
+.pitfall-card {
+  background-color: rgba(239, 68, 68, 0.1);
+  padding: 20px;
+  border-radius: 8px;
+  border-left: 4px solid #ef4444;
+}
+
+.pitfall-card h3 {
+  color: #ef4444;
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+.pitfall-card p {
+  margin: 0;
+  color: var(--text-color);
+}
+
+.guide-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  margin: 20px 0;
+}
+
+.guide-card {
+  background-color: var(--secondary-bg);
+  padding: 20px;
+  border-radius: 8px;
+  border-left: 4px solid var(--active-color);
+}
+
+.guide-card h3 {
+  color: var(--active-color);
+  margin-top: 0;
+  margin-bottom: 15px;
+}
+
+.guide-card ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.guide-card li {
+  margin-bottom: 10px;
+  padding-left: 20px;
+  position: relative;
+}
+
+.guide-card li:before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: var(--active-color);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .pitfalls-grid,
+  .guide-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .comparison-table {
+    margin: 15px -15px;
+  }
+
+  .feature-box,
+  .warning-box,
+  .info-box,
+  .best-practices,
+  .guide-card {
+    padding: 15px;
+  }
+}
+
+/* Dark mode adjustments */
+@media (prefers-color-scheme: dark) {
+  .pitfall-card {
+    background-color: rgba(239, 68, 68, 0.05);
+  }
+  
+  .guide-card {
+    background-color: rgba(45, 55, 72, 0.3);
+  }
+}

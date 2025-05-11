@@ -36,6 +36,9 @@ import MethodsAndOverloading from "./content/OOP BASIC/Methods and Overloading/M
 import ThisKeyword from "./content/OOP BASIC/ThisKeyword/ThisKeyword";
 import StaticMembers from "./content/OOP BASIC/StaticMembers/StaticMembers";
 import AccessModifiers from "./content/OOP BASIC/AccessModifiers/AccessModifiers";
+import JavaInheritance from "./content/OOP TOPICS/Inheritance/JavaInheritance";
+import JavaPolymorphism from "./content/OOP TOPICS/Polymorphism/JavaPolymorphism";
+import JavaAbstraction from "./content/OOP TOPICS/JavaAbstraction/JavaAbstraction";
 function JavaDashboard() {
   const [isSidebarOpen, setIsSidebarOpen] = useState(true);
   const [selectedContent, setSelectedContent] = useState("javaIntroduction");
@@ -112,7 +115,20 @@ function JavaDashboard() {
         return <StaticMembers />;
       case "accessModifiers":
         return <AccessModifiers />;
-
+      
+      // OOP COncept
+      case "javaInheritance":
+        return <JavaInheritance />;
+      case "javaPolymorphism":
+        return <JavaPolymorphism />;
+      case "javaAbstraction":
+        return <JavaAbstraction />;
+      // case "javaEncapsulation":
+      //   return <JavaEncapsulation />;
+      // case "javaInterfaces":
+      //   return <JavaInterfaces />;
+      // case "superKeyword":
+      //   return <SuperKeyword />;
 
       // Default case
       default:

@@ -23,6 +23,10 @@ import JavaLoops from "./content/BASIC CONCEPTS/JavaLoops/JavaLoops";
 import JavaArrays from "./content/BASIC CONCEPTS/JavaArrays/JavaArrays";
 import JavaStrings from "./content/BASIC CONCEPTS/JavaStrings/JavaStrings";
 import JavaMethods from "./content/BASIC CONCEPTS/JavaMethods/JavaMethods";
+import WhatIsJava from "./content/INTRODUCTION/WhatIsJava/WhatIsJava";
+import JavaEdition from "./content/INTRODUCTION/JavaEdition/JavaEdition";
+import JavaArchitecture from "./content/INTRODUCTION/JavaArchitecture/JavaArchitecture";
+import JavaComments from "./content/BASIC CONCEPTS/JavaComments/JavaComments";
 
 function JavaDashboard() {
   const [isSidebarOpen, setIsSidebarOpen] = useState(true);
@@ -36,26 +40,32 @@ function JavaDashboard() {
   const renderContent = () => {
     switch (selectedContent) {
       // Introduction section
-      case "javaIntroduction":
-        return <JavaIntroductionContent />;
-      case "javaWorking":
-        return <JavaWorking />;
-      case "javaInstallation":
-        return <JavaInstallation />;
-      case "javaExecution":
-        return <JavaExecution />;
-      case "javaBasicSyntax":
-        return <JavaBasicSyntax />;
+      case "whatIsJava":
+        return <WhatIsJava />;
       case "javaHistory":
         return <JavaHistory />;
       case "javaFeatures":
         return <JavaFeatures />;
+      case "javaEditions":
+        return <JavaEdition/>;
       case "javaJDK":
         return <JavaJDK />;
       case "javaJRE":
         return <JavaJRE />;
+      case "javaArchitecture":
+        return <JavaArchitecture />;
       case "javaIDEs":
         return <JavaIDEs />;
+      case "javaInstallation":
+        return <JavaInstallation />;
+      case "javaWorking":
+        return <JavaWorking />;
+      case "javaExecution":
+        return <JavaExecution />;
+      case "javaBasicSyntax":
+        return <JavaBasicSyntax />;
+      case "javaIntroduction":
+        return <JavaIntroductionContent />;
 
       // Basic Concepts section
       case "javaVariables":
@@ -64,6 +74,8 @@ function JavaDashboard() {
         return <JavaDataTypes />;
       case "javaOperators":
         return <JavaOperators />;
+      case "comments":
+        return <JavaComments />;
       case "javaControlFlow":
         return <JavaControlFlow />;
       case "javaLoops":
@@ -74,7 +86,7 @@ function JavaDashboard() {
         return <JavaStrings />;
       case "javaMethods":
         return <JavaMethods />;
-        
+
       // Default case
       default:
         return <JavaIntroductionContent />;
@@ -83,8 +95,8 @@ function JavaDashboard() {
 
   return (
     <div className="dashboard-container">
-      <button 
-        className="sidebar-toggle" 
+      <button
+        className="sidebar-toggle"
         onClick={toggleSidebar}
         aria-label={isSidebarOpen ? "Close sidebar" : "Open sidebar"}
       >
@@ -98,7 +110,7 @@ function JavaDashboard() {
         mainContentRef={mainContentRef}
       />
 
-      <main 
+      <main
         className={`main-content ${!isSidebarOpen ? 'expanded' : ''}`}
         ref={mainContentRef}
       >

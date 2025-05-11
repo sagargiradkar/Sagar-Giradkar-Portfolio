@@ -1,0 +1,86 @@
+/* JavaComments.css */
+.javadoc-tags {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+  background-color: var(--secondary-bg);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.javadoc-tags th,
+.javadoc-tags td {
+  padding: 12px 15px;
+  text-align: left;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.javadoc-tags th {
+  background-color: var(--active-color);
+  color: white;
+  font-weight: 600;
+}
+
+.javadoc-tags tr:last-child td {
+  border-bottom: none;
+}
+
+.javadoc-tags tr:hover {
+  background-color: rgba(45, 55, 72, 0.3);
+}
+
+.warning-box {
+  background-color: rgba(245, 158, 11, 0.1);
+  border-left: 4px solid #f59e0b;
+  padding: 15px;
+  margin: 20px 0;
+  border-radius: 0 5px 5px 0;
+}
+
+.best-practices {
+  background-color: rgba(45, 55, 72, 0.3);
+  padding: 20px;
+  border-radius: 8px;
+  margin: 20px 0;
+}
+
+.best-practices ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.best-practices li {
+  margin-bottom: 15px;
+  padding-left: 20px;
+  position: relative;
+}
+
+.best-practices li:before {
+  content: "→";
+  position: absolute;
+  left: 0;
+  color: var(--active-color);
+}
+
+.best-practices strong {
+  color: var(--active-color);
+  display: block;
+  margin-bottom: 5px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .javadoc-tags {
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+
+  .best-practices {
+    padding: 15px;
+  }
+
+  .best-practices li {
+    padding-left: 15px;
+  }
+}

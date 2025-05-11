@@ -1,0 +1,345 @@
+/* File 2: JavaArchitecture.css */
+
+.content-wrapper {
+  max-width: 800px;
+  margin: 0 auto;
+  color: var(--text-primary);
+}
+
+.content-breadcrumb {
+  font-size: 1rem;
+  margin-bottom: 20px;
+  margin-left: 30px;
+  color: var(--text-secondary);
+}
+
+.content-breadcrumb a {
+  color: var(--active-color);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.content-breadcrumb a:hover {
+  text-decoration: underline;
+}
+
+.content-title {
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+  font-weight: 700;
+  color: var(--text-primary);
+  background: var(--primary-bg);
+  padding-bottom: 15px;
+}
+
+.last-updated {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  margin-bottom: 25px;
+  font-style: italic;
+}
+
+.content-section {
+  margin-bottom: 40px;
+}
+
+.content-section h2 {
+  font-size: 1.8rem;
+  margin-bottom: 15px;
+  color: var(--text-primary);
+}
+
+.content-section h3 {
+  font-size: 1.4rem;
+  margin: 25px 0 15px;
+  color: var(--text-primary);
+}
+
+.content-section p {
+  line-height: 1.7;
+  margin-bottom: 15px;
+}
+
+.table-of-content {
+  background-color: rgba(45, 55, 72, 0.5);
+  border-radius: 10px;
+  padding: 20px;
+  margin-bottom: 30px;
+  border-left: 4px solid var(--active-color);
+}
+
+.table-of-content h2 {
+  margin-top: 0;
+  color: var(--active-color);
+  font-size: 1.5rem;
+}
+
+.table-of-content ul {
+  list-style-type: none;
+  padding-left: 10px;
+}
+
+.table-of-content li {
+  margin-bottom: 8px;
+  position: relative;
+  padding-left: 15px;
+}
+
+.table-of-content li:before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: var(--active-color);
+}
+
+.table-of-content li ul {
+  margin-top: 8px;
+  padding-left: 15px;
+}
+
+.table-of-content a {
+  color: var(--text-secondary);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.table-of-content a:hover {
+  color: var(--active-color);
+  text-decoration: underline;
+}
+
+.note-box {
+  background-color: rgba(79, 70, 229, 0.1);
+  border-left: 4px solid var(--active-color);
+  padding: 15px;
+  margin: 20px 0;
+  border-radius: 0 5px 5px 0;
+}
+
+.note-box p {
+  margin: 0;
+}
+
+/* Architecture diagrams */
+.architecture-diagram {
+  margin: 30px 0;
+  display: flex;
+  justify-content: center;
+}
+
+.jdk-box {
+  border: 2px solid #6366F1;
+  border-radius: 10px;
+  padding: 20px;
+  width: 80%;
+  background-color: rgba(99, 102, 241, 0.1);
+}
+
+.jdk-box h3 {
+  text-align: center;
+  margin-top: 0;
+  color: #6366F1;
+}
+
+.jre-box {
+  border: 2px solid #8B5CF6;
+  border-radius: 10px;
+  padding: 15px;
+  margin: 15px auto;
+  width: 90%;
+  background-color: rgba(139, 92, 246, 0.1);
+}
+
+.jre-box h3 {
+  text-align: center;
+  margin-top: 0;
+  color: #8B5CF6;
+}
+
+.jvm-box {
+  border: 2px solid #EC4899;
+  border-radius: 8px;
+  padding: 10px;
+  margin: 10px auto;
+  width: 80%;
+  background-color: rgba(236, 72, 153, 0.1);
+}
+
+.jvm-box h3, .jvm-box h4 {
+  text-align: center;
+  margin-top: 0;
+  color: #EC4899;
+}
+
+.library-box, .tools-box {
+  border: 2px solid #10B981;
+  border-radius: 8px;
+  padding: 10px;
+  margin: 10px auto;
+  width: 80%;
+  background-color: rgba(16, 185, 129, 0.1);
+  text-align: center;
+}
+
+.library-box p, .tools-box p {
+  margin: 5px 0;
+  color: #10B981;
+}
+
+/* JVM Architecture Diagram */
+.jvm-diagram {
+  margin: 30px 0;
+  display: flex;
+  justify-content: center;
+}
+
+.jvm-components {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
+}
+
+.classloader, .runtime-areas, .execution-engine {
+  border: 2px solid #8B5CF6;
+  border-radius: 8px;
+  padding: 10px;
+  background-color: rgba(139, 92, 246, 0.1);
+}
+
+.classloader h5, .runtime-areas h5, .execution-engine h5 {
+  margin-top: 0;
+  text-align: center;
+  color: #8B5CF6;
+}
+
+.memory-areas, .engine-components {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 8px;
+  margin-top: 10px;
+}
+
+.area, .engine-components div {
+  border: 1px solid #EC4899;
+  border-radius: 5px;
+  padding: 8px;
+  background-color: rgba(236, 72, 153, 0.1);
+  text-align: center;
+  font-size: 0.9em;
+  color: #EC4899;
+}
+
+/* Code Examples Section */
+.code-examples-selector {
+  margin-top: 20px;
+}
+
+.example-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.example-buttons button {
+  padding: 8px 15px;
+  background-color: rgba(79, 70, 229, 0.1);
+  border: 1px solid var(--active-color);
+  border-radius: 5px;
+  color: var(--text-primary);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.example-buttons button:hover {
+  background-color: rgba(79, 70, 229, 0.2);
+}
+
+.example-buttons button.active {
+  background-color: var(--active-color);
+  color: white;
+}
+
+.example-description {
+  margin-bottom: 15px;
+  padding: 10px;
+  background-color: rgba(45, 55, 72, 0.3);
+  border-radius: 5px;
+  font-style: italic;
+}
+
+.navigation-links {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 40px;
+  padding-top: 20px;
+  border-top: 1px solid var(--border-color);
+}
+
+.next-link,
+.prev-link {
+  color: var(--active-color);
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  transition: all 0.3s ease;
+}
+
+.next-link:hover {
+  transform: translateX(5px);
+}
+
+.prev-link:hover {
+  transform: translateX(-5px);
+}
+
+code {
+  font-family: "Consolas", "Monaco", "Andale Mono", monospace;
+  background-color: rgba(45, 55, 72, 0.5);
+  padding: 2px 5px;
+  border-radius: 3px;
+  font-size: 0.9em;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .content-title {
+    font-size: 2rem;
+  }
+
+  .content-section h2 {
+    font-size: 1.5rem;
+  }
+
+  .content-section h3 {
+    font-size: 1.3rem;
+  }
+
+  .table-of-content,
+  .note-box {
+    padding: 15px;
+  }
+  
+  .example-buttons {
+    flex-direction: column;
+  }
+  
+  .example-buttons button {
+    width: 100%;
+  }
+  
+  .memory-areas, .engine-components {
+    flex-direction: column;
+  }
+  
+  .area, .engine-components div {
+    width: 100%;
+    box-sizing: border-box;
+  }
+  
+  .jdk-box, .jre-box, .jvm-box, .library-box, .tools-box {
+    width: 95%;
+  }
+}

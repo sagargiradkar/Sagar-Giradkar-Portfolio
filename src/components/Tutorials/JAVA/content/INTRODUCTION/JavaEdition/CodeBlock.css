@@ -1,0 +1,103 @@
+.code-block-container {
+  margin: 20px 0;
+  background: #1e1e1e;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+.code-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 16px;
+  background: #2d2d2d;
+  border-bottom: 1px solid #3d3d3d;
+}
+
+.file-name {
+  color: #fff;
+  font-family: monospace;
+  font-size: 14px;
+}
+
+.code-actions {
+  display: flex;
+  gap: 8px;
+}
+
+.action-button {
+  background: #444;
+  border: none;
+  color: #fff;
+  padding: 6px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 13px;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  transition: background 0.2s;
+}
+
+.action-button:hover {
+  background: #555;
+}
+
+.action-button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.code-content {
+  position: relative;
+}
+
+.code-content pre {
+  margin: 0;
+  padding: 16px;
+  overflow-x: auto;
+}
+
+.code-content code {
+  font-family: "Consolas", "Monaco", "Courier New", monospace;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.code-editor {
+  width: 100%;
+  min-height: 200px;
+  padding: 16px;
+  background: #1e1e1e;
+  color: #d4d4d4;
+  border: none;
+  font-family: "Consolas", "Monaco", "Courier New", monospace;
+  font-size: 14px;
+  line-height: 1.5;
+  resize: vertical;
+}
+
+.code-editor:focus {
+  outline: none;
+}
+
+.code-output {
+  background: #2d2d2d;
+  border-top: 1px solid #3d3d3d;
+  padding: 16px;
+}
+
+.output-header {
+  color: #569cd6;
+  font-size: 14px;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+.code-output pre {
+  margin: 0;
+  color: #d4d4d4;
+  font-family: "Consolas", "Monaco", "Courier New", monospace;
+  font-size: 14px;
+}

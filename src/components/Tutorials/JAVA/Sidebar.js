@@ -3,56 +3,35 @@ import { MdKeyboardArrowRight, MdKeyboardArrowDown } from "react-icons/md";
 import PropTypes from "prop-types";
 
 const JAVA_TUTORIAL_SECTIONS = {
-  INTRODUCTION_ITEMS: [
-    { id: "javaIntroduction", title: "Java Introduction" },
-    { id: "javaWorking", title: "Java Working" },
-    { id: "javaInstallation", title: "Java Installation" },
-    { id: "javaExecution", title: "Java Execution" },
-    { id: "javaBasicSyntax", title: "Java Basic Syntax" },
-    { id: "javaHistory", title: "Java History" },
-    { id: "javaFeatures", title: "Java Features" },
-    { id: "javaJDK", title: "Java JDK" },
-    { id: "javaJRE", title: "Java JRE" },
-    { id: "javaIDEs", title: "Java IDEs" },
-  ],
 
   INTRODUCTION: [
     { id: "whatIsJava", title: "What is Java?" },
+    { id: "javaHistory", title: "Java History" },
     { id: "javaFeatures", title: "Features of Java" },
-    { id: "javaHistory", title: "History of Java" },
     { id: "javaEditions", title: "Java Editions (SE, EE, ME)" },
-    { id: "javaArchitecture", title: "JDK, JRE, and JVM" },
-    { id: "developmentEnvironment", title: "Development Environment Setup" },
-    { id: "firstProgram", title: "First Java Program" },
-    { id: "basicSyntax", title: "Basic Syntax and Structure" },
+    { id: "javaJDK", title: "Java JDK" },
+    { id: "javaJRE", title: "Java JRE" },
+    { id: "javaArchitecture", title: "Java Architecture" },
+    { id: "javaIDEs", title: "Java IDEs" },
+    { id: "javaInstallation", title: "Java Installation" },
+    { id: "javaWorking", title: "Java Working" },
+    { id: "javaExecution", title: "Java Execution" },
+    { id: "javaBasicSyntax", title: "Java Basic Syntax" },
+    { id: "javaIntroduction", title: "Java Introduction" }
   ],
-  BASIC_CONCEPTS_ITEMS: [
+
+  BASIC_CONCEPTS: [
     { id: "javaVariables", title: "Variables" },
     { id: "javaDataTypes", title: "Data Types" },
     { id: "javaOperators", title: "Operators" },
+    { id: "comments", title: "Comments" },
+    { id: "typeCasting", title: "Type Casting" },
+    { id: "inputOutput", title: "Input/Output Operations" },
     { id: "javaControlFlow", title: "Control Flow" },
     { id: "javaLoops", title: "Loops" },
     { id: "javaArrays", title: "Arrays" },
     { id: "javaStrings", title: "Strings" },
     { id: "javaMethods", title: "Methods" },
-  ],
-  LANGUAGE_FUNDAMENTALS: [
-    { id: "comments", title: "Comments and Documentation" },
-    { id: "identifiersKeywords", title: "Identifiers and Keywords" },
-    { id: "dataTypes", title: "Data Types" },
-    { id: "variables", title: "Variables and Constants" },
-    { id: "typeCasting", title: "Type Casting" },
-    { id: "operators", title: "Operators" },
-    { id: "inputOutput", title: "Input/Output Operations" },
-  ],
-
-  CONTROL_FLOW: [
-    { id: "ifElse", title: "If-Else Statements" },
-    { id: "switchCase", title: "Switch-Case" },
-    { id: "forLoop", title: "For Loop" },
-    { id: "whileLoop", title: "While Loop" },
-    { id: "doWhileLoop", title: "Do-While Loop" },
-    { id: "jumpStatements", title: "Break, Continue, Return" },
   ],
 
   OOP_BASICS: [
@@ -63,7 +42,7 @@ const JAVA_TUTORIAL_SECTIONS = {
     { id: "staticMembers", title: "Static Members" },
     { id: "accessModifiers", title: "Access Modifiers" },
   ],
-  OOP_CONCEPTS_ITEMS: [
+  OOP_CONCEPTS: [
     { id: "javaClasses", title: "Classes & Objects" },
     { id: "javaConstructors", title: "Constructors" },
     { id: "javaInheritance", title: "Inheritance" },
@@ -121,13 +100,6 @@ const JAVA_TUTORIAL_SECTIONS = {
     { id: "executorFramework", title: "Executor Framework" },
   ],
 
-  GUI_PROGRAMMING: [
-    { id: "swingBasics", title: "Swing Basics" },
-    { id: "swingComponents", title: "Swing Components" },
-    { id: "eventHandling", title: "Event Handling" },
-    { id: "layoutManagers", title: "Layout Managers" },
-    { id: "javaFX", title: "JavaFX (Optional)" },
-  ],
 
   ADVANCED_FEATURES: [
     { id: "generics", title: "Generics" },
@@ -158,20 +130,6 @@ const JAVA_TUTORIAL_SECTIONS = {
     { id: "modules", title: "Java Modules" },
   ],
 
-  PRACTICAL_DEVELOPMENT: [
-    { id: "consoleProjects", title: "Console Applications" },
-    { id: "guiProjects", title: "GUI Applications" },
-    { id: "databaseProjects", title: "Database Projects" },
-    { id: "testing", title: "Unit Testing" },
-    { id: "buildTools", title: "Build Tools" },
-    { id: "deployment", title: "Deployment" },
-  ],
-
-  CAREER_PREPARATION: [
-    { id: "interviewQuestions", title: "Interview Questions" },
-    { id: "codingPractice", title: "Coding Practice" },
-    { id: "certificationPrep", title: "Certification Preparation" },
-  ],
 };
 // MenuItem Component
 const MenuItem = ({ item, isActive, onClick }) => (

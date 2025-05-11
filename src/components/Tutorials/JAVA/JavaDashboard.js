@@ -39,6 +39,8 @@ import AccessModifiers from "./content/OOP BASIC/AccessModifiers/AccessModifiers
 import JavaInheritance from "./content/OOP TOPICS/Inheritance/JavaInheritance";
 import JavaPolymorphism from "./content/OOP TOPICS/Polymorphism/JavaPolymorphism";
 import JavaAbstraction from "./content/OOP TOPICS/JavaAbstraction/JavaAbstraction";
+import JavaEncapsulation from "./content/OOP TOPICS/JavaEncapsulation/JavaEncapsulation";
+import JavaInterfaces from "./content/OOP TOPICS/JavaInterfaces/JavaInterfaces";
 function JavaDashboard() {
   const [isSidebarOpen, setIsSidebarOpen] = useState(true);
   const [selectedContent, setSelectedContent] = useState("javaIntroduction");
@@ -123,10 +125,10 @@ function JavaDashboard() {
         return <JavaPolymorphism />;
       case "javaAbstraction":
         return <JavaAbstraction />;
-      // case "javaEncapsulation":
-      //   return <JavaEncapsulation />;
-      // case "javaInterfaces":
-      //   return <JavaInterfaces />;
+      case "javaEncapsulation":
+        return <JavaEncapsulation />;
+      case "javaInterfaces":
+        return <JavaInterfaces />;
       // case "superKeyword":
       //   return <SuperKeyword />;
 

@@ -33,6 +33,7 @@ import TopicNotFound from "./content/INTRODUCTION/TopicNotFound/TopicNotFound";
 import ClassesAndObjects from "./content/OOP BASIC/ClassesAndObjects/ClassesAndObjects";
 import Constructors from "./content/OOP BASIC/Constructors/Constructors";
 import MethodsAndOverloading from "./content/OOP BASIC/Methods and Overloading/MethodsAndOverloading";
+import ThisKeyword from "./content/OOP BASIC/ThisKeyword/ThisKeyword";
 
 function JavaDashboard() {
   const [isSidebarOpen, setIsSidebarOpen] = useState(true);
@@ -104,6 +105,8 @@ function JavaDashboard() {
         return <Constructors />;
       case "methods":
         return <MethodsAndOverloading />;
+      case "thisKeyword":
+        return <ThisKeyword />;
 
 
       // Default case

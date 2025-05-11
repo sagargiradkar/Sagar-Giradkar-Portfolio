@@ -34,7 +34,8 @@ import ClassesAndObjects from "./content/OOP BASIC/ClassesAndObjects/ClassesAndO
 import Constructors from "./content/OOP BASIC/Constructors/Constructors";
 import MethodsAndOverloading from "./content/OOP BASIC/Methods and Overloading/MethodsAndOverloading";
 import ThisKeyword from "./content/OOP BASIC/ThisKeyword/ThisKeyword";
-
+import StaticMembers from "./content/OOP BASIC/StaticMembers/StaticMembers";
+import AccessModifiers from "./content/OOP BASIC/AccessModifiers/AccessModifiers";
 function JavaDashboard() {
   const [isSidebarOpen, setIsSidebarOpen] = useState(true);
   const [selectedContent, setSelectedContent] = useState("javaIntroduction");
@@ -107,6 +108,10 @@ function JavaDashboard() {
         return <MethodsAndOverloading />;
       case "thisKeyword":
         return <ThisKeyword />;
+      case "staticMembers":
+        return <StaticMembers />;
+      case "accessModifiers":
+        return <AccessModifiers />;
 
 
       // Default case

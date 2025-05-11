@@ -3,7 +3,6 @@ import { MdKeyboardArrowRight, MdKeyboardArrowDown } from "react-icons/md";
 import PropTypes from "prop-types";
 
 const JAVA_TUTORIAL_SECTIONS = {
-
   INTRODUCTION: [
     { id: "whatIsJava", title: "What is Java?" },
     { id: "javaHistory", title: "Java History" },
@@ -17,7 +16,7 @@ const JAVA_TUTORIAL_SECTIONS = {
     { id: "javaWorking", title: "Java Working" },
     { id: "javaExecution", title: "Java Execution" },
     { id: "javaBasicSyntax", title: "Java Basic Syntax" },
-    { id: "javaIntroduction", title: "Java Introduction" }
+    { id: "javaIntroduction", title: "Java Introduction" },
   ],
 
   BASIC_CONCEPTS: [
@@ -42,32 +41,14 @@ const JAVA_TUTORIAL_SECTIONS = {
     { id: "staticMembers", title: "Static Members" },
     { id: "accessModifiers", title: "Access Modifiers" },
   ],
-  OOP_CONCEPTS: [
-    { id: "javaClasses", title: "Classes & Objects" },
-    { id: "javaConstructors", title: "Constructors" },
+  OOP_TOPICS: [
     { id: "javaInheritance", title: "Inheritance" },
     { id: "javaPolymorphism", title: "Polymorphism" },
     { id: "javaAbstraction", title: "Abstraction" },
     { id: "javaEncapsulation", title: "Encapsulation" },
     { id: "javaInterfaces", title: "Interfaces" },
-  ],
-  OOP_ADVANCED: [
-    { id: "inheritance", title: "Inheritance" },
     { id: "superKeyword", title: "Super Keyword" },
-    { id: "polymorphism", title: "Polymorphism" },
-    { id: "abstraction", title: "Abstraction" },
-    { id: "interfaces", title: "Interfaces" },
-    { id: "encapsulation", title: "Encapsulation" },
   ],
-
-  DATA_STRUCTURES: [
-    { id: "arrays", title: "Arrays (1D and 2D)" },
-    { id: "arrayOperations", title: "Array Operations" },
-    { id: "strings", title: "Strings and String Methods" },
-    { id: "stringBuilder", title: "StringBuilder and StringBuffer" },
-    { id: "stringTokenizer", title: "StringTokenizer" },
-  ],
-
   COLLECTIONS: [
     { id: "collectionInterface", title: "Collection Interface" },
     { id: "lists", title: "Lists (ArrayList, LinkedList)" },
@@ -100,7 +81,6 @@ const JAVA_TUTORIAL_SECTIONS = {
     { id: "executorFramework", title: "Executor Framework" },
   ],
 
-
   ADVANCED_FEATURES: [
     { id: "generics", title: "Generics" },
     { id: "lambdaExpressions", title: "Lambda Expressions" },
@@ -117,19 +97,12 @@ const JAVA_TUTORIAL_SECTIONS = {
     { id: "transactions", title: "Transactions" },
   ],
 
-  NETWORKING: [
-    { id: "networkingBasics", title: "Networking Basics" },
-    { id: "socketProgramming", title: "Socket Programming" },
-    { id: "urlConnection", title: "URL and HTTP Connection" },
-  ],
-
   MODERN_JAVA: [
     { id: "java8Features", title: "Java 8 Features" },
     { id: "java9To12", title: "Java 9-12 Features" },
     { id: "java13To17", title: "Java 13-17 Features" },
     { id: "modules", title: "Java Modules" },
   ],
-
 };
 // MenuItem Component
 const MenuItem = ({ item, isActive, onClick }) => (

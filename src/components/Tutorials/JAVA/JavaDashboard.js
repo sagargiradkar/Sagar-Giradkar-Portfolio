@@ -29,6 +29,7 @@ import JavaArchitecture from "./content/INTRODUCTION/JavaArchitecture/JavaArchit
 import JavaComments from "./content/BASIC CONCEPTS/JavaComments/JavaComments";
 import TypeCasting from "./content/BASIC CONCEPTS/TypeCasting/TypeCasting";
 import JavaIO from "./content/BASIC CONCEPTS/JavaIO/JavaIO";
+import TopicNotFound from "./content/INTRODUCTION/TopicNotFound/TopicNotFound";
 
 function JavaDashboard() {
   const [isSidebarOpen, setIsSidebarOpen] = useState(true);
@@ -93,9 +94,13 @@ function JavaDashboard() {
       case "javaMethods":
         return <JavaMethods />;
 
+      //OOP BASIC
+
+      
+
       // Default case
       default:
-        return <JavaIntroductionContent />;
+        return <TopicNotFound />;
     }
   };
 

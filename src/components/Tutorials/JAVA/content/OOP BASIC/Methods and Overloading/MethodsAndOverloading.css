@@ -1,0 +1,153 @@
+/* MethodsAndOverloading.css */
+.introduction {
+  background-color: var(--secondary-bg);
+  padding: 20px;
+  border-radius: 8px;
+  margin-bottom: 30px;
+}
+
+.method-components {
+  background-color: var(--secondary-bg);
+  padding: 20px;
+  border-radius: 8px;
+  margin: 20px 0;
+}
+
+.method-components ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.method-components li {
+  margin-bottom: 10px;
+  padding-left: 20px;
+  position: relative;
+}
+
+.method-components li:before {
+  content: "→";
+  position: absolute;
+  left: 0;
+  color: var(--active-color);
+}
+
+.overloading-rules {
+  background-color: var(--secondary-bg);
+  padding: 20px;
+  border-radius: 8px;
+  margin: 20px 0;
+}
+
+.comparison-table {
+  margin: 20px 0;
+  overflow-x: auto;
+}
+
+.comparison-table table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: var(--secondary-bg);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.comparison-table th,
+.comparison-table td {
+  padding: 12px 15px;
+  text-align: left;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.comparison-table th {
+  background-color: var(--active-color);
+  color: white;
+}
+
+.recursion-notes {
+  background-color: rgba(79, 70, 229, 0.1);
+  border-left: 4px solid var(--active-color);
+  padding: 20px;
+  margin: 20px 0;
+  border-radius: 0 8px 8px 0;
+}
+
+.best-practices {
+  background-color: rgba(45, 55, 72, 0.3);
+  padding: 20px;
+  border-radius: 8px;
+  margin: 20px 0;
+}
+
+.best-practices ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.best-practices li {
+  margin-bottom: 15px;
+  padding-left: 20px;
+  position: relative;
+}
+
+.best-practices li:before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: var(--active-color);
+}
+
+.best-practices strong {
+  color: var(--active-color);
+  display: block;
+  margin-bottom: 5px;
+}
+
+.mistakes-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  margin: 20px 0;
+}
+
+.mistake-card {
+  background-color: rgba(245, 158, 11, 0.1);
+  padding: 20px;
+  border-radius: 8px;
+  border-left: 4px solid #f59e0b;
+}
+
+.mistake-card h3 {
+  color: #f59e0b;
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+.mistake-card p {
+  margin: 0;
+  color: var(--text-color);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .mistakes-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .comparison-table {
+    overflow-x: auto;
+  }
+
+  .method-components,
+  .overloading-rules,
+  .recursion-notes,
+  .best-practices {
+    padding: 15px;
+  }
+}
+
+/* Dark mode adjustments */
+@media (prefers-color-scheme: dark) {
+  .mistake-card {
+    background-color: rgba(245, 158, 11, 0.05);
+  }
+}

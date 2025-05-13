@@ -10,6 +10,7 @@ import SystemRequirements from "./content/INTRODUCTION/SystemRequirements/System
 import DesignPrinciples from "./content/INTRODUCTION/DesignPrinciples/DesignPrinciples";
 import ScalabilityBasics from "./content/INTRODUCTION/ScalabilityBasics/ScalabilityBasics";
 import PerformanceBasics from "./content/INTRODUCTION/PerformanceBasics/PerformanceBasics";
+import ReliabilityBasics from "./content/INTRODUCTION/ReliabilityBasics/ReliabilityBasics";
 
 // Import all content components
 
@@ -25,7 +26,7 @@ function SystemDesignDashboard() {
     const renderContent = () => {
         switch (selectedContent) {
 
-            // Introduction section
+            // INTRODUCTION section
 
             case "whatIsSystemDesign":
                 return <WhatIsSystemDesign />;
@@ -36,12 +37,17 @@ function SystemDesignDashboard() {
             case "systemRequirements":
                 return <SystemRequirements />;
             case "designPrinciples":
-                return <DesignPrinciples/>;
+                return <DesignPrinciples />;
             case "scalabilityBasics":
-                return <ScalabilityBasics/>;
+                return <ScalabilityBasics />;
             case "performanceBasics":
-                return <PerformanceBasics/>;
+                return <PerformanceBasics />;
+            case "reliabilityBasics":
+                return <ReliabilityBasics />
 
+            // LOW_LEVEL_DESIGN section
+
+            
             // Default case
             default:
                 return <TopicNotFound />;

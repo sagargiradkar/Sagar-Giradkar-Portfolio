@@ -1,0 +1,181 @@
+/* src/components/Tutorials/SystemDesign/content/Introduction/DesignFundamentals/DesignFundamentals.css */
+
+.concept-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  margin: 20px 0;
+}
+
+.concept-card {
+  background-color: var(--sidebar-bg);
+  border-radius: 8px;
+  padding: 20px;
+  border: 1px solid var(--border-color);
+}
+
+.concept-card h3 {
+  color: var(--active-color);
+  margin-bottom: 15px;
+  font-size: 1.2rem;
+}
+
+.concept-card ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.concept-card li {
+  margin-bottom: 10px;
+  padding-left: 20px;
+  position: relative;
+}
+
+.concept-card li::before {
+  content: "→";
+  position: absolute;
+  left: 0;
+  color: var(--active-color);
+}
+
+.availability-table {
+  overflow-x: auto;
+  margin: 20px 0;
+}
+
+.availability-table table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: var(--sidebar-bg);
+  border-radius: 8px;
+}
+
+.availability-table th,
+.availability-table td {
+  padding: 12px 15px;
+  text-align: left;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.availability-table th {
+  background-color: var(--hover-bg);
+  color: var(--active-color);
+  font-weight: 600;
+}
+
+.maintainability-aspects {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  margin: 20px 0;
+}
+
+.aspect {
+  background-color: var(--sidebar-bg);
+  padding: 20px;
+  border-radius: 8px;
+  border: 1px solid var(--border-color);
+}
+
+.aspect h3 {
+  color: var(--active-color);
+  margin-bottom: 10px;
+}
+
+.performance-metrics,
+.security-principles,
+.cost-strategies {
+  background-color: var(--sidebar-bg);
+  padding: 20px;
+  border-radius: 8px;
+  margin: 20px 0;
+  border: 1px solid var(--border-color);
+}
+
+.performance-metrics h3,
+.security-principles h3,
+.cost-strategies h3 {
+  color: var(--active-color);
+  margin-bottom: 15px;
+}
+
+.performance-metrics ul,
+.security-principles ul,
+.cost-strategies ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.performance-metrics li,
+.security-principles li,
+.cost-strategies li {
+  margin-bottom: 10px;
+  padding-left: 20px;
+  position: relative;
+}
+
+.performance-metrics li::before,
+.security-principles li::before,
+.cost-strategies li::before {
+  content: "→";
+  position: absolute;
+  left: 0;
+  color: var(--active-color);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .concept-grid,
+  .maintainability-aspects {
+    grid-template-columns: 1fr;
+  }
+
+  .availability-table {
+    font-size: 0.9rem;
+  }
+
+  .concept-card,
+  .aspect,
+  .performance-metrics,
+  .security-principles,
+  .cost-strategies {
+    padding: 15px;
+  }
+}
+
+/* Animation for section entrance */
+.content-section {
+  opacity: 0;
+  animation: fadeIn 0.5s ease-out forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Accessibility */
+@media (prefers-reduced-motion: reduce) {
+  .content-section {
+    animation: none;
+    opacity: 1;
+  }
+}
+
+/* Print styles */
+@media print {
+  .concept-card,
+  .aspect,
+  .availability-table,
+  .performance-metrics,
+  .security-principles,
+  .cost-strategies {
+    break-inside: avoid;
+  }
+}

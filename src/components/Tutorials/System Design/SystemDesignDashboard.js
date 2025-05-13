@@ -12,6 +12,7 @@ import ScalabilityBasics from "./content/INTRODUCTION/ScalabilityBasics/Scalabil
 import PerformanceBasics from "./content/INTRODUCTION/PerformanceBasics/PerformanceBasics";
 import ReliabilityBasics from "./content/INTRODUCTION/ReliabilityBasics/ReliabilityBasics";
 import OOPConcepts from "./content/LowLevelDesign/OOPConcepts/OOPConcepts";
+import SolidPrinciples from "./content/LowLevelDesign/SolidPrinciples/SolidPrinciples";
 
 // Import all content components
 
@@ -50,8 +51,8 @@ function SystemDesignDashboard() {
 
             case "oopConcepts":
                 return <OOPConcepts />
-
-
+            case "solidPrinciples":
+                return <SolidPrinciples />
             // Default case
             default:
                 return <TopicNotFound />;

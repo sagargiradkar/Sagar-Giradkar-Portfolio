@@ -1,0 +1,166 @@
+/* src/components/Tutorials/SystemDesign/content/LowLevelDesign/SolidPrinciples/SolidPrinciples.css */
+
+.solid-intro {
+  background-color: var(--sidebar-bg);
+  border-radius: 8px;
+  padding: 20px;
+  margin: 20px 0;
+  border: 1px solid var(--border-color);
+}
+
+.content-section {
+  margin: 40px 0;
+}
+
+.principle-explanation {
+  background-color: var(--sidebar-bg);
+  border-radius: 8px;
+  padding: 20px;
+  margin: 20px 0;
+}
+
+.principle-summary {
+  margin-bottom: 20px;
+}
+
+.principle-summary p {
+  font-size: 1.1em;
+  color: var(--text-primary);
+  margin-bottom: 15px;
+  font-style: italic;
+}
+
+.key-points {
+  margin: 20px 0;
+}
+
+.key-points h3 {
+  color: var(--active-color);
+  margin-bottom: 10px;
+}
+
+.key-points ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.key-points li {
+  margin-bottom: 8px;
+  padding-left: 20px;
+  position: relative;
+}
+
+.key-points li::before {
+  content: "→";
+  position: absolute;
+  left: 0;
+  color: var(--active-color);
+}
+
+.example-block {
+  margin: 20px 0;
+  background-color: var(--code-bg);
+  border-radius: 8px;
+  padding: 20px;
+}
+
+.example-block h3 {
+  color: var(--active-color);
+  margin-bottom: 15px;
+}
+
+.practices-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  margin: 20px 0;
+}
+
+.practice-card {
+  background-color: var(--sidebar-bg);
+  border-radius: 8px;
+  padding: 20px;
+  border: 1px solid var(--border-color);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.practice-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.practice-card h3 {
+  color: var(--active-color);
+  margin-bottom: 15px;
+}
+
+.practice-card ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.practice-card li {
+  margin-bottom: 8px;
+  padding-left: 20px;
+  position: relative;
+}
+
+.practice-card li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  color: var(--active-color);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .practices-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .principle-explanation,
+  .example-block,
+  .practice-card {
+    padding: 15px;
+  }
+}
+
+/* Print styles */
+@media print {
+  .principle-explanation,
+  .example-block,
+  .practice-card {
+    break-inside: avoid;
+  }
+}
+
+/* Accessibility */
+.practice-card:focus-within {
+  outline: 2px solid var(--active-color);
+  outline-offset: 2px;
+}
+
+/* Dark mode adjustments */
+@media (prefers-color-scheme: dark) {
+  .principle-explanation {
+    background-color: var(--sidebar-bg);
+  }
+}
+
+/* Code block styles */
+.example-block pre {
+  margin: 0;
+  padding: 15px;
+  background-color: var(--code-bg);
+  border-radius: 4px;
+  overflow-x: auto;
+}
+
+/* Animation */
+.principle-explanation {
+  transition: transform 0.3s ease;
+}
+
+.principle-explanation:hover {
+  transform: translateY(-2px);
+}

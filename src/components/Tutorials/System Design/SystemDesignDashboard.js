@@ -8,6 +8,7 @@ import TypesOfDesign from "./content/INTRODUCTION/TypesOfDesign/TypesOfDesign";
 import DesignFundamentals from "./content/INTRODUCTION/DesignFundamentals/DesignFundamentals";
 import SystemRequirements from "./content/INTRODUCTION/SystemRequirements/SystemRequirements";
 import DesignPrinciples from "./content/INTRODUCTION/DesignPrinciples/DesignPrinciples";
+import ScalabilityBasics from "./content/INTRODUCTION/ScalabilityBasics/ScalabilityBasics";
 
 // Import all content components
 
@@ -32,9 +33,11 @@ function SystemDesignDashboard() {
             case "designFundamentals":
                 return <DesignFundamentals />;
             case "systemRequirements":
-                return <SystemRequirements />
+                return <SystemRequirements />;
             case "designPrinciples":
-                return <DesignPrinciples/>
+                return <DesignPrinciples/>;
+            case "scalabilityBasics":
+                return <ScalabilityBasics/>;
 
             // Default case
             default:

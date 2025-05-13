@@ -9,6 +9,7 @@ import DesignFundamentals from "./content/INTRODUCTION/DesignFundamentals/Design
 import SystemRequirements from "./content/INTRODUCTION/SystemRequirements/SystemRequirements";
 import DesignPrinciples from "./content/INTRODUCTION/DesignPrinciples/DesignPrinciples";
 import ScalabilityBasics from "./content/INTRODUCTION/ScalabilityBasics/ScalabilityBasics";
+import PerformanceBasics from "./content/INTRODUCTION/PerformanceBasics/PerformanceBasics";
 
 // Import all content components
 
@@ -38,6 +39,8 @@ function SystemDesignDashboard() {
                 return <DesignPrinciples/>;
             case "scalabilityBasics":
                 return <ScalabilityBasics/>;
+            case "performanceBasics":
+                return <PerformanceBasics/>;
 
             // Default case
             default:

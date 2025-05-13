@@ -6,6 +6,7 @@ import TopicNotFound from "../JAVA/content/INTRODUCTION/TopicNotFound/TopicNotFo
 import WhatIsSystemDesign from "./content/INTRODUCTION/WhatIsSystemDesign/WhatIsSystemDesign";
 import TypesOfDesign from "./content/INTRODUCTION/TypesOfDesign/TypesOfDesign";
 import DesignFundamentals from "./content/INTRODUCTION/DesignFundamentals/DesignFundamentals";
+import SystemRequirements from "./content/INTRODUCTION/SystemRequirements/SystemRequirements";
 
 // Import all content components
 
@@ -29,6 +30,8 @@ function SystemDesignDashboard() {
                 return <TypesOfDesign />;
             case "designFundamentals":
                 return <DesignFundamentals />;
+            case "systemRequirements":
+                return <SystemRequirements />
 
             // Default case
             default:

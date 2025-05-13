@@ -1,0 +1,298 @@
+/* src/components/Tutorials/SystemDesign/content/Introduction/WhatIsSystemDesign/WhatIsSystemDesign.css */
+
+:root {
+  --primary-bg: #0c1420;
+  --sidebar-bg: #192231;
+  --hover-bg: #2c3e50;
+  --active-color: #b01db8;
+  --text-primary: #fbf8fc;
+  --text-secondary: #94a3b8;
+  --border-color: #334155;
+
+  /* Additional derived colors for specific components */
+  --note-bg: rgba(176, 29, 184, 0.1);
+  --code-bg: rgba(25, 34, 49, 0.8);
+  --hover-active: #c23dcb;
+}
+
+.content-wrapper {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 20px;
+  color: var(--text-primary);
+  background-color: var(--primary-bg);
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, sans-serif;
+}
+
+.content-breadcrumb {
+  font-size: 0.95rem;
+  margin-bottom: 25px;
+  color: var(--text-secondary);
+}
+
+.content-breadcrumb a {
+  color: var(--active-color);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.content-breadcrumb a:hover {
+  color: var(--hover-active);
+  text-decoration: underline;
+}
+
+.content-breadcrumb span {
+  margin: 0 8px;
+  color: var(--border-color);
+}
+
+.content-title {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: var(--active-color);
+  border-bottom: 2px solid var(--border-color);
+  padding-bottom: 15px;
+  font-weight: 700;
+}
+
+.last-updated {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  margin-bottom: 30px;
+  font-style: italic;
+}
+
+/* Table of Contents Styling */
+.table-of-content {
+  background-color: var(--sidebar-bg);
+  border-radius: 8px;
+  padding: 25px;
+  margin: 30px 0;
+  border-left: 4px solid var(--active-color);
+}
+
+.table-of-content h2 {
+  margin-top: 0;
+  color: var(--active-color);
+  font-size: 1.4rem;
+  margin-bottom: 15px;
+}
+
+.table-of-content ul {
+  list-style-type: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+.table-of-content ul ul {
+  padding-left: 20px;
+  margin-top: 8px;
+}
+
+.table-of-content li {
+  margin-bottom: 10px;
+  position: relative;
+  padding-left: 20px;
+}
+
+.table-of-content li::before {
+  content: "→";
+  position: absolute;
+  left: 0;
+  color: var(--active-color);
+}
+
+.table-of-content a {
+  color: var(--text-secondary);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.table-of-content a:hover {
+  color: var(--active-color);
+}
+
+/* Content Sections */
+.content-section {
+  margin-bottom: 40px;
+}
+
+.content-section h2 {
+  font-size: 1.8rem;
+  color: var(--active-color);
+  margin: 30px 0 20px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.content-section p {
+  line-height: 1.8;
+  margin-bottom: 20px;
+  font-size: 1.1rem;
+  color: var(--text-primary);
+}
+
+.content-section ul,
+.content-section ol {
+  padding-left: 25px;
+  margin-bottom: 20px;
+  color: var(--text-primary);
+}
+
+.content-section li {
+  margin-bottom: 12px;
+  line-height: 1.7;
+}
+
+/* Note Box Styling */
+.note-box {
+  background-color: var(--note-bg);
+  border-left: 4px solid var(--active-color);
+  padding: 20px;
+  margin: 25px 0;
+  border-radius: 0 8px 8px 0;
+}
+
+.note-box p {
+  margin: 0;
+  color: var(--text-primary);
+}
+
+.note-box strong {
+  color: var(--active-color);
+}
+
+/* Code Block Styling */
+.code-block {
+  background-color: var(--code-bg);
+  border-radius: 8px;
+  padding: 20px;
+  margin: 20px 0;
+  overflow-x: auto;
+  border: 1px solid var(--border-color);
+}
+
+.code-block pre {
+  margin: 0;
+  font-family: "Fira Code", "Consolas", monospace;
+  font-size: 0.95rem;
+  color: var(--text-primary);
+}
+
+/* Inline Code Styling */
+code {
+  background-color: var(--code-bg);
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-family: "Fira Code", "Consolas", monospace;
+  font-size: 0.9em;
+  color: var(--text-primary);
+}
+
+/* Navigation Links */
+.navigation-links {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 50px;
+  padding-top: 20px;
+  border-top: 1px solid var(--border-color);
+}
+
+.next-link,
+.prev-link {
+  color: var(--active-color);
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  transition: all 0.3s ease;
+  font-weight: 500;
+}
+
+.next-link:hover,
+.prev-link:hover {
+  color: var(--hover-active);
+  transform: translateX(5px);
+}
+
+/* Special Elements */
+strong {
+  color: var(--active-color);
+  font-weight: 600;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .content-wrapper {
+    padding: 15px;
+  }
+
+  .content-title {
+    font-size: 2rem;
+  }
+
+  .content-section h2 {
+    font-size: 1.5rem;
+  }
+}
+
+/* Focus Styles */
+a:focus,
+button:focus {
+  outline: 2px solid var(--active-color);
+  outline-offset: 2px;
+}
+
+/* Selection Style */
+::selection {
+  background-color: var(--active-color);
+  color: var(--text-primary);
+}
+
+/* Scrollbar Styling */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--sidebar-bg);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--active-color);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--hover-active);
+}
+
+/* Hover Effects */
+.content-section a:hover {
+  color: var(--hover-active);
+}
+
+/* Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.content-section {
+  animation: fadeIn 0.5s ease-out;
+}
+
+/* Accessibility */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation: none !important;
+    transition: none !important;
+  }
+}

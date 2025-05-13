@@ -9,6 +9,7 @@ import cIcon from "../../Assets/Tutorials/c.webp"
 import reactIcon from "../../Assets/Tutorials/reactjs.webp"
 import javaIcon from "../../Assets/Tutorials/java.webp"
 import cppIcon from "../../Assets/Tutorials/cpp.webp"
+import systemDesignIcon from "../../Assets/Tutorials/system-integration.png"
 import Footer from "../../components/Footer"
 import { useNavigate } from "react-router-dom";
 
@@ -21,7 +22,7 @@ function Tutorials() {
       .toLowerCase()
       .replace(/[^a-zA-Z0-9]/g, '')
       .replace(/\s+/g, '');
-    
+
     console.log(`Navigating to: /tutorial/${route}`); // For debugging
     navigate(`/tutorial/${route}`);
   };
@@ -34,6 +35,14 @@ function Tutorials() {
       description: "Java is a programming language, created in 1995. More than 3 billion devices run...",
       color: "#007396"
     },
+    {
+      id: "system-design",
+      title: "System Design Tutorial",
+      icon: systemDesignIcon,
+      description: "System Design is the process of designing the architecture, components, and interfaces for a system to satisfy specified requirements. It covers both Low-Level Design (LLD) and High-Level Design (HLD).",
+      color: "#2C3E50"
+    }
+    ,
     {
       id: "html-tutorial",
       title: "HTML Tutorial",
@@ -76,7 +85,7 @@ function Tutorials() {
       description: "React is an open-source front-end JavaScript library. This series will cover Rea...",
       color: "#61DAFB"
     },
-    
+
     {
       id: "cpp-tutorial",
       title: "C++ Tutorial",
@@ -88,33 +97,33 @@ function Tutorials() {
 
   return (
     <>
-    <Container fluid className="tutorial-section">
-      <h1 className="text-center text-white">Tutorials</h1>
-      <Container>
-        <Row>
-          {tutorialData.map((tutorial) => (
-            <Col xl={3} lg={3} md={6} xs={12} className="tutorial-card" key={tutorial.id}>
-              <div className="tutorial-card-view">
-                <div className="tutorial-icon-container">
-                  <img src={tutorial.icon} alt={tutorial.title} className="tutorial-icon" />
+      <Container fluid className="tutorial-section">
+        <h1 className="text-center text-white">Tutorials</h1>
+        <Container>
+          <Row>
+            {tutorialData.map((tutorial) => (
+              <Col xl={3} lg={3} md={6} xs={12} className="tutorial-card" key={tutorial.id}>
+                <div className="tutorial-card-view">
+                  <div className="tutorial-icon-container">
+                    <img src={tutorial.icon} alt={tutorial.title} className="tutorial-icon" />
+                  </div>
+                  <h3 className="tutorial-name">{tutorial.title}</h3>
+                  <p className="tutorial-description">{tutorial.description}</p>
+                  <button
+                    className="tutorial-btn"
+                    onClick={() => handleStartLearning(tutorial.title)}
+                  >
+                    Start Learning !
+                  </button>
                 </div>
-                <h3 className="tutorial-name">{tutorial.title}</h3>
-                <p className="tutorial-description">{tutorial.description}</p>
-                <button 
-                  className="tutorial-btn"
-                  onClick={() => handleStartLearning(tutorial.title)}
-                >
-                  Start Learning !
-                </button>
-              </div>
-            </Col>
-          ))}
-        </Row>
+              </Col>
+            ))}
+          </Row>
+        </Container>
+
       </Container>
-    
-    </Container>
-    <Footer/></>
-    
+      <Footer /></>
+
   );
 }
 

@@ -30,6 +30,7 @@ import Tutorials from "./components/Tutorials/Tutorials";
 import HTMLDashboard from "./components/Tutorials/HTML/HTMLDashboard";
 import JavaDashboard from "./components/Tutorials/JAVA/JavaDashboard";
 import TopicNotFound from "./components/Tutorials/JAVA/content/INTRODUCTION/TopicNotFound/TopicNotFound";
+import SystemDesignDashboard from "./components/Tutorials/System Design/SystemDesignDashboard";
 
 function App() {
   const [load, upadateLoad] = useState(true);
@@ -70,7 +71,7 @@ function App() {
       
         <Route path="/tutorial/cpptutorial" element={<CppTutorial />} /> */}
 
-
+            <Route path="/tutorial/systemdesigntutorial" element={<SystemDesignDashboard />} />
           <Route path="/blog/mongodb-nextjs" element={<MongoPost />} />
           <Route path="/blog/java-windows-installation" element={<JavaInstallationPost />} />
           <Route path="/blog/python-setup-virtual-env" element={<PythonSetupPost />} />

@@ -1,0 +1,100 @@
+/* CodeBlock.css */
+.code-block-container {
+  background-color: var(--sidebar-bg);
+  border-radius: 8px;
+  margin: 20px 0;
+  overflow: hidden;
+  border: 1px solid var(--border-color);
+}
+
+.code-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 15px;
+  background-color: var(--hover-bg);
+  border-bottom: 1px solid var(--border-color);
+}
+
+.code-actions {
+  display: flex;
+  gap: 10px;
+}
+
+.action-button {
+  background: var(--primary-bg);
+  border: 1px solid var(--border-color);
+  color: var(--text-primary);
+  padding: 5px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
+}
+
+.action-button:hover {
+  background: var(--hover-bg);
+  border-color: var(--active-color);
+}
+
+.action-button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.code-content {
+  padding: 15px;
+  overflow-x: auto;
+}
+
+.code-editor {
+  width: 100%;
+  min-height: 200px;
+  background-color: var(--primary-bg);
+  color: var(--text-primary);
+  border: none;
+  padding: 10px;
+  font-family: 'Fira Code', monospace;
+  resize: vertical;
+}
+
+.code-output {
+  border-top: 1px solid var(--border-color);
+  padding: 15px;
+  background-color: var(--primary-bg);
+}
+
+.output-header {
+  color: var(--active-color);
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+pre {
+  margin: 0;
+  padding: 0;
+}
+
+code {
+  font-family: 'Fira Code', monospace;
+  font-size: 0.9rem;
+}
+
+/* Scrollbar styles */
+.code-content::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+.code-content::-webkit-scrollbar-track {
+  background: var(--primary-bg);
+}
+
+.code-content::-webkit-scrollbar-thumb {
+  background: var(--border-color);
+  border-radius: 4px;
+}
+
+.code-content::-webkit-scrollbar-thumb:hover {
+  background: var(--active-color);
+}
